@@ -12,6 +12,7 @@ module Maenporth
   class App < BaseController
 
     # Load further controllers before final root mounted controller
+    controller '/properties', PropertiesController
     controller '/', HomeController
 
     after :status => 404 do

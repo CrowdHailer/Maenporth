@@ -1,11 +1,11 @@
 require_relative '../test_config'
 
 module Maenporth
-  class HomeControllerTest < MiniTest::Test
+  class PropertiesControllerTest < MiniTest::Test
     include ControllerTesting
 
     def app
-      HomeController
+      PropertiesController
     end
 
     def test_home_page_is_availabe
