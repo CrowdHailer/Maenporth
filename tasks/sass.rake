@@ -3,4 +3,9 @@ namespace :sass do
   task :watch do
     system "bundle exec sass --watch assets/stylesheets:public/stylesheets --style compressed"
   end
+
+  desc 'Build stylesheets'
+  task :build do
+    system "bundle exec sass assets/stylesheets:public/stylesheets --style compressed"
+  end
 end
