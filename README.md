@@ -43,5 +43,5 @@ bundle exec rake test
 shotgun
 
 # Start SASS watch and compilation
-rake sass:watch
+bundle exec rake sass:watch
 ```
