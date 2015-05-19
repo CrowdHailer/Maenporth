@@ -1,3 +1,7 @@
+.env
+public/
+.sass-cache/
+
 *.gem
 *.rbc
 /.config
