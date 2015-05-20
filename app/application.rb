@@ -10,6 +10,9 @@ end
 
 module Maenporth
   class App < BaseController
+    middleware << proc do |app|
+      use Bugsnag::Rack
+    end
 
     # Load further controllers before final root mounted controller
     controller '/properties', PropertiesController
