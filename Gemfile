@@ -11,6 +11,8 @@ gem 'shotgun' # Automatic reloading of Rack based applications
 
 gem 'scorched'
 
+gem 'bugsnag'
+
 gem 'sass'
 
 group :test do
