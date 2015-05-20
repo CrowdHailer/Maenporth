@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    
+
     <title>Maenporth</title>
 
     <meta name="description" content="TODO add site description">
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/stylesheets/application.css">
 </head>
 <body>
+    <%= render File.expand_path('../../partials/header.erb', __FILE__).to_sym %>
 
     <%= yield %>
 
