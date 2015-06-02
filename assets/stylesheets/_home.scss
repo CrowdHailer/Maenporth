@@ -1,3 +1,282 @@
-h1 {
-  color: green;
+
+h1,h2,h3,h4,h5,h6,h7 {
+  font-family: 'Muli', sans-serif;
+    font-weight: 500;
+  color: #414141;
+  margin: 0em;
+  margin-bottom: 0em;
+}
+
+.mnav-1{ background: #39C0D7; margin-bottom: 0; }
+ .mnav-2{ background:#25a3b8; margin-bottom: 0;}
+ .mnav-1:hover, .mnav-1:active{ background: #FF1493; margin-bottom: 0;}
+ .mnav-2:hover, .mnav-2:active{ background:#FF1493; margin-bottom: 0;}
+ .bdbt { border-bottom: 2px solid white; margin-bottom: 0;}
+ .bdlr {border-left: 2px solid white; border-right: 2px solid white; margin-bottom: 0;}
+.bdlronly{border-left: 2px solid white; margin-bottom: 0;}
+
+#wrapper {
+  width: 100%;
+}
+
+#white-bg {
+  background: white;
+  padding: 1em;
+}
+
+#header {
+  padding: 0px 0 0px 0;
+  background: #fff;
+  max-height: 200px;
+}
+ #header .logo {
+   float: left;
+   max-width: 150px;
+   max-height: 50px;
+   margin-right: 0px;
+   -webkit-transition: left .25s ease-out;
+   -moz-transition: left .25s ease-out;
+   -o-transition: left .25s ease-out;
+   -ms-transition: left .25s ease-out;
+   transition: left .25s ease-out;
+   position: fixed;
+ }
+ #header .logo a{
+   width: 100%;
+   display: block;
+   border: none;
+   position: fixed;
+ }
+ #bordertrim {
+   position: fixed;
+   width: 100%;
+   margin: 0 auto;
+   border-bottom: 2px solid #39C0D7;
+ }
+ #logo2 {
+   position: fixed;
+   float: left;
+   z-index: 25;
+   background: fff;
+   margin-top: -20px;
+ }
+ #logomaincontainer {
+   width: 982px;
+   margin: 0 auto;
+ }
+ #logomain {
+   float: left;
+   z-index: 25;
+   margin-top: -2px;
+ }
+ #logomain2 {
+   z-index: 25;
+   margin: 0 auto;
+ }
+ #socialicons {
+   margin-left: 875px;
+   margin-top: 20px;
+ }
+ #contactnumber {
+   color: #186b79;
+   font-family: 'Muli';
+   margin-top: -20px;
+   font-size: 13px;
+   margin-left: 775px;
+   z-index: 35;
+ }
+ #navigation{
+   float: right;
+   width: 1000px;
+   margin-top: 30px;
+   margin-bottom: 0px;
+   margin-right: -300px;
+   margin-left: 0px;
+   z-index: 25;
+   background: #fff;
+ }
+ #navigation ul{
+   width: 100%;
+   list-style: none;
+ }
+ #navigation ul li {
+   display: block;
+   float: left;
+   max-width: 190px;
+   padding: 15px 15px 22px 40px;
+   text-align: center;
+   margin-left: -40px;
+ }
+ #navigation ul li a {
+   text-transform: uppercase;
+   line-height: 1;
+   letter-spacing: 1px;
+   padding-top: 15px;
+   padding-bottom: 20px;
+   padding-right: 5px;
+   padding-left: 5px;
+   color: #186b79;
+   overflow: none;
+ }
+ #navigation a, #wsite-menus .wsite-menu li a, #wsite-menus .wsite-menu li a{
+   color: #00645E;
+ }
+ #navigation a:hover, #active a {
+   background: rgba(57,192,215,0.6);
+   color: #FF1493; padding-top: 15px;
+   padding-bottom: 20px;
+   padding-right: 5px;
+   padding-left: 5px;
+   -webkit-transition: .3s ease-out;
+   -moz-transition: .3s ease-out;
+   -o-transition: .3s ease-out;
+   -ms-transition: .3s ease-out;
+   transition: .3s ease-out;
+ }
+ #wsite-menus .wsite-menu li a:hover, #wsite-menus .wsite-menu li.weebly-nav-current a{
+   background: #FF1493;
+   color: #fff;
+ }
+ #navigation {
+   font-family: 'Muli', sans-serif;
+   font-size: 12px;
+ }
+ #wsite-menus .wsite-menu li a, #wsite-menus .wsite-menu li a {
+   font-family: 'Muli', sans-serif;
+   font-size: 12px;
+ }
+ #wsite-menus .wsite-menu, #wsite-menus .wsite-menu {
+   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+ }
+ #wsite-menus .wsite-menu li, #wsite-menus .wsite-menu li {
+   background: none;
+ }
+ #navigation a, #wsite-menus .wsite-menu li a, #wsite-menus .wsite-menu li a {
+   font-size: 12px;
+   padding: 0;}
+ #wsite-menus .wsite-menu li a, #wsite-menus .wsite-menu li a {
+   position: relative;
+   display: block;
+   background: #fff;
+   border: none;
+   text-decoration: none;
+   font-size: 13px;
+   font-weight: normal;
+   line-height: 1;
+   padding: 10px 5px; zoom: 1;
+   -webkit-transition: .5s ease-out;
+   -moz-transition: .5s ease-out;
+   -o-transition: .5s ease-out;
+   -ms-transition: .5s ease-out;
+   transition: .5s ease-out;
+ }
+a:-webkit-any-link {
+  text-decoration: none !important;
+}
+
+.property-box {
+  background: #f7f7f9;
+  padding: 0.5em;
+  height: 13.7em;
+  margin-top: 1em;
+}
+
+.property-box h2{
+font-size: 1.75em;
+margin-bottom: 0em;
+  }
+
+.property-box-icon {
+  width: 1.3em;
+  margin-top: -0.4em;
+}
+
+.property-box-large {
+  min-height: 20em;
+}
+
+.for-rent li {
+  margin-bottom: 0.5em;
+}
+
+.property-image {
+  width: 100%;
+}
+
+.sale-content {
+  margin-left: 1em !important;
+}
+
+.sale-content ul {
+  margin: 0;
+    -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
+
+.sale-content li {
+  margin-left: 1em;
+   font-family: 'Muli', sans-serif;
+    font-weight: 500;
+  color: #414141;
+  font-size: 1.2em;
+}
+
+.sale-content h3 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-top: 1em;
+}
+
+.property-box button {
+  background: #39C0D7;
+  border: none;
+  padding: 1em;
+  color: white;
+  font-family: 'Muli', sans-serif;
+  font-weight: 500;
+  width: 100%;
+  font-size: 1.1em;
+  margin-top: 6em;
+   transition: .5s;
+  -moz-transition: .5s;
+  -o-transition: .5s;
+  -webkit-transition: .5s;
+  cursor: pointer;
+}
+
+.property-box button:hover {
+  background: #ea2182;
+  transition: .5s;
+  -moz-transition: .5s;
+  -o-transition: .5s;
+  -webkit-transition: .5s;
+}
+
+footer {
+  background: #39C0D7;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 10em;
+}
+
+.footer-logo-wrap {
+  width: 8em;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.footer-logo {
+  width: 8em;
+}
+
+footer p {
+  color: white;
+  font-family: 'Muli' sans-serif !important;
+  text-align: center;
+  font-size: 0.9em;
 }
