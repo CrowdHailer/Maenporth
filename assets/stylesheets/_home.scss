@@ -368,9 +368,24 @@ margin-bottom: 0em;
   font-size: 3em;
 }
 
+.prop-type h5 {
+  color: white;
+  text-align: center;
+  font-size: 4em;
+  margin-bottom: 0.125em;
+}
+
 .enq-btn {
   background-color: #ea2182 !important;
   font-size: 1.3em !important;
+  margin-top: 0em !important;
+}
+
+.est-btn {
+  background-color: #ea2182 !important;
+  font-size: 1.3em !important;
+  width: 100% !important;
+  padding: 0.5em;
   margin-top: 0em !important;
 }
 
@@ -391,6 +406,11 @@ margin-bottom: 0em;
   border: 0.1em solid #909090;
   border-radius: 0.5em;
   margin-top: 1em;
+}
+
+.map-wrap-small {
+  padding: 0.15em;
+  border: 0.1em solid #909090;
 }
 
 footer {
