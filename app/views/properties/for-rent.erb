@@ -10,6 +10,19 @@
         </div>
       </div>
       <hr>
+      <script>
+      function changeImage(current) {
+        var imagesNumber = 8;
+
+        for (i=1; i<=imagesNumber; i++) {
+          if (i == current) {
+            document.getElementById("normal" + current).style.display = "block";
+          } else {
+            document.getElementById("normal" + i).style.display = "none";
+          }
+        }
+      }
+      </script>
       <!-- -->
       <div class="row collapse">
         <div class="large-8 columns">
