@@ -1,1 +1,181 @@
-edit
+<div class="admin-head">
+  <div class="row collapse">
+    <div class="large-10 columns">
+        <h1>Maenporth Estate System Admin</h1>
+    </div>
+    <div class="large-2 columns">
+      <a href=""><button>Log Out</button></a>
+    </div>
+  </div>
+</div>
+
+<div class="row collapse admin-list">
+  <div class="large-9 columns">
+    <h2>Edit Property Profile</h2>
+  </div>
+  <div class="large-3 columns">
+    <a href=""><button>Save</button></a>
+    <p style="font-style: italic;">Save the form regularly.</p>
+  </div>
+</div>
+<div class="row collapse">
+  <hr>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+
+<div id="tabvanilla" class="widget">
+  <ul class="tabnav">
+        <li><a href="#c-tabs1">For Sale</a></li>
+        <li><a href="#c-tabs2">For rent</a></li>
+    </ul>
+</div>
+<!-- For Sale Form -->
+<div id="c-tabs1" class="tabdiv">
+  <section id="for-sale">
+  <div class="row collapse">
+    <h1>For Sale Property Profile Form</h1>
+    <div class="large-5 columns">
+      <h2>Image Upload</h2>
+      <p>Click on the image icon to upload an image.  You can upload 8 images per property per profile type.</p>
+      <p>Image Size.  The large display image is 644 pixels wide by 344 pixels high.  The thumbnail images are 160 pixels wide by 80 pixels high.  Your image uploads will be cropped to these sizes automatically. </p>
+    </div>
+      <div class="large-7 columns">
+        <div class="edit-gallery">
+        <ul class="large-block-grid-4 medium-block-grid-2 small-block-grid-2">
+          <li style="float: left; margin-bottom:  1em;"><a href=""><img src="/img/upload.svg" alt="" /></a><p>Image 1</p></li>
+          <li style="float: right;margin-bottom: 1em; "><a href=""><img src="/img/upload.svg" alt="" /></a><p>Image 4</p></li>
+          <li style="float: left; margin-bottom: 1em"><a href=""><img src="/img/upload.svg" alt="" /></a>  <p>Image 2</p></li>
+          <li style="float: right;margin-bottom: 1em;"><a href=""><img src="/img/upload.svg" alt="" /></a> <p>Image 3</p></li>
+          <li style="float: left; margin-bottom: 1em"><a href=""><img src="/img/upload.svg" alt="" /></a>  <p>Image 5</p></li>
+          <li style="float: right;margin-bottom: 1em;"><a href=""><img src="/img/upload.svg" alt="" /></a> <p>Image 8</p></li>
+          <li style="float: left; margin-bottom: 1em"><a href=""><img src="/img/upload.svg" alt="" /></a>  <p>Image 6</p></li>
+          <li style="float: right;margin-bottom: 1em;"><a href=""><img src="/img/upload.svg" alt="" /></a> <p>Image 7</p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row collapse">
+    <hr>
+    <div class="large-5 columns">
+      <h2>Description</h2>
+      <p>Please provide a long description of the property for sale.  Recommended word count 130 words.</p>
+      <p>This text editor uses Markdown to help you format your text.  Use the return key to add paragraph spacing.</p>
+    </div>
+    <div class="large-7 columns">
+      <textarea rows="15" cols="70" placeholder="Type your property description here..." style="padding: 1em; margin-bottom: 1em;"></textarea>
+    </div>
+  </div>
+  <div class="row collapse">
+    <hr>
+    <h2>Sale Price</h2>
+    <div class="large-5 columns">
+      <p>Numbers only, do not include the currency symbol.</p>
+    </div>
+    <div class="large-7 columns">
+      <input class="sale-price-input" type="number" placeholder="e.g. 280000">
+    </div>
+  </div>
+  <div class="row collapse">
+    <hr>
+    <h2>Estate Agent Website Link</h2>
+    <div class="large-5 columns">
+      <p>URL format http(s)://www.example.com</p>
+    </div>
+    <div class="large-7 columns">
+      <input class="sale-price-input" type="url" placeholder="http://www.example.com">
+    </div>
+  </div>
+  <div class="row collapse">
+    <hr>
+    <div class="large-5 columns">
+      <h2>Checklist</h2>
+      <p>Please select from these variables the statements that best describes your property.  If you do not have a balcony, patio or lawn, leave the checkbox unchecked.</p>
+    </div>
+    <div class="large-7 columns">
+      <div class="checklist-wrap">
+        <div class="row collapse">
+          <div class="large-4 columns">
+            <p>Property Type:</p>
+            <p>Bedrooms:</p>
+            <p>Bathrooms:</p>
+            <p>View Type:</p>
+            <p>Balcony</p>
+            <p>Patio</p>
+            <p>Lawn</p>
+          </div>
+          <div class="large-4 columns end">
+            <select name="property-type">
+              <option>Flat</option>
+              <option>Apartment</option>
+              <option>Semi Detached</option>
+              <option>Terraced</option>
+              <option>End of Terrace</option>
+            </select>
+            <select name="number-of-bedrooms">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>5+</option>
+            </select>
+            <select name="number-of-bathrooms">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>3+</option>
+            </select>
+            <select name="view-type">
+              <option>Sea View</option>
+              <option>Sea Glimpses</option>
+              <option>Woodland View</option>
+            </select>
+            <input name="balcony" type="checkbox" value="Balcony"><br>
+            <input name="balcony" type="checkbox" value="Patio"><br>
+            <input name="balcony" type="checkbox" value="Lawn">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row collapse" style="margin-bottom: 2em;">
+    <hr>
+    <div class="large-5 columns">
+      <h2>Map</h2>
+      <p>Please upload an image to show where this property is on the map.</p>
+    </div>
+    <div class="large-5 columns end">
+      <a href=""><img src="/img/upload.svg" alt="" /></a>
+    </div>
+  </div>
+  <div class="row collapse admin-list">
+    <hr>
+    <div class="large-9 columns">
+      <h2>Edit Property Profile</h2>
+    </div>
+    <div class="large-3 columns">
+      <a href=""><button>Save</button></a>
+      <p style="font-style: italic;">Save the form regularly.</p>
+    </div>
+  </div>
+</section>
+</div>
+<!-- END For Sale Form -->
+
+<!-- For Rent Form -->
+<div id="c-tabs2" class="tabdiv">
+  FOR RENT CONTENT
+  <div class="row collapse">
+
+  </div>
+</div>
+<!-- END For Rent Form -->
+</div>
+
+<script type="text/javascript">
+$.noConflict()
+jQuery(document).ready(function($){
+$('#tabvanilla > ul').tabs({ fx: { opacity: 'toggle' } });
+$('#featurevid > ul').tabs();
+});
+</script>
