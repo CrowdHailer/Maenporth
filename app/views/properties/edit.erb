@@ -93,51 +93,96 @@
     </div>
     <div class="large-7 columns">
       <div class="checklist-wrap">
-        <div class="row collapse">
-          <div class="large-4 columns">
-            <p>Property Type:</p>
-            <p>Bedrooms:</p>
-            <p>Bathrooms:</p>
-            <p>View Type:</p>
-            <p>Balcony</p>
-            <p>Patio</p>
-            <p>Lawn</p>
-          </div>
-          <div class="large-4 columns end">
-            <select name="property-type">
-              <option>Flat</option>
-              <option>Apartment</option>
-              <option>Semi Detached</option>
-              <option>Terraced</option>
-              <option>End of Terrace</option>
-            </select>
-            <select name="number-of-bedrooms">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>5+</option>
-            </select>
-            <select name="number-of-bathrooms">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>3+</option>
-            </select>
-            <select name="view-type">
-              <option>Sea View</option>
-              <option>Sea Glimpses</option>
-              <option>Woodland View</option>
-            </select>
-            <input name="balcony" type="checkbox" value="Balcony"><br>
-            <input name="patio" type="checkbox" value="Patio"><br>
-            <input name="lawn" type="checkbox" value="Lawn">
-          </div>
+        <table>
+          <tr>
+            <td>
+              <p>Property Type:
+              </p>
+            </td>
+            <td>
+              <select name="property-type">
+                <option>Flat</option>
+                <option>Apartment</option>
+                <option>Semi Detached</option>
+                <option>Terraced</option>
+                <option>End of Terrace</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Bedrooms:
+              </p>
+            </td>
+            <td>
+              <select name="number-of-bedrooms">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>5+</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Bathrooms:
+              </p>
+            </td>
+            <td>
+              <select name="number-of-bathrooms">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>3+</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>View Type:
+              </p>
+            </td>
+            <td>
+              <select name="view-type">
+                <option>Sea View</option>
+                <option>Sea Glimpses</option>
+                <option>Woodland View</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Balcony
+              </p>
+            </td>
+            <td>
+              <input name="balcony" type="checkbox" value="Balcony">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Patio
+              </p>
+            </td>
+            <td>
+              <input name="patio" type="checkbox" value="Patio">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Lawn
+              </p>
+            </td>
+            <td>
+              <input name="lawn" type="checkbox" value="Lawn">
+            </td>
+          </tr>
+        </table>
         </div>
       </div>
     </div>
-  </div>
   <div class="row collapse" style="margin-bottom: 2em;">
     <hr>
     <div class="large-5 columns">
@@ -237,78 +282,134 @@
     </div>
     <div class="large-7 columns">
       <div class="checklist-wrap">
-        <div class="row collapse">
-          <div class="large-4 columns">
-            <p>Property Type:</p>
-            <p>Bedrooms:</p>
-            <p>Bathrooms:</p>
-            <p>Sleeps:</p>
-            <p>View Type:</p>
-            <p>Wifi</p>
-            <p>BBQ</p>
-            <p>Towels Provided</p>
-            <p>Bath</p>
-            <p>Shower</p>
-            <p>Washing Machine</p>
-            <p>Tumble Dryer</p>
-            <p>Patio</p>
-            <p>Balcony</p>
-            <p>Lawn</p>
-          </div>
-          <div class="large-4 columns end">
-            <select name="property-type">
-              <option>Flat</option>
-              <option>Apartment</option>
-              <option>House</option>
-            </select>
-            <select name="number-of-bedrooms">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>5+</option>
-            </select>
-            <select name="number-of-bathrooms">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>3+</option>
-            </select>
-            <select name="sleeps">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10</option>
-              <option>11</option>
-              <option>12</option>
-              <option>13</option>
-              <option>14</option>
-              <option>15</option>
-            </select>
-            <select name="view-type">
-              <option>Sea View</option>
-              <option>Sea Glimpses</option>
-              <option>Woodland View</option>
-            </select>
-            <input name="wifi" type="checkbox" value="Wifi"><br>
-            <input name="bbq" type="checkbox" value="BBQ"><br>
-            <input name="Towels" type="checkbox" value="Towels"><br>
-            <input name="Bath" type="checkbox" value="Bath"><br>
-            <input name="Shower" type="checkbox" value="Shower"><br>
-            <input name="Washing Machine" type="checkbox" value="Washing Machine"><br>
-            <input name="Tumble Dryer" type="checkbox" value="Tumble Dryer"><br>
-            <input name="Patio" type="checkbox" value="Patio"><br>
-            <input name="Balcony" type="checkbox" value="Balcony"><br>
-            <input name="Lawn" type="checkbox" value="Lawn"><br>
-          </div>
-        </div>
+        <table>
+          <tr>
+            <td>Property Type:</td>
+            <td>
+              <select name="property-type">
+                <option>Flat</option>
+                <option>Apartment</option>
+                <option>House</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Bedrooms:</td>
+            <td>
+              <select name="number-of-bedrooms">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>5+</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Bathrooms</td>
+            <td>
+              <select name="number-of-bathrooms">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>3+</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Sleeps</td>
+            <td>
+              <select name="sleeps">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>View Type</td>
+            <td>
+              <select name="view-type">
+                <option>Sea View</option>
+                <option>Sea Glimpses</option>
+                <option>Woodland View</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Wifi</td>
+            <td>
+              <input name="wifi" type="checkbox" value="Wifi">
+            </td>
+          </tr>
+          <tr>
+            <td>BBQ</td>
+            <td>
+              <input name="bbq" type="checkbox" value="BBQ">
+            </td>
+          </tr>
+          <tr>
+            <td>Towels Provided</td>
+            <td>
+              <input name="Towels" type="checkbox" value="Towels">
+            </td>
+          </tr>
+          <tr>
+            <td>Bath</td>
+            <td>
+              <input name="Bath" type="checkbox" value="Bath">
+            </td>
+          </tr>
+          <tr>
+            <td>Shower</td>
+            <td>
+              <input name="Shower" type="checkbox" value="Shower">
+            </td>
+          </tr>
+          <tr>
+            <td>Washing Machine</td>
+            <td>
+              <input name="Washing Machine" type="checkbox" value="Washing Machine">
+            </td>
+          </tr>
+          <tr>
+            <td>Tumble Dryer</td>
+            <td>
+              <input name="Tumble Dryer" type="checkbox" value="Tumble Dryer">
+            </td>
+          </tr>
+          <tr>
+            <td>Patio</td>
+            <td>
+              <input name="Patio" type="checkbox" value="Patio">
+            </td>
+          </tr>
+          <tr>
+            <td>Balcony</td>
+            <td>
+              <input name="Balcony" type="checkbox" value="Balcony">
+            </td>
+          </tr>
+          <tr>
+            <td>Lawn</td>
+            <td>
+              <input name="Lawn" type="checkbox" value="Lawn">
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
   </div>

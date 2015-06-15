@@ -126,10 +126,15 @@
   padding: 1em;
   height: auto;
   margin-bottom: 1em;
+  margin-left: 1em;
 }
 
 .checklist-wrap p {
   margin-bottom: 0em;
+}
+
+.checklist-wrap td {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .checklist-wrap select {
@@ -176,4 +181,9 @@
   padding: 0.3em;
   color: white;
   width: 6em;
+}
+
+.form-checks select input {
+  margin-bottom: 1em;
+
 }
