@@ -177,7 +177,7 @@ a:-webkit-any-link {
 }
 
 .property-box {
-  background: #f7f7f9;
+  background: #ececf1;
   padding: 0.5em;
   height: 13.7em;
   margin-top: 1em;
@@ -224,6 +224,7 @@ margin-bottom: 0em;
     font-weight: 500;
   color: #414141;
   font-size: 1.2em;
+  margin-bottom: 0.3em;
 }
 
 .sale-content h3 {
@@ -348,6 +349,14 @@ margin-bottom: 0em;
   margin-right: 0.5em;
 }
 
+.prop-type h1 {
+  color: white;
+  text-align: center;
+  padding-top: 0.1em;
+  font-size: 2.5em;
+  margin-bottom: 0em;
+}
+
 .prop-type h2 {
   color: white;
   text-align: center;
@@ -411,6 +420,41 @@ margin-bottom: 0em;
 .map-wrap-small {
   padding: 0.15em;
   border: 0.1em solid #909090;
+}
+
+#image-enlarge {
+  position: fixed;
+  background: white;
+  height: 27em;
+  width: 43em;
+  box-shadow: 0.2em 0.2em 0.2em #222222;
+  margin-left: 7.5em;
+  margin-right: 7.5em;
+  margin-top: 2em;
+  z-index: 10;
+  padding: 1em;
+  display: none;
+  border: 0.15em solid #222222;
+}
+
+.large-map h1{
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0.1em;
+}
+
+.large-map h2{
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.large-map a {
+  border: 0.1em solid #222222;
+  padding: 0.1em;
+  width: 1.5em;
+  text-align: center;
+  float: right;
 }
 
 footer {

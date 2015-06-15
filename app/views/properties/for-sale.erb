@@ -1,3 +1,30 @@
+<div class="row collapse">
+  <div class="large-12 columns">
+    <div id="image-enlarge">
+      <div class="large-map">
+        <a onclick="document.getElementById('image-enlarge').style.display = 'none'">&#x2716;</a>
+        <h1>Property Name</h1>
+        <h2>Location on Maenporth Estate</h2>
+        <img style="width: 100%;" src="/img/property-map.jpg">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function changeImage(current) {
+  var imagesNumber = 8;
+
+  for (i=1; i<=imagesNumber; i++) {
+    if (i == current) {
+      document.getElementById("normal" + current).style.display = "block";
+    } else {
+      document.getElementById("normal" + i).style.display = "none";
+    }
+  }
+}
+</script>
+
 <div class="row collapse" id="white-bg">
   <div class="large-12 columns">
     <div class="property-box property-box-large for-rent">
@@ -10,68 +37,6 @@
         </div>
       </div>
       <hr>
-      <style>
-      #image-enlarge {
-        position: fixed;
-        background: white;
-        height: 27em;
-        width: 43em;
-        box-shadow: 0.2em 0.2em 0.2em #222222;
-        margin-left: 7.5em;
-        margin-right: 7.5em;
-        margin-top: 5em;
-        z-index: 10;
-        padding: 1em;
-        display: none;
-      }
-
-      .large-map h1{
-        text-align: center;
-        font-size: 2em;
-        margin-bottom: 0.1em;
-      }
-
-      .large-map h2{
-        text-align: center;
-        font-size: 1.5em;
-        margin-bottom: 0.5em;
-      }
-
-      .large-map a {
-        border: 0.1em solid #222222;
-        padding: 0.1em;
-        width: 1.5em;
-        text-align: center;
-        float: right;
-      }
-
-      </style>
-      <div class="row collapse">
-        <div class="large-12 columns">
-          <div id="image-enlarge">
-            <div class="large-map">
-              <a onclick="document.getElementById('image-enlarge').style.display = 'none'">&#x2716;</a>
-              <h1>Property Name</h1>
-              <h2>Location on Maenporth Estate</h2>
-              <img style="width: 100%;" src="/img/property-map.jpg">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <script>
-      function changeImage(current) {
-        var imagesNumber = 8;
-
-        for (i=1; i<=imagesNumber; i++) {
-          if (i == current) {
-            document.getElementById("normal" + current).style.display = "block";
-          } else {
-            document.getElementById("normal" + i).style.display = "none";
-          }
-        }
-      }
-      </script>
       <!-- -->
       <div class="row collapse">
         <div class="large-8 columns">
@@ -163,16 +128,24 @@
         </div>
         <div class="large-6 columns">
           <div class="prop-type">
-            <h5>£230,000</h5>
-            <a href="">
-              <button class="est-btn">
-                View Estate Agent Page
-              </button>
-            </a>
+            <h1>£230000</h1>
+            <div class="row collapse">
+              <div class="large-6 columns">
+                <h3>Bedrooms</h3>
+                <h4>3</h4>
+              </div>
+              <div class="large-6 columns">
+                <h3>Bathrooms</h3>
+                <h4>1</h4>
+              </div>
+            </div>
           </div>
+          <a href="">
+            <button class="enq-btn">
+              Visit Estate Agent Website
+            </button>
+          </a>
           <div class="facilities-wrap" style="margin-top: 1em;">
-              <div class="row collapse">
-                <div class="large-4 columns">
                   <ul>
                     <li>Property Type</li>
                     <li>Bedrooms: 4</li>
@@ -183,20 +156,9 @@
                     <li>Lawn</li>
                   </ul>
                 </div>
-                <div class="large-8 columns">
-                  <div class="map-wrap-small" onclick="document.getElementById('image-enlarge').style.display = 'inline'">
-                    <img style="width: 100%;" src="/img/property-map.jpg">
-                  </div>
+                <div class="map-wrap" onclick="document.getElementById('image-enlarge').style.display = 'inline'">
+                  <img style="width: 100%;" src="/img/property-map.jpg">
                 </div>
-            </div>
-          </div>
-          <h2 style="margin-top: 1em;">About Maenporth</h2>
-          <div class="favourites-wrap">
-            <p class="description">Description, 200 words. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            <br><br>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-            <br><br>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-            </p>
-          </div>
         </div>
       </div>
     </div>
