@@ -1,3 +1,30 @@
+<div class="row collapse">
+  <div class="large-12 columns">
+    <div id="image-enlarge">
+      <div class="large-map">
+        <a onclick="document.getElementById('image-enlarge').style.display = 'none'">&#x2716;</a>
+        <h1>Property Name</h1>
+        <h2>Location on Maenporth Estate</h2>
+        <img style="width: 100%;" src="/img/property-map.jpg">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function changeImage(current) {
+  var imagesNumber = 8;
+
+  for (i=1; i<=imagesNumber; i++) {
+    if (i == current) {
+      document.getElementById("normal" + current).style.display = "block";
+    } else {
+      document.getElementById("normal" + i).style.display = "none";
+    }
+  }
+}
+</script>
+
 <div class="row collapse" id="white-bg">
   <div class="large-12 columns">
     <div class="property-box property-box-large for-rent">
@@ -160,7 +187,7 @@
               </div>
             </div>
           </div>
-          <div class="map-wrap">
+          <div class="map-wrap" onclick="document.getElementById('image-enlarge').style.display = 'inline'">
             <img style="width: 100%;" src="/img/property-map.jpg">
           </div>
         </div>
