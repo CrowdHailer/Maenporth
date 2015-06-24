@@ -6,7 +6,7 @@
 <div class="admin-head">
   <div class="row collapse">
     <div class="large-10 columns">
-        <h1>Maenporth Estate System Admin</h1>
+      <h1>Maenporth Estate System Admin</h1>
     </div>
     <div class="large-2 columns">
       <a href=""><button>Log Out</button></a>
@@ -28,442 +28,476 @@
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
 
-<div id="tabvanilla" class="widget">
-  <ul class="tabnav">
-        <li><a href="#c-tabs1">For Sale</a></li>
-        <li><a href="#c-tabs2">For rent</a></li>
+  <div id="tabvanilla" class="widget">
+    <ul class="tabnav">
+      <li><a href="#c-tabs1">For Sale</a></li>
+      <li><a href="#c-tabs2">For rent</a></li>
     </ul>
-</div>
-<!-- For Sale Form -->
-<div id="c-tabs1" class="tabdiv">
-  <section id="for-sale">
-  <div class="row collapse">
-    <h1>For Sale Property Profile Form</h1>
-    <div class="large-5 columns">
-      <h2>Image Upload</h2>
-      <p>Click on the image icon to upload an image.  You can upload 8 images per property per profile type.</p>
-      <p>Image Size.  The large display image is 644 pixels wide by 344 pixels high.  The thumbnail images are 160 pixels wide by 80 pixels high.  Your image uploads will be cropped to these sizes automatically. </p>
-    </div>
-      <div class="large-7 columns">
-        <div class="edit-gallery">
-        <ul class="large-block-grid-4 medium-block-grid-2 small-block-grid-2">
-          <li style="float: left; margin-bottom:  1em;"><a href=""><img src="/img/upload.svg" alt="" /></a><p>Image 1</p></li>
-          <li style="float: right;margin-bottom: 1em; "><a href=""><img src="/img/upload.svg" alt="" /></a><p>Image 4</p></li>
-          <li style="float: left; margin-bottom: 1em"><a href=""><img src="/img/upload.svg" alt="" /></a>  <p>Image 2</p></li>
-          <li style="float: right;margin-bottom: 1em;"><a href=""><img src="/img/upload.svg" alt="" /></a> <p>Image 3</p></li>
-          <li style="float: left; margin-bottom: 1em"><a href=""><img src="/img/upload.svg" alt="" /></a>  <p>Image 5</p></li>
-          <li style="float: right;margin-bottom: 1em;"><a href=""><img src="/img/upload.svg" alt="" /></a> <p>Image 8</p></li>
-          <li style="float: left; margin-bottom: 1em"><a href=""><img src="/img/upload.svg" alt="" /></a>  <p>Image 6</p></li>
-          <li style="float: right;margin-bottom: 1em;"><a href=""><img src="/img/upload.svg" alt="" /></a> <p>Image 7</p></li>
-        </ul>
-      </div>
-    </div>
   </div>
-  <div class="row collapse">
-    <hr>
-    <div class="large-5 columns">
-      <h2>Description</h2>
-      <p>Please provide a long description of the property for sale.  Recommended word count 130 words.</p>
-      <p>This text editor uses Markdown to help you format your text.  Use the return key to add paragraph spacing.</p>
-    </div>
-    <div class="large-7 columns">
-      <textarea rows="15" cols="70" placeholder="Type your property description here..." style="padding: 1em; margin-bottom: 1em;"></textarea>
-    </div>
-  </div>
-  <div class="row collapse">
-    <hr>
-    <h2>Sale Price</h2>
-    <div class="large-5 columns">
-      <p>Numbers only, do not include the currency symbol.</p>
-    </div>
-    <div class="large-7 columns">
-      <input class="sale-price-input" type="number" placeholder="e.g. 280000">
-    </div>
-  </div>
-  <div class="row collapse">
-    <hr>
-    <h2>Estate Agent Website Link</h2>
-    <div class="large-5 columns">
-      <p>URL format http(s)://www.example.com</p>
-    </div>
-    <div class="large-7 columns">
-      <input class="sale-price-input" type="url" placeholder="http://www.example.com">
-    </div>
-  </div>
-  <div class="row collapse">
-    <hr>
-    <div class="large-5 columns">
-      <h2>Checklist</h2>
-      <p>Please select from these variables the statements that best describes your property.  If you do not have a balcony, patio or lawn, leave the checkbox unchecked.</p>
-    </div>
-    <div class="large-7 columns">
-      <div class="checklist-wrap">
-        <table>
-          <tr>
-            <td>
-              <p>Property Type:
-              </p>
-            </td>
-            <td>
-              <select name="property-type">
-                <option>Flat</option>
-                <option>Apartment</option>
-                <option>Semi Detached</option>
-                <option>Terraced</option>
-                <option>End of Terrace</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>Bedrooms:
-              </p>
-            </td>
-            <td>
-              <select name="number-of-bedrooms">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>5+</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>Bathrooms:
-              </p>
-            </td>
-            <td>
-              <select name="number-of-bathrooms">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>3+</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>View Type:
-              </p>
-            </td>
-            <td>
-              <select name="view-type">
-                <option>Sea View</option>
-                <option>Sea Glimpses</option>
-                <option>Woodland View</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>Balcony
-              </p>
-            </td>
-            <td>
-              <input name="balcony" type="checkbox" value="Balcony">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>Patio
-              </p>
-            </td>
-            <td>
-              <input name="patio" type="checkbox" value="Patio">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p>Lawn
-              </p>
-            </td>
-            <td>
-              <input name="lawn" type="checkbox" value="Lawn">
-            </td>
-          </tr>
-        </table>
+  <!-- For Sale Form -->
+  <form id="form_id" action="index.html" method="post">
+    <div id="c-tabs1" class="tabdiv">
+      <section id="for-sale">
+        <div class="row collapse">
+          <h1>For Sale Property Profile Form</h1>
+          <div class="large-5 columns">
+            <h2>Image Upload</h2>
+            <p>Click on the image icon to upload an image.  You can upload 8 images per property per profile type.</p>
+            <p>Image Size.  The large display image is 644 pixels wide by 344 pixels high.  The thumbnail images are 160 pixels wide by 80 pixels high.  Your image uploads will be cropped to these sizes automatically. </p>
+          </div>
+          <div class="large-7 columns">
+            <div class="edit-gallery">
+              <ul class="large-block-grid-4 medium-block-grid-2 small-block-grid-2">
+                <li style="float: left; margin-bottom:  1em;">
+                  <img src="/img/upload.svg" alt="" />
+                  <p>Image 1</p>
+                  <input type="file">
+                </li>
+                <li style="float: right;margin-bottom: 1em; ">
+                  <img src="/img/upload.svg" alt="" />
+                  <p>Image 4</p>
+                  <input type="file">
+                </li>
+                <li style="float: left; margin-bottom: 1em">
+                  <img src="/img/upload.svg" alt="" />
+                  <p>Image 2</p>
+                  <input type="file">
+                </li>
+                <li style="float: right;margin-bottom: 1em;">
+                  <img src="/img/upload.svg" alt="" />
+                  <p>Image 3</p>
+                  <input type="file">
+                </li>
+                <li style="float: left; margin-bottom: 1em">
+                  <img src="/img/upload.svg" alt="" />
+                  <p>Image 5</p>
+                  <input type="file">
+                </li>
+                <li style="float: right;margin-bottom: 1em;">
+                  <img src="/img/upload.svg" alt="" />
+                  <p>Image 8</p>
+                  <input type="file">
+                </li>
+                <li style="float: left; margin-bottom: 1em">
+                  <img src="/img/upload.svg" alt="" />
+                  <p>Image 6</p>
+                  <input type="file">
+                </li>
+                <li style="float: right;margin-bottom: 1em;">
+                  <img src="/img/upload.svg" alt="" />
+                  <p>Image 7</p>
+                  <input type="file">
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
+        <div class="row collapse">
+          <hr>
+          <div class="large-5 columns">
+            <h2>Description</h2>
+            <p>Please provide a long description of the property for sale.  Recommended word count 130 words.</p>
+            <p>This text editor uses Markdown to help you format your text.  Use the return key to add paragraph spacing.</p>
+          </div>
+          <div class="large-7 columns">
+            <textarea rows="15" cols="70" placeholder="Type your property description here..." style="padding: 1em; margin-bottom: 1em;"></textarea>
+          </div>
+        </div>
+        <div class="row collapse">
+          <hr>
+          <h2>Sale Price</h2>
+          <div class="large-5 columns">
+            <p>Numbers only, do not include the currency symbol.</p>
+          </div>
+          <div class="large-7 columns">
+            <input class="sale-price-input" type="number" placeholder="e.g. 280000">
+          </div>
+        </div>
+        <div class="row collapse">
+          <hr>
+          <h2>Estate Agent Website Link</h2>
+          <div class="large-5 columns">
+            <p>URL format http(s)://www.example.com</p>
+          </div>
+          <div class="large-7 columns">
+            <input class="sale-price-input" type="url" placeholder="http://www.example.com">
+          </div>
+        </div>
+        <div class="row collapse">
+          <hr>
+          <div class="large-5 columns">
+            <h2>Checklist</h2>
+            <p>Please select from these variables the statements that best describes your property.  If you do not have a balcony, patio or lawn, leave the checkbox unchecked.</p>
+          </div>
+          <div class="large-7 columns">
+            <div class="checklist-wrap">
+              <table>
+                <tr>
+                  <td>
+                    <p>Property Type:
+                    </p>
+                  </td>
+                  <td>
+                    <select name="property-type">
+                      <option>Flat</option>
+                      <option>Apartment</option>
+                      <option>Semi Detached</option>
+                      <option>Terraced</option>
+                      <option>End of Terrace</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Bedrooms:
+                    </p>
+                  </td>
+                  <td>
+                    <select name="number-of-bedrooms">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>5+</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Bathrooms:
+                    </p>
+                  </td>
+                  <td>
+                    <select name="number-of-bathrooms">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>3+</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>View Type:
+                    </p>
+                  </td>
+                  <td>
+                    <select name="view-type">
+                      <option>Sea View</option>
+                      <option>Sea Glimpses</option>
+                      <option>Woodland View</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Balcony
+                    </p>
+                  </td>
+                  <td>
+                    <input name="balcony" type="checkbox" value="Balcony">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Patio
+                    </p>
+                  </td>
+                  <td>
+                    <input name="patio" type="checkbox" value="Patio">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Lawn
+                    </p>
+                  </td>
+                  <td>
+                    <input name="lawn" type="checkbox" value="Lawn">
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="row collapse" style="margin-bottom: 2em;">
+          <hr>
+          <div class="large-5 columns">
+            <h2>Map</h2>
+            <p>Please upload an image to show where this property is on the map.</p>
+          </div>
+          <div class="large-5 columns end">
+            <a href=""><img src="/img/upload.svg" alt="" /></a>
+          </div>
+        </div>
+        <div class="row collapse admin-list">
+          <hr>
+          <div class="large-9 columns">
+            <h2>Edit Property Profile</h2>
+          </div>
+          <div class="large-3 columns">
+            <a href=""><button>Save</button></a>
+            <p style="font-style: italic;">Save the form regularly.</p>
+          </div>
+        </div>
+      </section>
     </div>
-  <div class="row collapse" style="margin-bottom: 2em;">
-    <hr>
-    <div class="large-5 columns">
-      <h2>Map</h2>
-      <p>Please upload an image to show where this property is on the map.</p>
-    </div>
-    <div class="large-5 columns end">
-      <a href=""><img src="/img/upload.svg" alt="" /></a>
-    </div>
-  </div>
-  <div class="row collapse admin-list">
-    <hr>
-    <div class="large-9 columns">
-      <h2>Edit Property Profile</h2>
-    </div>
-    <div class="large-3 columns">
-      <a href=""><button>Save</button></a>
-      <p style="font-style: italic;">Save the form regularly.</p>
-    </div>
-  </div>
-</section>
-</div>
-<!-- END For Sale Form -->
+    <!-- END For Sale Form -->
 
-<!-- For Rent Form -->
-<div id="c-tabs2" class="tabdiv">
-  <section id="for-rent">
-  <div class="row collapse">
-    <h1>Rental Property Profile Form</h1>
-    <div class="large-5 columns">
-      <h2>Image Upload</h2>
-      <p>Click on the image icon to upload an image.  You can upload 8 images per property per profile type.</p>
-      <p>Image Size.  The large display image is 644 pixels wide by 344 pixels high.  The thumbnail images are 160 pixels wide by 80 pixels high.  Your image uploads will be cropped to these sizes automatically. </p>
+    <!-- For Rent Form -->
+    <div id="c-tabs2" class="tabdiv">
+      <section id="for-rent">
+        <div class="row collapse">
+          <h1>Rental Property Profile Form</h1>
+          <div class="large-5 columns">
+            <h2>Image Upload</h2>
+            <p>Click on the image icon to upload an image.  You can upload 8 images per property per profile type.</p>
+            <p>Image Size.  The large display image is 644 pixels wide by 344 pixels high.  The thumbnail images are 160 pixels wide by 80 pixels high.  Your image uploads will be cropped to these sizes automatically. </p>
+          </div>
+          <div class="large-7 columns">
+            <div class="edit-gallery">
+              <ul class="large-block-grid-4 medium-block-grid-2 small-block-grid-2">
+                <li style="float: left; margin-bottom:  1em;"><a href=""><img src="/img/upload.svg" alt="" /></a><p>Image 1</p></li>
+                <li style="float: right;margin-bottom: 1em; "><a href=""><img src="/img/upload.svg" alt="" /></a><p>Image 4</p></li>
+                <li style="float: left; margin-bottom: 1em"><a href=""><img src="/img/upload.svg" alt="" /></a>  <p>Image 2</p></li>
+                <li style="float: right;margin-bottom: 1em;"><a href=""><img src="/img/upload.svg" alt="" /></a> <p>Image 3</p></li>
+                <li style="float: left; margin-bottom: 1em"><a href=""><img src="/img/upload.svg" alt="" /></a>  <p>Image 5</p></li>
+                <li style="float: right;margin-bottom: 1em;"><a href=""><img src="/img/upload.svg" alt="" /></a> <p>Image 8</p></li>
+                <li style="float: left; margin-bottom: 1em"><a href=""><img src="/img/upload.svg" alt="" /></a>  <p>Image 6</p></li>
+                <li style="float: right;margin-bottom: 1em;"><a href=""><img src="/img/upload.svg" alt="" /></a> <p>Image 7</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row collapse">
+          <hr>
+          <div class="large-5 columns">
+            <h2>Description</h2>
+            <p>Please provide a long description of the property for rent.  Recommended word count 130 words.</p>
+            <p>This text editor uses Markdown to help you format your text.  Use the return key to add paragraph spacing.</p>
+          </div>
+          <div class="large-7 columns">
+            <textarea rows="15" cols="70" placeholder="Type your property description here..." style="padding: 1em; margin-bottom: 1em;"></textarea>
+          </div>
+        </div>
+        <div class="row collapse enquiry-route">
+          <hr>
+          <h2>Enquiry Route</h2>
+          <div class="large-5 columns">
+            <p>Would you like enquiries about your property to be received by a third party booking agent?</p>
+            <p>Leave this box Unchecked if you would like enquiries to come directly to you via email.</p>
+          </div>
+          <div class="large-7 columns">
+            <input class="enquiry-route-input" type="checkbox" value="agent-enquiry" onclick="document.getElementById('agent-enquiry').style.display = 'inline'"><br>
+            <p style="text-align: right;">Send enquiries to my booking agent.</p>
+          </div>
+          <div class="large-8 columns end">
+            <div id="agent-enquiry">
+              <h2>Third Party Booking Agent Details</h2>
+              <p>You have selected to send enquiries about your rental property to a booking agent.</p>
+              <p>Please provide a URL (website address) for your booking agent.  This might be a profile page for your property that you have already set-up with your booking agent.</p>
+              <p>URLS must begin http:// or https://</p>
+              <input style="width: 100%"type="URL">
+            </div>
+          </div>
+        </div>
+        <div class="row collapse">
+          <hr>
+          <h2>Communicating With You</h2>
+          <div class="large-5 columns">
+            <p>Please provide an email address to communicate with you regarding this rental profile.</p>
+          </div>
+          <div class="large-7 columns">
+            <input type="email">
+          </div>
+        </div>
+        <div class="row collapse">
+          <hr>
+          <div class="large-5 columns">
+            <h2>Checklist</h2>
+            <p>Please select from these variables the statements that best describes your property.  If you do not have a balcony, patio or lawn, leave the checkbox unchecked.</p>
+          </div>
+          <div class="large-7 columns">
+            <div class="checklist-wrap">
+              <table>
+                <tr>
+                  <td>Property Type:</td>
+                  <td>
+                    <select name="property-type">
+                      <option>Flat</option>
+                      <option>Apartment</option>
+                      <option>House</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Bedrooms:</td>
+                  <td>
+                    <select name="number-of-bedrooms">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>5+</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Bathrooms</td>
+                  <td>
+                    <select name="number-of-bathrooms">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>3+</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Sleeps</td>
+                  <td>
+                    <select name="sleeps">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                      <option>11</option>
+                      <option>12</option>
+                      <option>13</option>
+                      <option>14</option>
+                      <option>15</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>View Type</td>
+                  <td>
+                    <select name="view-type">
+                      <option>Sea View</option>
+                      <option>Sea Glimpses</option>
+                      <option>Woodland View</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Wifi</td>
+                  <td>
+                    <input name="wifi" type="checkbox" value="Wifi">
+                  </td>
+                </tr>
+                <tr>
+                  <td>BBQ</td>
+                  <td>
+                    <input name="bbq" type="checkbox" value="BBQ">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Towels Provided</td>
+                  <td>
+                    <input name="Towels" type="checkbox" value="Towels">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Bath</td>
+                  <td>
+                    <input name="Bath" type="checkbox" value="Bath">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Shower</td>
+                  <td>
+                    <input name="Shower" type="checkbox" value="Shower">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Washing Machine</td>
+                  <td>
+                    <input name="Washing Machine" type="checkbox" value="Washing Machine">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Tumble Dryer</td>
+                  <td>
+                    <input name="Tumble Dryer" type="checkbox" value="Tumble Dryer">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Patio</td>
+                  <td>
+                    <input name="Patio" type="checkbox" value="Patio">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Balcony</td>
+                  <td>
+                    <input name="Balcony" type="checkbox" value="Balcony">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Lawn</td>
+                  <td>
+                    <input name="Lawn" type="checkbox" value="Lawn">
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="row collapse">
+          <hr>
+          <h2>Local Recommendations</h2>
+          <div class="large-5 columns">
+            <p>Please provide 8 local recommendations.  These should be personal to you.  Consider including your favourite walk or a beach that you like.  Perhaps a local restaurant or attraction.</p>
+          </div>
+          <div class="large-7 columns local-recs">
+            <input type="text" name="rec-1" placeholder="Recommendation 1"><br>
+            <input type="text" name="rec-2" placeholder="Recommendation 2"><br>
+            <input type="text" name="rec-3" placeholder="Recommendation 3"><br>
+            <input type="text" name="rec-4" placeholder="Recommendation 4"><br>
+            <input type="text" name="rec-5" placeholder="Recommendation 5"><br>
+            <input type="text" name="rec-6" placeholder="Recommendation 6"><br>
+            <input type="text" name="rec-7" placeholder="Recommendation 7"><br>
+            <input type="text" name="rec-8" placeholder="Recommendation 8">
+          </div>
+        </div>
+        <div class="row collapse" style="margin-bottom: 2em;">
+          <hr>
+          <div class="large-5 columns">
+            <h2>Map</h2>
+            <p>Please upload an image to show where this property is on the map.</p>
+          </div>
+          <div class="large-5 columns end">
+            <a href=""><img src="/img/upload.svg" alt="" /></a>
+          </div>
+        </div>
+        <div class="row collapse admin-list">
+          <hr>
+          <div class="large-9 columns">
+            <h2>Edit Property Profile</h2>
+          </div>
+          <div class="large-3 columns">
+            <a href=""><button>Save</button></a>
+            <p style="font-style: italic;">Save the form regularly.</p>
+          </div>
+        </div>
+      </section>
     </div>
-      <div class="large-7 columns">
-        <div class="edit-gallery">
-        <ul class="large-block-grid-4 medium-block-grid-2 small-block-grid-2">
-          <li style="float: left; margin-bottom:  1em;"><a href=""><img src="/img/upload.svg" alt="" /></a><p>Image 1</p></li>
-          <li style="float: right;margin-bottom: 1em; "><a href=""><img src="/img/upload.svg" alt="" /></a><p>Image 4</p></li>
-          <li style="float: left; margin-bottom: 1em"><a href=""><img src="/img/upload.svg" alt="" /></a>  <p>Image 2</p></li>
-          <li style="float: right;margin-bottom: 1em;"><a href=""><img src="/img/upload.svg" alt="" /></a> <p>Image 3</p></li>
-          <li style="float: left; margin-bottom: 1em"><a href=""><img src="/img/upload.svg" alt="" /></a>  <p>Image 5</p></li>
-          <li style="float: right;margin-bottom: 1em;"><a href=""><img src="/img/upload.svg" alt="" /></a> <p>Image 8</p></li>
-          <li style="float: left; margin-bottom: 1em"><a href=""><img src="/img/upload.svg" alt="" /></a>  <p>Image 6</p></li>
-          <li style="float: right;margin-bottom: 1em;"><a href=""><img src="/img/upload.svg" alt="" /></a> <p>Image 7</p></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="row collapse">
-    <hr>
-    <div class="large-5 columns">
-      <h2>Description</h2>
-      <p>Please provide a long description of the property for rent.  Recommended word count 130 words.</p>
-      <p>This text editor uses Markdown to help you format your text.  Use the return key to add paragraph spacing.</p>
-    </div>
-    <div class="large-7 columns">
-      <textarea rows="15" cols="70" placeholder="Type your property description here..." style="padding: 1em; margin-bottom: 1em;"></textarea>
-    </div>
-  </div>
-  <div class="row collapse enquiry-route">
-    <hr>
-    <h2>Enquiry Route</h2>
-    <div class="large-5 columns">
-      <p>Would you like enquiries about your property to be received by a third party booking agent?</p>
-      <p>Leave this box Unchecked if you would like enquiries to come directly to you via email.</p>
-    </div>
-    <div class="large-7 columns">
-      <input class="enquiry-route-input" type="checkbox" value="agent-enquiry" onclick="document.getElementById('agent-enquiry').style.display = 'inline'"><br>
-      <p style="text-align: right;">Send enquiries to my booking agent.</p>
-  </div>
-  <div class="large-8 columns end">
-    <div id="agent-enquiry">
-      <h2>Third Party Booking Agent Details</h2>
-      <p>You have selected to send enquiries about your rental property to a booking agent.</p>
-      <p>Please provide a URL (website address) for your booking agent.  This might be a profile page for your property that you have already set-up with your booking agent.</p>
-      <p>URLS must begin http:// or https://</p>
-      <input style="width: 100%"type="URL">
-    </div>
-  </div>
-  </div>
-    <div class="row collapse">
-      <hr>
-      <h2>Communicating With You</h2>
-      <div class="large-5 columns">
-        <p>Please provide an email address to communicate with you regarding this rental profile.</p>
-      </div>
-      <div class="large-7 columns">
-        <input type="email">
-    </div>
-  </div>
-  <div class="row collapse">
-    <hr>
-    <div class="large-5 columns">
-      <h2>Checklist</h2>
-      <p>Please select from these variables the statements that best describes your property.  If you do not have a balcony, patio or lawn, leave the checkbox unchecked.</p>
-    </div>
-    <div class="large-7 columns">
-      <div class="checklist-wrap">
-        <table>
-          <tr>
-            <td>Property Type:</td>
-            <td>
-              <select name="property-type">
-                <option>Flat</option>
-                <option>Apartment</option>
-                <option>House</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td>Bedrooms:</td>
-            <td>
-              <select name="number-of-bedrooms">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>5+</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td>Bathrooms</td>
-            <td>
-              <select name="number-of-bathrooms">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>3+</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td>Sleeps</td>
-            <td>
-              <select name="sleeps">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-                <option>13</option>
-                <option>14</option>
-                <option>15</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td>View Type</td>
-            <td>
-              <select name="view-type">
-                <option>Sea View</option>
-                <option>Sea Glimpses</option>
-                <option>Woodland View</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <td>Wifi</td>
-            <td>
-              <input name="wifi" type="checkbox" value="Wifi">
-            </td>
-          </tr>
-          <tr>
-            <td>BBQ</td>
-            <td>
-              <input name="bbq" type="checkbox" value="BBQ">
-            </td>
-          </tr>
-          <tr>
-            <td>Towels Provided</td>
-            <td>
-              <input name="Towels" type="checkbox" value="Towels">
-            </td>
-          </tr>
-          <tr>
-            <td>Bath</td>
-            <td>
-              <input name="Bath" type="checkbox" value="Bath">
-            </td>
-          </tr>
-          <tr>
-            <td>Shower</td>
-            <td>
-              <input name="Shower" type="checkbox" value="Shower">
-            </td>
-          </tr>
-          <tr>
-            <td>Washing Machine</td>
-            <td>
-              <input name="Washing Machine" type="checkbox" value="Washing Machine">
-            </td>
-          </tr>
-          <tr>
-            <td>Tumble Dryer</td>
-            <td>
-              <input name="Tumble Dryer" type="checkbox" value="Tumble Dryer">
-            </td>
-          </tr>
-          <tr>
-            <td>Patio</td>
-            <td>
-              <input name="Patio" type="checkbox" value="Patio">
-            </td>
-          </tr>
-          <tr>
-            <td>Balcony</td>
-            <td>
-              <input name="Balcony" type="checkbox" value="Balcony">
-            </td>
-          </tr>
-          <tr>
-            <td>Lawn</td>
-            <td>
-              <input name="Lawn" type="checkbox" value="Lawn">
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-  <div class="row collapse">
-    <hr>
-    <h2>Local Recommendations</h2>
-    <div class="large-5 columns">
-      <p>Please provide 8 local recommendations.  These should be personal to you.  Consider including your favourite walk or a beach that you like.  Perhaps a local restaurant or attraction.</p>
-    </div>
-    <div class="large-7 columns local-recs">
-      <input type="text" name="rec-1" placeholder="Recommendation 1"><br>
-      <input type="text" name="rec-2" placeholder="Recommendation 2"><br>
-      <input type="text" name="rec-3" placeholder="Recommendation 3"><br>
-      <input type="text" name="rec-4" placeholder="Recommendation 4"><br>
-      <input type="text" name="rec-5" placeholder="Recommendation 5"><br>
-      <input type="text" name="rec-6" placeholder="Recommendation 6"><br>
-      <input type="text" name="rec-7" placeholder="Recommendation 7"><br>
-      <input type="text" name="rec-8" placeholder="Recommendation 8">
-    </div>
-  </div>
-  <div class="row collapse" style="margin-bottom: 2em;">
-    <hr>
-    <div class="large-5 columns">
-      <h2>Map</h2>
-      <p>Please upload an image to show where this property is on the map.</p>
-    </div>
-    <div class="large-5 columns end">
-      <a href=""><img src="/img/upload.svg" alt="" /></a>
-    </div>
-  </div>
-  <div class="row collapse admin-list">
-    <hr>
-    <div class="large-9 columns">
-      <h2>Edit Property Profile</h2>
-    </div>
-    <div class="large-3 columns">
-      <a href=""><button>Save</button></a>
-      <p style="font-style: italic;">Save the form regularly.</p>
-    </div>
-  </div>
-</section>
-</div>
-<!-- END For Rent Form -->
+  </form>
+  <!-- END For Rent Form -->
 </div>
 
 <script type="text/javascript">
 $.noConflict()
 jQuery(document).ready(function($){
-$('#tabvanilla > ul').tabs({ fx: { opacity: 'toggle' } });
-$('#featurevid > ul').tabs();
+  $('#tabvanilla > ul').tabs({ fx: { opacity: 'toggle' } });
+  $('#featurevid > ul').tabs();
 });
 </script>
