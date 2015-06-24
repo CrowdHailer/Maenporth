@@ -116,9 +116,9 @@
   display: none;
 }
 
-.edit-gallery img:hover {
-  opacity: 0.7;
-  cursor: pointer;
+.edit-gallery img {
+  cursor: default;
+  height: 73px;
 }
 
 .checklist-wrap {
