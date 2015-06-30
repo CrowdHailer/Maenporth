@@ -1,5 +1,3 @@
-
-
 class SalePrice
   CURRENCY = 'GBP'
   def initialize(pounds)

@@ -1,0 +1,3 @@
+class Link < String
+
+end
