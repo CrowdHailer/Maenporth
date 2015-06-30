@@ -1,5 +1,13 @@
 class SalePrice
   CURRENCY = 'GBP'
+
+  class << self
+    def dump(item)
+      # TODO test
+      item.pounds
+    end
+  end
+
   def initialize(pounds)
     pence = pounds.to_f * 100
     @value = Money.new pence, CURRENCY
