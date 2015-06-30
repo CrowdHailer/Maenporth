@@ -1,6 +1,12 @@
 require_relative '../test_config'
 
 class PropertyFormTest < Minitest::Test
+  def test_obtains_property_name
+    property_name = 'number 38'
+    form = PropertyForm.new :property_name => property_name
+    assert_equal property_name, form.property_name
+  end
+
   def test_obtains_sale_description
     raw = '# Hello'
     description = Description.new raw

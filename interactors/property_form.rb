@@ -1,4 +1,5 @@
 class PropertyForm < Vulcanize::Form
+  attribute :property_name, PropertyName
   attribute :sale_description, Description
   attribute :sale_price, SalePrice
   attribute :estate_agent_link, Link

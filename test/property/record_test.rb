@@ -9,6 +9,13 @@ module Property
       assert record.id
     end
 
+    def test_can_save_property_name
+      raw = 'Number 45'
+      property_name = PropertyName.new raw
+      record = Record.new :property_name => property_name
+      assert_equal property_name, record.property_name
+    end
+
     def test_can_save_sale_description
       raw = '# Hello'
       description = Description.new raw
