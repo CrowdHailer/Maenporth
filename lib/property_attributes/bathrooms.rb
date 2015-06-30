@@ -1,0 +1,3 @@
+class Bathrooms < String
+
+end
