@@ -13,6 +13,10 @@ module Maenporth
       assert_ok get('/')
     end
 
+    def test_new_page_is_availabe
+      assert_ok get('/new')
+    end
+
     def test_edit_page_is_available_for_property
       property = Estate.create
       assert_ok get("/#{property.id}/edit")

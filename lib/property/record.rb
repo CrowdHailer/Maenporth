@@ -13,5 +13,10 @@ module Property
     serialize_attributes [->(x){x}, Bathrooms.method(:new)], :bathrooms
     serialize_attributes [->(x){x}, PropertyType.method(:new)], :property_type
     serialize_attributes [->(x){x}, ViewType.method(:new)], :view_type
+
+    def sale_description
+      # TODO move to enitity and test
+      super || Description.new('')
+    end
   end
 end

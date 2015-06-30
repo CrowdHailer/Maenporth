@@ -7,6 +7,12 @@ module Maenporth
       render :index
     end
 
+    get '/new' do
+      # Might want to be 'new in future'
+      @property = Property::Record.create
+      render :edit
+    end
+
     get '/for-rent' do
       render :'all-for-rent'
     end
