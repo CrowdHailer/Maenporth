@@ -35,7 +35,8 @@
     </ul>
   </div>
   <!-- For Sale Form -->
-  <form id="form_id" action="index.html" method="post">
+  <form id="form_id" action="/properties/<%= @property.id %>" method="post">
+    <input type="hidden" name="_method" value="PATCH">
     <div id="c-tabs1" class="tabdiv">
       <section id="for-sale">
         <div class="row collapse">
@@ -97,7 +98,7 @@
           <hr>
           <div class="large-12 columns prop-name">
             <h2>Property Name</h2>
-            <input type="text" value="<%= @property.property_name %>">
+            <input type="text" name='property[property_name]' value="<%= @property.property_name %>">
           </div>
         </div>
         <div class="row collapse">
@@ -108,9 +109,7 @@
             <p>This text editor uses Markdown to help you format your text.  Use the return key to add paragraph spacing.</p>
           </div>
           <div class="large-7 columns">
-            <textarea rows="15" cols="70" placeholder="Type your property description here..." style="padding: 1em; margin-bottom: 1em;">
-              <%= @property.sale_description %>
-            </textarea>
+            <textarea rows="15" cols="70" placeholder="Type your property description here..." style="padding: 1em; margin-bottom: 1em;" name="property[sale_description]"><%= @property.sale_description.raw %></textarea>
           </div>
         </div>
         <div class="row collapse">
@@ -120,7 +119,7 @@
             <p>Numbers only, do not include the currency symbol.</p>
           </div>
           <div class="large-7 columns">
-            <input class="sale-price-input" type="number" placeholder="e.g. 280000" value="<%= @property.sale_price %>">
+            <input class="sale-price-input" type="number" placeholder="e.g. 280000" name="property[sale_price]" value="<%= @property.sale_price.pounds if @property.sale_price %>">
           </div>
         </div>
         <div class="row collapse">
@@ -130,7 +129,7 @@
             <p>URL format http(s)://www.example.com</p>
           </div>
           <div class="large-7 columns">
-            <input class="sale-price-input" type="url" placeholder="http://www.example.com">
+            <input class="sale-price-input" type="url" placeholder="http://www.example.com" name="property[estate_agent_link]" value="<%= @property.estate_agent_link %>">
           </div>
         </div>
         <div class="row collapse">
@@ -148,12 +147,12 @@
                     </p>
                   </td>
                   <td>
-                    <select name="property-type">
-                      <option>Flat</option>
-                      <option>Apartment</option>
-                      <option>Semi Detached</option>
-                      <option>Terraced</option>
-                      <option>End of Terrace</option>
+                    <select name="property[property_type]">
+                      <option <%= 'selected' if @property.property_type == 'Flat' %>>Flat</option>
+                      <option <%= 'selected' if @property.property_type == 'Apartment' %>>Apartment</option>
+                      <option <%= 'selected' if @property.property_type == 'Semi Detached' %>>Semi Detached</option>
+                      <option <%= 'selected' if @property.property_type == 'Terraced' %>>Terraced</option>
+                      <option <%= 'selected' if @property.property_type == 'End of Terrace' %>>End of Terrace</option>
                     </select>
                   </td>
                 </tr>
@@ -163,13 +162,13 @@
                     </p>
                   </td>
                   <td>
-                    <select name="number-of-bedrooms">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                      <option>5+</option>
+                    <select name="property[bedrooms]">
+                      <option <%= 'selected' if @property.bedrooms == '1' %>>1</option>
+                      <option <%= 'selected' if @property.bedrooms == '2' %>>2</option>
+                      <option <%= 'selected' if @property.bedrooms == '3' %>>3</option>
+                      <option <%= 'selected' if @property.bedrooms == '4' %>>4</option>
+                      <option <%= 'selected' if @property.bedrooms == '5' %>>5</option>
+                      <option <%= 'selected' if @property.bedrooms == '5+' %>>5+</option>
                     </select>
                   </td>
                 </tr>
@@ -179,11 +178,11 @@
                     </p>
                   </td>
                   <td>
-                    <select name="number-of-bathrooms">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>3+</option>
+                    <select name="property[bathrooms]">
+                      <option <%= 'selected' if @property.bathrooms == '1' %>>1</option>
+                      <option <%= 'selected' if @property.bathrooms == '2' %>>2</option>
+                      <option <%= 'selected' if @property.bathrooms == '3' %>>3</option>
+                      <option <%= 'selected' if @property.bathrooms == '3+' %>>3+</option>
                     </select>
                   </td>
                 </tr>
@@ -193,10 +192,10 @@
                     </p>
                   </td>
                   <td>
-                    <select name="view-type">
-                      <option>Sea View</option>
-                      <option>Sea Glimpses</option>
-                      <option>Woodland View</option>
+                    <select name="property[view_type]">
+                      <option <%= 'selected' if @property.view_type == 'Sea View' %>>Sea View</option>
+                      <option <%= 'selected' if @property.view_type == 'Sea Glimpses' %>>Sea Glimpses</option>
+                      <option <%= 'selected' if @property.view_type == 'Woodland View' %>>Woodland View</option>
                     </select>
                   </td>
                 </tr>
@@ -206,7 +205,7 @@
                     </p>
                   </td>
                   <td>
-                    <input name="balcony" type="checkbox" value="Balcony">
+                    <input name="property[balcony]" type="checkbox" <%= 'checked' if @property.balcony %>>
                   </td>
                 </tr>
                 <tr>
@@ -215,7 +214,7 @@
                     </p>
                   </td>
                   <td>
-                    <input name="patio" type="checkbox" value="Patio">
+                    <input name="property[patio]" type="checkbox" <%= 'checked' if @property.patio %>>
                   </td>
                 </tr>
                 <tr>
@@ -224,7 +223,7 @@
                     </p>
                   </td>
                   <td>
-                    <input name="lawn" type="checkbox" value="Lawn">
+                    <input name="property[lawn]" type="checkbox" <%= 'checked' if @property.lawn %>>
                   </td>
                 </tr>
               </table>

@@ -23,6 +23,18 @@ module Maenporth
       render :edit
     end
 
+    patch '/:id' do |id|
+      # TODO test
+      @property = Estate.fetch(id) do
+        not_found
+        halt
+      end
+      form = PropertyForm.new request.POST['property']
+      ap request.POST
+      @property.update form
+      render :edit
+    end
+
     get '/1/for-rent' do
       render :'for-rent'
     end
