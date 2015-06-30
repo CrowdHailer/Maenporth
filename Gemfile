@@ -11,7 +11,21 @@ gem 'shotgun' # Automatic reloading of Rack based applications
 
 gem 'scorched'
 
+gem 'bugsnag'
+
 gem 'sass'
+
+gem 'redcarpet'
+
+gem 'money'
+
+gem 'vulcanize', :git => 'git@github.com:CrowdHailer/vulcanize.git'
+
+gem 'pg'
+
+gem 'sequel'
+
+gem 'errol', :git => 'git@github.com:CrowdHailer/Errol.git'
 
 group :test do
   gem 'rack-test', :require => 'rack/test'

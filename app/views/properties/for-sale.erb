@@ -1,0 +1,166 @@
+<div class="row collapse">
+  <div class="large-12 columns">
+    <div id="image-enlarge">
+      <div class="large-map">
+        <a onclick="document.getElementById('image-enlarge').style.display = 'none'">&#x2716;</a>
+        <h1>Property Name</h1>
+        <h2>Location on Maenporth Estate</h2>
+        <img style="width: 100%;" src="/img/property-map.jpg">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function changeImage(current) {
+  var imagesNumber = 8;
+
+  for (i=1; i<=imagesNumber; i++) {
+    if (i == current) {
+      document.getElementById("normal" + current).style.display = "block";
+    } else {
+      document.getElementById("normal" + i).style.display = "none";
+    }
+  }
+}
+</script>
+
+<div class="row collapse" id="white-bg">
+  <div class="large-12 columns">
+    <div class="property-box property-box-large for-rent">
+      <div class="row collapse">
+        <div class="large-10 medium-10 columns">
+          <h2>Property Name 38 Lower Gardens</h2>
+        </div>
+        <div class="large-2 medium-2 columns">
+          <h2>For Sale <img class="property-box-icon" src="/img/house-svg-09.svg"></h2>
+        </div>
+      </div>
+      <hr>
+      <!-- -->
+      <div class="row collapse">
+        <div class="large-8 columns">
+          <div id="bigimages">
+            <div id="normal1">
+              <img class="large-image" src="/img/nature1.jpg" alt=""/>
+            </div>
+
+            <div id="normal2">
+              <img class="large-image" src="/img/nature2.jpg" alt=""/>
+            </div>
+
+            <div id="normal3">
+              <img class="large-image" src="/img/nature3.jpg" alt=""/>
+            </div>
+
+            <div id="normal4">
+              <img class="large-image" src="/img/nature4.jpg" alt=""/>
+            </div>
+
+            <div id="normal5">
+              <img class="large-image" src="/img/nature5.jpg" alt=""/>
+            </div>
+
+            <div id="normal6">
+              <img class="large-image" src="/img/nature6.jpg" alt=""/>
+            </div>
+
+            <div id="normal7">
+              <img class="large-image" src="/img/nature7.jpg" alt=""/>
+            </div>
+
+            <div id="normal8">
+              <img class="large-image" src="/img/nature8.jpg" alt=""/>
+            </div>
+          </div>
+        </div>
+        <div class="large-2 columns">
+          <div id="gallery">
+            <div id="thumbs">
+              <div class="row collapse">
+              <ul class="large-block-grid-1 medium-block-grid-1 small-block-grid-2">
+                <li><a href="javascript: changeImage(1);"><img src="/img/nature1.jpg" alt="" /></a></li>
+                <li><a href="javascript: changeImage(2);"><img src="/img/nature2.jpg" alt="" /></a></li>
+                <li><a href="javascript: changeImage(3);"><img src="/img/nature3.jpg" alt="" /></a></li>
+                <li><a href="javascript: changeImage(4);"><img src="/img/nature4.jpg" alt="" /></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="large-2 columns">
+        <div id="gallery">
+          <div id="thumbs">
+            <div class="row collapse">
+            <ul class="large-block-grid-1 medium-block-grid-1 small-block-grid-2">
+              <li><a href="javascript: changeImage(5);"><img src="/img/nature5.jpg" alt="" /></a></li>
+              <li><a href="javascript: changeImage(6);"><img src="/img/nature6.jpg" alt="" /></a></li>
+              <li><a href="javascript: changeImage(7);"><img src="/img/nature7.jpg" alt="" /></a></li>
+              <li><a href="javascript: changeImage(8);"><img src="/img/nature8.jpg" alt="image-alt" /></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <!-- -->
+      <div class="row collapse">
+        <div class="large-6 columns">
+          <div class="description-wrap">
+            <p class="description">Description, 200 words. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            <br><br>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+            <br><br>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+            <br><br> Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum
+          </div>
+          <h2 style="margin-top: 1em;">Why Buy at Maenporth</h2>
+          <div class="favourites-wrap">
+            <ul>
+              <li>Reason 1</li>
+              <li>Reason 2</li>
+              <li>Reason 3</li>
+              <li>Reason 4</li>
+              <li>Reason 5</li>
+              <li>Reason 6</li>
+              <li>Reason 7</li>
+              <li>Reason 8</li>
+            </ul>
+          </div>
+        </div>
+        <div class="large-6 columns">
+          <div class="prop-type">
+            <h1>£230000</h1>
+            <div class="row collapse">
+              <div class="large-6 columns">
+                <h3>Bedrooms</h3>
+                <h4>3</h4>
+              </div>
+              <div class="large-6 columns">
+                <h3>Bathrooms</h3>
+                <h4>1</h4>
+              </div>
+            </div>
+          </div>
+          <a href="">
+            <button class="enq-btn">
+              Visit Estate Agent Website
+            </button>
+          </a>
+          <div class="facilities-wrap" style="margin-top: 1em;">
+                  <ul>
+                    <li>Property Type</li>
+                    <li>Bedrooms: 4</li>
+                    <li>Bathrooms: 1</li>
+                    <li>View Type</li>
+                    <li>Balcony?</li>
+                    <li>Patio</li>
+                    <li>Lawn</li>
+                  </ul>
+                </div>
+                <div class="map-wrap" onclick="document.getElementById('image-enlarge').style.display = 'inline'">
+                  <img style="width: 100%;" src="/img/property-map.jpg">
+                </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

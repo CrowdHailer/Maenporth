@@ -1,0 +1,3 @@
+class PropertyName < String
+
+end
