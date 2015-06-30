@@ -1,3 +1,9 @@
+GIT
+  remote: git@github.com:CrowdHailer/vulcanize.git
+  revision: 8fb85277ef388273693701b7c47d32d60d5b3240
+  specs:
+    vulcanize (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -61,3 +67,4 @@ DEPENDENCIES
   scorched
   shotgun
   thin
+  vulcanize!

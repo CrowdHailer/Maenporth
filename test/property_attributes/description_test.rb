@@ -25,4 +25,8 @@ class DescriptionTest < MiniTest::Test
     assert_equal description_string, description.raw
   end
 
+  def test_should_be_equal_for_raw_input
+    assert_equal description, Description.new(description_string)
+  end
+
 end

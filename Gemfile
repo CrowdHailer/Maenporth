@@ -19,6 +19,8 @@ gem 'redcarpet'
 
 gem 'money'
 
+gem 'vulcanize', :git => 'git@github.com:CrowdHailer/vulcanize.git'
+
 group :test do
   gem 'rack-test', :require => 'rack/test'
   gem 'minitest', :require => 'minitest/autorun'

@@ -12,4 +12,8 @@ class Description
     @html ||= Renderer.render raw
   end
 
+  def ==(other)
+    raw == other.raw
+  end
+
 end
