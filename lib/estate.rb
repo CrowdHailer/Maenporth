@@ -25,6 +25,8 @@ class Estate < Errol::Repository
   end
 
   def dataset
-    raw_dataset.order :title
+    # TODO errol allow no dataset method
+    raw_dataset
+    # raw_dataset.order :title
   end
 end
