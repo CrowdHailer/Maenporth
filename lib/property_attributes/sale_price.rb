@@ -1,7 +1,7 @@
 class SalePrice
   CURRENCY = 'GBP'
   def initialize(pounds)
-    pence = pounds * 100
+    pence = pounds.to_f * 100
     @value = Money.new pence, CURRENCY
   end
 
@@ -11,5 +11,9 @@ class SalePrice
 
   def to_s
     @value.format
+  end
+
+  def ==(other)
+    pounds == other.pounds
   end
 end
