@@ -21,6 +21,8 @@ gem 'money'
 
 gem 'vulcanize', :git => 'git@github.com:CrowdHailer/vulcanize.git'
 
+gem 'pg'
+
 gem 'sequel'
 
 gem 'errol', :git => 'git@github.com:CrowdHailer/Errol.git'

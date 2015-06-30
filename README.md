@@ -18,6 +18,22 @@ cd Maenporth
 bundle install
 ```
 
+#### Build Database
+
+create a development and a test database
+
+```
+createdb maenporth_development
+createdb maenporth_test
+```
+
+Run the migrations to the latest database schema
+
+```
+rake db:migrate:up
+RACK_ENV=test rake db:migrate:up
+```
+
 #### Add Enviroment Variable
 
 *Enviroment variables loaded with dotenv Gem*
