@@ -15,7 +15,8 @@ module Maenporth
       render :'all-for-sale'
     end
 
-    get '/1/edit' do
+    get '/:id/edit' do |id|
+      @property = Estate.fetch(id) { not_found }
       render :edit
     end
 
@@ -29,6 +30,10 @@ module Maenporth
 
     get '/1/enquire' do
       render :enquire
+    end
+
+    def not_found
+      response.status = 404
     end
 
   end
