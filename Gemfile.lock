@@ -1,4 +1,11 @@
 GIT
+  remote: git@github.com:CrowdHailer/Errol.git
+  revision: 80b5850ff9e6a51a68dbd89f274b13d0d481c17d
+  specs:
+    errol (0.0.1)
+      sequel (~> 4.19)
+
+GIT
   remote: git@github.com:CrowdHailer/vulcanize.git
   revision: 8fb85277ef388273693701b7c47d32d60d5b3240
   specs:
@@ -43,6 +50,7 @@ GEM
       tilt (~> 1.4)
     scorched-accept (0.1)
       parslet (~> 1.7)
+    sequel (4.23.0)
     shotgun (0.9.1)
       rack (>= 1.0)
     thin (1.6.3)
@@ -58,6 +66,7 @@ DEPENDENCIES
   awesome_print
   bugsnag
   dotenv
+  errol!
   minitest
   minitest-reporters
   money
@@ -65,6 +74,7 @@ DEPENDENCIES
   redcarpet
   sass
   scorched
+  sequel
   shotgun
   thin
   vulcanize!

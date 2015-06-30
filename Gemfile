@@ -21,6 +21,10 @@ gem 'money'
 
 gem 'vulcanize', :git => 'git@github.com:CrowdHailer/vulcanize.git'
 
+gem 'sequel'
+
+gem 'errol', :git => 'git@github.com:CrowdHailer/Errol.git'
+
 group :test do
   gem 'rack-test', :require => 'rack/test'
   gem 'minitest', :require => 'minitest/autorun'
