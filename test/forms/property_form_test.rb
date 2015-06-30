@@ -44,4 +44,34 @@ class PropertyFormTest < Minitest::Test
     form = PropertyForm.new :view_type => view_type
     assert_equal view_type, form.view_type
   end
+
+  def test_obtains_balcony
+    form = PropertyForm.new :balcony => 'on'
+    assert_equal true, form.balcony
+  end
+
+  def test_balcony_false_when_unchecked
+    form = PropertyForm.new
+    assert_equal false, form.balcony
+  end
+
+  def test_obtains_patio
+    form = PropertyForm.new :patio => 'on'
+    assert_equal true, form.patio
+  end
+
+  def test_patio_false_when_unchecked
+    form = PropertyForm.new
+    assert_equal false, form.patio
+  end
+
+  def test_obtains_lawn
+    form = PropertyForm.new :lawn => 'on'
+    assert_equal true, form.lawn
+  end
+
+  def test_lawn_false_when_unchecked
+    form = PropertyForm.new
+    assert_equal false, form.lawn
+  end
 end

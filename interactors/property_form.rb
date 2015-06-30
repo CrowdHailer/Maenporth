@@ -6,4 +6,7 @@ class PropertyForm < Vulcanize::Form
   attribute :bedrooms, Bedrooms
   attribute :bathrooms, Bathrooms
   attribute :view_type, ViewType
+  attribute :balcony, Vulcanize::CheckBox, :default => false
+  attribute :patio, Vulcanize::CheckBox, :default => false
+  attribute :lawn, Vulcanize::CheckBox, :default => false
 end
