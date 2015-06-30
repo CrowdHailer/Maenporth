@@ -16,7 +16,10 @@ module Maenporth
     end
 
     get '/:id/edit' do |id|
-      @property = Estate.fetch(id) { not_found }
+      @property = Estate.fetch(id) do
+        not_found
+        halt
+      end
       render :edit
     end
 
