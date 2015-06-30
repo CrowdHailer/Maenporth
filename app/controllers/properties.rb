@@ -3,6 +3,7 @@ module Maenporth
     render_defaults[:dir] += '/properties'
 
     get '/' do
+      @properties = Estate.all
       render :index
     end
 

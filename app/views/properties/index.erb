@@ -21,7 +21,7 @@
 <div class="admin-head">
   <div class="row collapse">
     <div class="large-10 columns">
-        <h1>Maenporth Estate System Admin</h1>
+      <h1>Maenporth Estate System Admin</h1>
     </div>
     <div class="large-2 columns">
       <a href=""><button>Log Out</button></a>
@@ -43,9 +43,10 @@
 
 <!-- REPEAT THIS SECTION -->
 
+<% @properties.each do |property| %>
 <div class="row collapse admin-listing">
   <div class="large-8 columns">
-    <h3>Property Name 38 Lower Gardens</h3>
+    <h3>Property Name <%= property.property_name %></h3>
   </div>
   <div class="large-2 columns">
     <div class="stat-wrap">
@@ -60,232 +61,9 @@
   </div>
   <div class="large-2 columns">
     <button onclick="document.getElementById('are-you-sure').style.display = 'inline'" style="background: red;">DELETE</button>
-    <a href=""><button style="background: #60c650;">EDIT</button></a>
+    <a href="/properties/<%= property.id %>/edit"><button style="background: #60c650;">EDIT</button></a>
   </div>
 </div>
-
-<!-- END REPEAT -->
-<!-- REPEAT THIS SECTION -->
-
-<div class="row collapse admin-listing">
-  <div class="large-8 columns">
-    <h3>Property Name 38 Lower Gardens</h3>
-  </div>
-  <div class="large-2 columns">
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Sale</p><img src="/img/house-svg-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Rent</p><img src="/img/sun-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox" checked><p>Hide</p><img src="/img/hidden-02.svg">
-    </div>
-  </div>
-  <div class="large-2 columns">
-    <button onclick="document.getElementById('are-you-sure').style.display = 'inline'" style="background: red;">DELETE</button>
-    <a href=""><button style="background: #60c650;">EDIT</button></a>
-  </div>
-</div>
-
-<!-- END REPEAT -->
-
-<!-- REPEAT THIS SECTION -->
-
-<div class="row collapse admin-listing">
-  <div class="large-8 columns">
-    <h3>Property Name 38 Lower Gardens</h3>
-  </div>
-  <div class="large-2 columns">
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Sale</p><img src="/img/house-svg-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Rent</p><img src="/img/sun-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox" checked><p>Hide</p><img src="/img/hidden-02.svg">
-    </div>
-  </div>
-  <div class="large-2 columns">
-    <button onclick="document.getElementById('are-you-sure').style.display = 'inline'" style="background: red;">DELETE</button>
-    <a href=""><button style="background: #60c650;">EDIT</button></a>
-  </div>
-</div>
-
-<!-- END REPEAT -->
-
-<!-- REPEAT THIS SECTION -->
-
-<div class="row collapse admin-listing">
-  <div class="large-8 columns">
-    <h3>Property Name 38 Lower Gardens</h3>
-  </div>
-  <div class="large-2 columns">
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Sale</p><img src="/img/house-svg-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Rent</p><img src="/img/sun-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox" checked><p>Hide</p><img src="/img/hidden-02.svg">
-    </div>
-  </div>
-  <div class="large-2 columns">
-    <button onclick="document.getElementById('are-you-sure').style.display = 'inline'" style="background: red;">DELETE</button>
-    <a href=""><button style="background: #60c650;">EDIT</button></a>
-  </div>
-</div>
-
-<!-- END REPEAT -->
-
-<!-- REPEAT THIS SECTION -->
-
-<div class="row collapse admin-listing">
-  <div class="large-8 columns">
-    <h3>Property Name 38 Lower Gardens</h3>
-  </div>
-  <div class="large-2 columns">
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Sale</p><img src="/img/house-svg-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Rent</p><img src="/img/sun-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox" checked><p>Hide</p><img src="/img/hidden-02.svg">
-    </div>
-  </div>
-  <div class="large-2 columns">
-    <button onclick="document.getElementById('are-you-sure').style.display = 'inline'" style="background: red;">DELETE</button>
-    <a href=""><button style="background: #60c650;">EDIT</button></a>
-  </div>
-</div>
-
-<!-- END REPEAT -->
-
-<!-- REPEAT THIS SECTION -->
-
-<div class="row collapse admin-listing">
-  <div class="large-8 columns">
-    <h3>Property Name 38 Lower Gardens</h3>
-  </div>
-  <div class="large-2 columns">
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Sale</p><img src="/img/house-svg-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Rent</p><img src="/img/sun-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox" checked><p>Hide</p><img src="/img/hidden-02.svg">
-    </div>
-  </div>
-  <div class="large-2 columns">
-    <button onclick="document.getElementById('are-you-sure').style.display = 'inline'" style="background: red;">DELETE</button>
-    <a href=""><button style="background: #60c650;">EDIT</button></a>
-  </div>
-</div>
-
-<!-- END REPEAT -->
-
-<!-- REPEAT THIS SECTION -->
-
-<div class="row collapse admin-listing">
-  <div class="large-8 columns">
-    <h3>Property Name 38 Lower Gardens</h3>
-  </div>
-  <div class="large-2 columns">
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Sale</p><img src="/img/house-svg-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Rent</p><img src="/img/sun-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox" checked><p>Hide</p><img src="/img/hidden-02.svg">
-    </div>
-  </div>
-  <div class="large-2 columns">
-    <button onclick="document.getElementById('are-you-sure').style.display = 'inline'" style="background: red;">DELETE</button>
-    <a href=""><button style="background: #60c650;">EDIT</button></a>
-  </div>
-</div>
-
-<!-- END REPEAT -->
-
-<!-- REPEAT THIS SECTION -->
-
-<div class="row collapse admin-listing">
-  <div class="large-8 columns">
-    <h3>Property Name 38 Lower Gardens</h3>
-  </div>
-  <div class="large-2 columns">
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Sale</p><img src="/img/house-svg-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Rent</p><img src="/img/sun-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox" checked><p>Hide</p><img src="/img/hidden-02.svg">
-    </div>
-  </div>
-  <div class="large-2 columns">
-    <button onclick="document.getElementById('are-you-sure').style.display = 'inline'" style="background: red;">DELETE</button>
-    <a href=""><button style="background: #60c650;">EDIT</button></a>
-  </div>
-</div>
-
-<!-- END REPEAT -->
-
-<!-- REPEAT THIS SECTION -->
-
-<div class="row collapse admin-listing">
-  <div class="large-8 columns">
-    <h3>Property Name 38 Lower Gardens</h3>
-  </div>
-  <div class="large-2 columns">
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Sale</p><img src="/img/house-svg-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Rent</p><img src="/img/sun-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox" checked><p>Hide</p><img src="/img/hidden-02.svg">
-    </div>
-  </div>
-  <div class="large-2 columns">
-    <button onclick="document.getElementById('are-you-sure').style.display = 'inline'" style="background: red;">DELETE</button>
-    <a href=""><button style="background: #60c650;">EDIT</button></a>
-  </div>
-</div>
-
-<!-- END REPEAT -->
-
-<!-- REPEAT THIS SECTION -->
-
-<div class="row collapse admin-listing">
-  <div class="large-8 columns">
-    <h3>Property Name 38 Lower Gardens</h3>
-  </div>
-  <div class="large-2 columns">
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Sale</p><img src="/img/house-svg-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox"><p>For Rent</p><img src="/img/sun-09.svg">
-    </div>
-    <div class="stat-wrap">
-      <input type="checkbox" checked><p>Hide</p><img src="/img/hidden-02.svg">
-    </div>
-  </div>
-  <div class="large-2 columns">
-    <button onclick="document.getElementById('are-you-sure').style.display = 'inline'" style="background: red;">DELETE</button>
-    <a href=""><button style="background: #60c650;">EDIT</button></a>
-  </div>
-</div>
+<% end %>
 
 <!-- END REPEAT -->
