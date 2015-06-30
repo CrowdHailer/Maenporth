@@ -60,7 +60,10 @@
     </div>
   </div>
   <div class="large-2 columns">
-    <button onclick="document.getElementById('are-you-sure').style.display = 'inline'" style="background: red;">DELETE</button>
+    <form class="" action="/properties/<%= property.id %>" method="post">
+      <input type="hidden" name="_method" value="DELETE">
+      <button onclick="document.getElementById('are-you-sure').style.display = 'inline'" style="background: red;">DELETE</button>
+    </form>
     <a href="/properties/<%= property.id %>/edit"><button style="background: #60c650;">EDIT</button></a>
   </div>
 </div>

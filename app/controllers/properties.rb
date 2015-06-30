@@ -53,6 +53,15 @@ module Maenporth
       render :enquire
     end
 
+    delete '/:id' do |id|
+      piece = Estate.fetch(id) do
+        not_found
+        halt
+      end
+      piece.destroy
+      redirect '/pieces'
+    end
+
     def not_found
       response.status = 404
     end
