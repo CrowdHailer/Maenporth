@@ -22,6 +22,9 @@ class SalePrice
   end
 
   def ==(other)
-    pounds == other.pounds
+    if other.respond_to? :pounds
+      # TODO test conditional
+      pounds == other.pounds
+    end
   end
 end

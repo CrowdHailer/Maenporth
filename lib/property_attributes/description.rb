@@ -19,7 +19,10 @@ class Description
   end
 
   def ==(other)
-    raw == other.raw
+    if other.respond_to? :raw
+      # TODO test more
+      raw == other.raw
+    end
   end
 
 end
