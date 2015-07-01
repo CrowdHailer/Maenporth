@@ -120,19 +120,19 @@ function changeImage(current) {
       <div class="row collapse">
         <div class="large-6 columns">
           <div class="description-wrap">
-            <%= @property.sale_description.html %>
+            <%= @property.rent_description.html if @property.rent_description %>
           </div>
           <h2 style="margin-top: 1em;">Local Recommendations</h2>
           <div class="favourites-wrap">
             <ul>
-              <li>Try the lovely restaurant.</li>
-              <li>The gardens at Budock are our favourite.</li>
-              <li>Maenporth beach is a must.</li>
-              <li>Try swimming at Durgan beach.</li>
-              <li>Falmouth town is a lot of fun.</li>
-              <li>We have a lovely BBQ terrace here.</li>
-              <li>Explore Pendennis castle.</li>
-              <li>Have fun at Cornwall's Crealy.</li>
+              <li><%= @property.recommendation_1 %></li>
+              <li><%= @property.recommendation_2 %></li>
+              <li><%= @property.recommendation_3 %></li>
+              <li><%= @property.recommendation_4 %></li>
+              <li><%= @property.recommendation_5 %></li>
+              <li><%= @property.recommendation_6 %></li>
+              <li><%= @property.recommendation_7 %></li>
+              <li><%= @property.recommendation_8 %></li>
             </ul>
           </div>
         </div>
@@ -146,7 +146,7 @@ function changeImage(current) {
               </div>
               <div class="large-4 columns">
                 <h3>Sleeps</h3>
-                <h4>6</h4>
+                <h4><%= @property.sleeps %></h4>
               </div>
               <div class="large-4 columns">
                 <h3>Bathrooms</h3>
