@@ -137,10 +137,8 @@ function changeImage(current) {
               </div>
             </div>
           </div>
-          <a href="">
-            <button class="enq-btn">
-              Visit Estate Agent Website
-            </button>
+          <a class="enq-btn" href="">
+            Visit Estate Agent Website
           </a>
           <style media="screen">
             .facilities-wrap ul {
@@ -163,7 +161,7 @@ function changeImage(current) {
               <li>Bedrooms: <%= @property.bedrooms %></li>
               <li>Bathrooms: <%= @property.bathrooms %></li>
               <li><%= @property.view_type %></li>
-              
+
               <% if @property.patio %>
               <li>Patio</li>
               <% end %>
