@@ -2,10 +2,11 @@
   <h1>Properties For Rent</h1>
   <hr>
   <!-- START REPEATING -->
+  <% @properties.each do |property| %>
   <div class="property-box for-rent">
     <div class="row collapse">
       <div class="large-10 medium-10 columns">
-        <h2>Property Name 38 Lower Gardens</h2>
+        <h2>Property Name <%= property.property_name %></h2>
       </div>
       <div class="large-2 medium-2 columns">
         <h2>For Rent <img class="property-box-icon" src="/img/sun-09.svg"></h2>
@@ -19,18 +20,19 @@
       <div class="large-7 medium-4 columns">
         <div class="sale-content">
           <ul>
-            <li>3 Bedrooms</li>
+            <li><%= property.bedrooms %> Bedrooms</li>
             <li>Sleeps 6</li>
-            <li>Apartment</li>
+            <li><%= property.view_type %></li>
           </ul>
         </div>
       </div>
       <div class="large-2 medium-12 columns">
-        <a href="insert-link">
+        <a href="/properties/<%= property.id %>/for-rent">
           <button>Find Out More</button>
         </a>
       </div>
     </div>
   </div>
+  <% end %>
   <!-- END REPEATING -->
 </div>
