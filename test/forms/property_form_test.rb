@@ -80,4 +80,24 @@ class PropertyFormTest < Minitest::Test
     form = PropertyForm.new
     assert_equal false, form.lawn
   end
+
+  def test_obtains_for_rent_status
+    form = PropertyForm.new :for_rent => 'on'
+    assert_equal true, form.for_rent
+  end
+
+  def test_for_rent_status_false_when_unchecked
+    form = PropertyForm.new
+    assert_equal false, form.for_rent
+  end
+
+  def test_obtains_for_sale_status
+    form = PropertyForm.new :for_sale => 'on'
+    assert_equal true, form.for_sale
+  end
+
+  def test_for_sale_status_false_when_unchecked
+    form = PropertyForm.new
+    assert_equal false, form.for_sale
+  end
 end
