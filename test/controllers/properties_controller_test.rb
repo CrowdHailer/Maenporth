@@ -27,6 +27,15 @@ module Maenporth
       assert_ok get('/for-sale')
     end
 
+    def test_all_for_rent_page_is_availabe
+      assert_ok get('/for-rent')
+    end
+
+    def test_all_for_rent_page_is_availabe_when_properties_to_show
+      property = Estate.create
+      assert_ok get('/for-rent')
+    end
+
     def test_new_page_is_availabe
       assert_ok get('/new')
     end

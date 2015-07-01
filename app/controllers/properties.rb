@@ -14,6 +14,8 @@ module Maenporth
     end
 
     get '/for-rent' do
+      # TODO filter
+      @properties = Estate.all
       render :'all-for-rent'
     end
 
