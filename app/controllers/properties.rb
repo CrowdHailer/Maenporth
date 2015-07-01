@@ -47,7 +47,11 @@ module Maenporth
       render :'for-rent'
     end
 
-    get '/1/for-sale' do
+    get '/:id/for-sale' do |id|
+      @property = Estate.fetch(id) do
+        not_found
+        halt
+      end
       render :'for-sale'
     end
 
