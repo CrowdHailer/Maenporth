@@ -1,4 +1,4 @@
-class PropertyForm < Vulcanize::Form
+class PropertySaleForm < Vulcanize::Form
   attribute :property_name, PropertyName
   attribute :sale_description, Description
   attribute :sale_price, SalePrice
