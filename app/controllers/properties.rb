@@ -83,7 +83,7 @@ module Maenporth
         halt
       end
       piece.destroy
-      redirect '/pieces'
+      redirect '/properties'
     end
 
     def not_found
