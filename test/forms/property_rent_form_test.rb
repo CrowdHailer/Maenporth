@@ -32,10 +32,10 @@ class PropertyRentFormTest < Minitest::Test
     assert_equal email, form.enquiry_email
   end
 
-  def test_obtains_property_sale_type
-    property_sale_type = 'Flat'
-    form = PropertyRentForm.new :property_sale_type => property_sale_type
-    assert_equal property_sale_type, form.property_sale_type
+  def test_obtains_property_rent_type
+    property_rent_type = 'Flat'
+    form = PropertyRentForm.new :property_rent_type => property_rent_type
+    assert_equal property_rent_type, form.property_rent_type
   end
 
   def test_obtains_bedrooms

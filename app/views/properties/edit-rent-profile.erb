@@ -146,66 +146,56 @@
                 <tr>
                   <td>Property Type:</td>
                   <td>
-                    <select name="property-type">
-                      <option>Flat</option>
-                      <option>Apartment</option>
-                      <option>House</option>
+                    <select name="property[property_rent_type]">
+                      <option <%= 'selected' if @property.property_rent_type == 'Flat' %>>Flat</option>
+                      <option <%= 'selected' if @property.property_rent_type == 'Apartment' %>>Apartment</option>
+                      <option <%= 'selected' if @property.property_rent_type == 'House' %>>House</option>
                     </select>
                   </td>
                 </tr>
                 <tr>
                   <td>Bedrooms:</td>
                   <td>
-                    <select name="number-of-bedrooms">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                      <option>5+</option>
+                    <select name="property[bedrooms]">
+                      <option <%= 'selected' if @property.bedrooms == '1' %>>1</option>
+                      <option <%= 'selected' if @property.bedrooms == '2' %>>2</option>
+                      <option <%= 'selected' if @property.bedrooms == '3' %>>3</option>
+                      <option <%= 'selected' if @property.bedrooms == '4' %>>4</option>
+                      <option <%= 'selected' if @property.bedrooms == '5' %>>5</option>
+                      <option <%= 'selected' if @property.bedrooms == '5+' %>>5+</option>
                     </select>
                   </td>
                 </tr>
                 <tr>
                   <td>Bathrooms</td>
                   <td>
-                    <select name="number-of-bathrooms">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>3+</option>
+                    <select name="property[bathrooms]">
+                      <option <%= 'selected' if @property.bathrooms == '1' %>>1</option>
+                      <option <%= 'selected' if @property.bathrooms == '2' %>>2</option>
+                      <option <%= 'selected' if @property.bathrooms == '3' %>>3</option>
+                      <option <%= 'selected' if @property.bathrooms == '3+' %>>3+</option>
                     </select>
                   </td>
                 </tr>
                 <tr>
                   <td>Sleeps</td>
                   <td>
-                    <select name="sleeps">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                      <option>6</option>
-                      <option>7</option>
-                      <option>8</option>
-                      <option>9</option>
-                      <option>10</option>
-                      <option>11</option>
-                      <option>12</option>
-                      <option>13</option>
-                      <option>14</option>
-                      <option>15</option>
+                    <select name="property[sleeps]">
+                      <option <%= 'selected' if @property.sleeps == '1' %>>1</option>
+                      <option <%= 'selected' if @property.sleeps == '2' %>>2</option>
+                      <option <%= 'selected' if @property.sleeps == '3' %>>3</option>
+                      <option <%= 'selected' if @property.sleeps == '4' %>>4</option>
+                      <option <%= 'selected' if @property.sleeps == '5' %>>5</option>
                     </select>
                   </td>
                 </tr>
                 <tr>
                   <td>View Type</td>
                   <td>
-                    <select name="view-type">
-                      <option>Sea View</option>
-                      <option>Sea Glimpses</option>
-                      <option>Woodland View</option>
+                    <select name="property[view_type]">
+                      <option <%= 'selected' if @property.view_type == 'Sea View' %>>Sea View</option>
+                      <option <%= 'selected' if @property.view_type == 'Sea Glimpses' %>>Sea Glimpses</option>
+                      <option <%= 'selected' if @property.view_type == 'Woodland View' %>>Woodland View</option>
                     </select>
                   </td>
                 </tr>
