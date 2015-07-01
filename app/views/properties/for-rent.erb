@@ -175,17 +175,47 @@ function changeImage(current) {
               }
             </style>
             <ul>
-              <li>View Type</li>
+              <li><%= @property.view_type %></li>
+
+              <% if @property.wifi %>
               <li>WiFi</li>
+              <% end %>
+
+              <% if @property.bbq %>
               <li>BBQ</li>
+              <% end %>
+
+              <% if @property.towels %>
               <li>Towels</li>
+              <% end %>
+
+              <% if @property.bath %>
               <li>Bath</li>
+              <% end %>
+
+              <% if @property.shower %>
               <li>Shower</li>
+              <% end %>
+
+              <% if @property.washing_machine %>
               <li>Washing Machine</li>
+              <% end %>
+
+              <% if @property.tumble_dryer %>
               <li>Tumble Dryer</li>
+              <% end %>
+
+              <% if @property.patio %>
               <li>Patio</li>
+              <% end %>
+
+              <% if @property.balcony %>
               <li>Balcony</li>
+              <% end %>
+
+              <% if @property.lawn %>
               <li>Lawn</li>
+              <% end %>
             </ul>
           </div>
           <div class="map-wrap" onclick="document.getElementById('image-enlarge').style.display = 'inline'">
