@@ -5,7 +5,7 @@
 
 <div class="row collapse">
   <div class="large-6 columns form">
-    <h2>Enquire with the owner of 38 Lower Gardens</h2>
+    <h2>Enquire with the owner of <%= @property.property_name %></h2>
     <p>This message will be sent directly to the owner of this property.</p>
     <p>Please ensure your provide accurate contact details so they may respond to your enquiry.</p>
     <form>
@@ -26,6 +26,6 @@
   <div class="large-5 columns">
     <img style="margin-bottom: 0.5em; width: 100%;"src="/img/nature1.jpg">
     <img style="margin-bottom: 0.5em; width: 100%;"src="/img/nature2.jpg">
-    <p>38 Lower Gardens</p>
+    <p><%= @property.property_name %></p>
   </div>
 </div>

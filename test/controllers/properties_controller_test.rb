@@ -70,5 +70,15 @@ module Maenporth
       assert_equal 404, response.status
     end
 
+    def test_for_enquire_is_available_for_property
+      property = Estate.create
+      assert_ok get("/#{property.id}/enquire")
+    end
+
+    def test_for_enquire_is_unavailable_for_nonexistant_property
+      response = get('/0/enquire')
+      assert_equal 404, response.status
+    end
+
   end
 end
