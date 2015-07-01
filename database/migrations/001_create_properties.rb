@@ -6,15 +6,34 @@ Sequel.migration do
       String :sale_description
       String :sale_price
       String :estate_agent_link
+      String :enquiry_method
+      String :enquiry_link
+      String :enquiry_email
       String :property_type
       String :bedrooms
       String :bathrooms
+      String :sleeps
       String :view_type
+      TrueClass :wifi, :default => false
+      TrueClass :bbq, :default => false
+      TrueClass :towels, :default => false
+      TrueClass :bath, :default => false
+      TrueClass :shower, :default => false
+      TrueClass :washing_machine, :default => false
+      TrueClass :tumble_dryer, :default => false
       TrueClass :balcony, :default => false
       TrueClass :patio, :default => false
       TrueClass :lawn, :default => false
       TrueClass :for_sale, :default => false
       TrueClass :for_rent, :default => false
+      String :recommendation_1
+      String :recommendation_2
+      String :recommendation_3
+      String :recommendation_4
+      String :recommendation_5
+      String :recommendation_6
+      String :recommendation_7
+      String :recommendation_8
     end
   end
 
