@@ -13,7 +13,7 @@ module Property
     serialize_attributes [->(x){x}, Link.method(:new)], :enquiry_link
     serialize_attributes [->(x){x}, Bedrooms.method(:new)], :bedrooms
     serialize_attributes [->(x){x}, Bathrooms.method(:new)], :bathrooms
-    serialize_attributes [->(x){x}, PropertyType.method(:new)], :property_type
+    serialize_attributes [->(x){x}, PropertyType.method(:new)], :property_sale_type, :property_rent_type
     serialize_attributes [->(x){x}, ViewType.method(:new)], :view_type
 
     def sale_description

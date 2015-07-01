@@ -140,12 +140,12 @@
                     </p>
                   </td>
                   <td>
-                    <select name="property[property_type]">
-                      <option <%= 'selected' if @property.property_type == 'Flat' %>>Flat</option>
-                      <option <%= 'selected' if @property.property_type == 'Apartment' %>>Apartment</option>
-                      <option <%= 'selected' if @property.property_type == 'Semi Detached' %>>Semi Detached</option>
-                      <option <%= 'selected' if @property.property_type == 'Terraced' %>>Terraced</option>
-                      <option <%= 'selected' if @property.property_type == 'End of Terrace' %>>End of Terrace</option>
+                    <select name="property[property_sale_type]">
+                      <option <%= 'selected' if @property.property_sale_type == 'Flat' %>>Flat</option>
+                      <option <%= 'selected' if @property.property_sale_type == 'Apartment' %>>Apartment</option>
+                      <option <%= 'selected' if @property.property_sale_type == 'Semi Detached' %>>Semi Detached</option>
+                      <option <%= 'selected' if @property.property_sale_type == 'Terraced' %>>Terraced</option>
+                      <option <%= 'selected' if @property.property_sale_type == 'End of Terrace' %>>End of Terrace</option>
                     </select>
                   </td>
                 </tr>

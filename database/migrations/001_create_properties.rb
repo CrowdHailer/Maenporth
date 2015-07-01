@@ -10,7 +10,8 @@ Sequel.migration do
       String :enquiry_route
       String :enquiry_link
       String :enquiry_email
-      String :property_type
+      String :property_sale_type
+      String :property_rent_type
       String :bedrooms
       String :bathrooms
       String :sleeps

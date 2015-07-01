@@ -27,10 +27,10 @@ class PropertySaleFormTest < Minitest::Test
     assert_equal link, form.estate_agent_link
   end
 
-  def test_obtains_property_type
-    property_type = 'Flat'
-    form = PropertySaleForm.new :property_type => property_type
-    assert_equal property_type, form.property_type
+  def test_obtains_property_sale_type
+    property_sale_type = 'Flat'
+    form = PropertySaleForm.new :property_sale_type => property_sale_type
+    assert_equal property_sale_type, form.property_sale_type
   end
 
   def test_obtains_bedrooms

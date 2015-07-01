@@ -5,7 +5,7 @@ class PropertyRentForm < Vulcanize::Form
   attribute :enquiry_route, String
   attribute :enquiry_link, Link
   attribute :enquiry_email, String
-  attribute :property_type, PropertyType
+  attribute :property_sale_type, PropertyType
   attribute :bedrooms, Bedrooms
   attribute :bathrooms, Bathrooms
   # TODO destringify

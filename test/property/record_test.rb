@@ -61,10 +61,16 @@ module Property
       assert_equal email, record.enquiry_email
     end
 
-    def test_can_save_property_type
-      property_type = PropertyType.new 'Flat'
-      record = Record.new :property_type => property_type
-      assert_equal PropertyType, record.property_type.class
+    def test_can_save_property_sale_type
+      property_sale_type = PropertyType.new 'Flat'
+      record = Record.new :property_sale_type => property_sale_type
+      assert_equal PropertyType, record.property_sale_type.class
+    end
+
+    def test_can_save_property_rent_type
+      property_rent_type = PropertyType.new 'Flat'
+      record = Record.new :property_rent_type => property_rent_type
+      assert_equal PropertyType, record.property_rent_type.class
     end
 
     def test_can_save_bedrooms
