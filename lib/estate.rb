@@ -45,6 +45,7 @@ class Estate < Errol::Repository
     unless inquiry.for_rent
       tmp = tmp.exclude(:for_rent => true)
     end
+    tmp.order :id
     tmp
   end
 end
