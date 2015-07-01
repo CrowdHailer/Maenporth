@@ -160,29 +160,33 @@ function changeImage(current) {
             </button>
           </a>
           <div class="facilities-wrap">
-            <div class="">
-              <div class="row collapse">
-                <div class="large-6 columns">
-                  <ul>
-                    <li>View Type</li>
-                    <li>WiFi</li>
-                    <li>BBQ</li>
-                    <li>Towels</li>
-                    <li>Bath</li>
-                    <li>Shower</li>
-                  </ul>
-                </div>
-                <div class="large-6 columns">
-                  <ul>
-                    <li>Washing Machine</li>
-                    <li>Tumble Dryer</li>
-                    <li>Patio</li>
-                    <li>Balcony</li>
-                    <li>Lawn</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <style media="screen">
+              .facilities-wrap ul {
+                /* TODO richard put in styling */
+                /* clearfix for floating list elements*/
+                overflow: hidden;
+              }
+              .facilities-wrap li {
+                margin-left: 0;
+                list-style-position: inside;
+                float: left;
+                width: 50%;
+                box-sizing: border-box;
+              }
+            </style>
+            <ul>
+              <li>View Type</li>
+              <li>WiFi</li>
+              <li>BBQ</li>
+              <li>Towels</li>
+              <li>Bath</li>
+              <li>Shower</li>
+              <li>Washing Machine</li>
+              <li>Tumble Dryer</li>
+              <li>Patio</li>
+              <li>Balcony</li>
+              <li>Lawn</li>
+            </ul>
           </div>
           <div class="map-wrap" onclick="document.getElementById('image-enlarge').style.display = 'inline'">
             <img style="width: 100%;" src="/img/property-map.jpg">
