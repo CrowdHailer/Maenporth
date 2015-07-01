@@ -14,14 +14,12 @@ module Maenporth
     end
 
     get '/for-rent' do
-      # TODO filter
-      @properties = Estate.all
+      @properties = Estate.for_rent
       render :'all-for-rent'
     end
 
     get '/for-sale' do
-      # TODO filter
-      @properties = Estate.all
+      @properties = Estate.for_sale
       render :'all-for-sale'
     end
 

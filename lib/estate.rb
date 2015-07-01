@@ -1,7 +1,7 @@
 class Estate < Errol::Repository
   class Inquiry < Errol::Inquiry
-    default :for_sale, true
-    default :for_rent, true
+    default :for_sale_only, false
+    default :for_rent_only, false
     default :page, 1
     default :page_size, 15
   end
@@ -16,11 +16,11 @@ class Estate < Errol::Repository
     end
 
     def for_rent
-      all :for_sale => false
+      all :for_rent_only => true
     end
 
     def for_sale
-      all :for_rent => false
+      all :for_sale_only => true
     end
 
     def dispatch(record)
@@ -38,12 +38,12 @@ class Estate < Errol::Repository
     # TODO errol allow no dataset method
     tmp = raw_dataset
 
-    unless inquiry.for_sale
-      tmp = tmp.exclude(:for_sale => true)
+    if inquiry.for_rent_only
+      tmp = tmp.exclude(:for_rent => false)
     end
 
-    unless inquiry.for_rent
-      tmp = tmp.exclude(:for_rent => true)
+    if inquiry.for_sale_only
+      tmp = tmp.exclude(:for_sale => false)
     end
     tmp.order :id
     tmp
