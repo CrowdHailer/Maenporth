@@ -14,10 +14,14 @@ module Maenporth
     end
 
     get '/for-rent' do
+      # TODO filter
+      @properties = Estate.all
       render :'all-for-rent'
     end
 
     get '/for-sale' do
+      # TODO filter
+      @properties = Estate.all
       render :'all-for-sale'
     end
 
@@ -36,20 +40,31 @@ module Maenporth
         halt
       end
       form = PropertyForm.new request.POST['property']
-      ap request.POST
       @property.update form
       render :edit
     end
 
-    get '/1/for-rent' do
+    get '/:id/for-rent' do |id|
+      @property = Estate.fetch(id) do
+        not_found
+        halt
+      end
       render :'for-rent'
     end
 
-    get '/1/for-sale' do
+    get '/:id/for-sale' do |id|
+      @property = Estate.fetch(id) do
+        not_found
+        halt
+      end
       render :'for-sale'
     end
 
-    get '/1/enquire' do
+    get '/:id/enquire' do |id|
+      @property = Estate.fetch(id) do
+        not_found
+        halt
+      end
       render :enquire
     end
 

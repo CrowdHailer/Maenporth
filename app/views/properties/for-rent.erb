@@ -30,7 +30,7 @@ function changeImage(current) {
     <div class="property-box property-box-large for-rent">
       <div class="row collapse">
         <div class="large-10 medium-10 columns">
-          <h2>Property Name 38 Lower Gardens</h2>
+          <h2>Property Name <%= @property.property_name %></h2>
         </div>
         <div class="large-2 medium-2 columns">
           <h2>For Rent <img class="property-box-icon" src="/img/sun-09.svg"></h2>
@@ -120,10 +120,7 @@ function changeImage(current) {
       <div class="row collapse">
         <div class="large-6 columns">
           <div class="description-wrap">
-            <p class="description">Description, 200 words. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            <br><br>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-            <br><br>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-            <br><br> Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum
+            <%= @property.sale_description.html %>
           </div>
           <h2 style="margin-top: 1em;">Local Recommendations</h2>
           <div class="favourites-wrap">
@@ -141,11 +138,11 @@ function changeImage(current) {
         </div>
         <div class="large-6 columns">
           <div class="prop-type">
-            <h2>Penthouse</h2>
+            <h2><%= @property.property_type %></h2>
             <div class="row collapse">
               <div class="large-4 columns">
                 <h3>Bedrooms</h3>
-                <h4>3</h4>
+                <h4><%= @property.bedrooms %></h4>
               </div>
               <div class="large-4 columns">
                 <h3>Sleeps</h3>
@@ -153,11 +150,11 @@ function changeImage(current) {
               </div>
               <div class="large-4 columns">
                 <h3>Bathrooms</h3>
-                <h4>1</h4>
+                <h4><%= @property.bathrooms %></h4>
               </div>
             </div>
           </div>
-          <a href="">
+          <a href="/properties/<%= @property.id %>/enquire">
             <button class="enq-btn">
               Enquire Now
             </button>
