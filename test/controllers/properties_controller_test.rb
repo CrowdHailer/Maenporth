@@ -9,8 +9,22 @@ module Maenporth
       PropertiesController
     end
 
-    def test_home_page_is_availabe
+    def test_index_page_is_availabe
       assert_ok get('/')
+    end
+
+    def test_index_page_is_availabe_when_properties_to_show
+      property = Estate.create
+      assert_ok get('/')
+    end
+
+    def test_all_for_sale_page_is_availabe
+      assert_ok get('/for-sale')
+    end
+
+    def test_all_for_sale_page_is_availabe_when_properties_to_show
+      property = Estate.create
+      assert_ok get('/for-sale')
     end
 
     def test_new_page_is_availabe

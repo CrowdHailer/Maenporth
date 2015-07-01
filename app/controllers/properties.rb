@@ -18,6 +18,8 @@ module Maenporth
     end
 
     get '/for-sale' do
+      # TODO filter
+      @properties = Estate.all
       render :'all-for-sale'
     end
 
