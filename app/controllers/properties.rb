@@ -44,6 +44,17 @@ module Maenporth
       render :edit
     end
 
+    patch '/:id/status' do |id|
+      # TODO test
+      @property = Estate.fetch(id) do
+        not_found
+        halt
+      end
+      form = PropertyStatusForm.new request.POST['property']
+      @property.update form
+      redirect('/properties')
+    end
+
     get '/:id/for-rent' do |id|
       @property = Estate.fetch(id) do
         not_found

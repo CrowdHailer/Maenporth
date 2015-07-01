@@ -59,5 +59,30 @@ module Property
       record = Record.new :view_type => view_type
       assert_equal ViewType, record.view_type.class
     end
+
+    def test_can_have_a_lawn
+      record = Record.new :lawn => true
+      assert_equal true, record.lawn
+    end
+
+    def test_can_have_a_patio
+      record = Record.new :patio => true
+      assert_equal true, record.patio
+    end
+
+    def test_can_have_a_balcony
+      record = Record.new :balcony => true
+      assert_equal true, record.balcony
+    end
+
+    def test_can_be_for_sale
+      record = Record.new :for_sale => true
+      assert_equal true, record.for_sale
+    end
+
+    def test_can_be_for_rent
+      record = Record.new :for_rent => true
+      assert_equal true, record.for_rent
+    end
   end
 end

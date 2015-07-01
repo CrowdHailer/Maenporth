@@ -13,6 +13,8 @@ Sequel.migration do
       TrueClass :balcony, :default => false
       TrueClass :patio, :default => false
       TrueClass :lawn, :default => false
+      TrueClass :for_sale, :default => false
+      TrueClass :for_rent, :default => false
     end
   end
 
