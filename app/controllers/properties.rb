@@ -31,6 +31,14 @@ module Maenporth
       render :'edit-sale-profile'
     end
 
+    get '/:id/edit-rent-profile' do |id|
+      @property = Estate.fetch(id) do
+        not_found
+        halt
+      end
+      render :'edit-rent-profile'
+    end
+
     patch '/:id' do |id|
       # TODO test
       @property = Estate.fetch(id) do

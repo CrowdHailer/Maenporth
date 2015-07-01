@@ -50,6 +50,16 @@ module Maenporth
       assert_equal 404, response.status
     end
 
+    def test_edit_rent_profile_page_is_available_for_property
+      property = Estate.create
+      assert_ok get("/#{property.id}/edit-rent-profile")
+    end
+
+    def test_edit_rent_profile_page_is_unavailable_for_nonexistant_property
+      response = get('/0/edit-rent-profile')
+      assert_equal 404, response.status
+    end
+
     def test_for_sale_page_is_available_for_property
       property = Estate.create
       assert_ok get("/#{property.id}/for-sale")
