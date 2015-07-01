@@ -23,6 +23,13 @@ module Property
       assert_equal description, record.sale_description
     end
 
+    def test_can_save_rent_description
+      raw = '# Hello'
+      description = Description.new raw
+      record = Record.new :rent_description => description
+      assert_equal description, record.rent_description
+    end
+
     def test_can_save_sale_price
       raw = '120000'
       sale_price = SalePrice.new 120000
@@ -36,10 +43,10 @@ module Property
       assert_equal Link, record.estate_agent_link.class
     end
 
-    def test_can_save_enquiry_method
+    def test_can_save_enquiry_route
       method = 'email'
-      record = Record.new :enquiry_method => method
-      assert_equal method, record.enquiry_method
+      record = Record.new :enquiry_route => method
+      assert_equal method, record.enquiry_route
     end
 
     def test_can_save_enquiry_link

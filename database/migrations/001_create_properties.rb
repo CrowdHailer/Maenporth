@@ -4,9 +4,10 @@ Sequel.migration do
       primary_key :id, :type => :varchar, :auto_increment => false, :unique => true
       String :property_name
       String :sale_description
+      String :rent_description
       String :sale_price
       String :estate_agent_link
-      String :enquiry_method
+      String :enquiry_route
       String :enquiry_link
       String :enquiry_email
       String :property_type

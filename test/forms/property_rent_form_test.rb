@@ -14,10 +14,10 @@ class PropertyRentFormTest < Minitest::Test
     assert_equal description, form.rent_description
   end
 
-  def test_obtains_enquiry_method
+  def test_obtains_enquiry_route
     method = 'email'
-    form = PropertyRentForm.new :enquiry_method => method
-    assert_equal method, form.enquiry_method
+    form = PropertyRentForm.new :enquiry_route => method
+    assert_equal method, form.enquiry_route
   end
 
   def test_obtains_enquiry_link
