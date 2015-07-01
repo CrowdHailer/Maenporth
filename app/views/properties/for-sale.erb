@@ -142,15 +142,39 @@ function changeImage(current) {
               Visit Estate Agent Website
             </button>
           </a>
+          <style media="screen">
+            .facilities-wrap ul {
+              /* TODO richard put in styling */
+              /* TODO should be grouped with edit page stuff*/
+              /* clearfix for floating list elements*/
+              overflow: hidden;
+            }
+            .facilities-wrap li {
+              margin-left: 0;
+              list-style-position: inside;
+              float: left;
+              width: 50%;
+              box-sizing: border-box;
+            }
+          </style>
           <div class="facilities-wrap" style="margin-top: 1em;">
             <ul>
               <li><%= @property.property_sale_type %></li>
               <li>Bedrooms: <%= @property.bedrooms %></li>
               <li>Bathrooms: <%= @property.bathrooms %></li>
               <li><%= @property.view_type %></li>
-              <li>Balcony?</li>
+              
+              <% if @property.patio %>
               <li>Patio</li>
+              <% end %>
+
+              <% if @property.balcony %>
+              <li>Balcony</li>
+              <% end %>
+
+              <% if @property.lawn %>
               <li>Lawn</li>
+              <% end %>
             </ul>
           </div>
           <div class="map-wrap" onclick="document.getElementById('image-enlarge').style.display = 'inline'">
