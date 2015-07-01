@@ -37,20 +37,6 @@ function changeImage(current) {
         </div>
       </div>
       <hr>
-      <script>
-      function changeImage(current) {
-        var imagesNumber = 8;
-
-        for (i=1; i<=imagesNumber; i++) {
-          if (i == current) {
-            document.getElementById("normal" + current).style.display = "block";
-          } else {
-            document.getElementById("normal" + i).style.display = "none";
-          }
-        }
-      }
-      </script>
-      <!-- -->
       <div class="row collapse">
         <div class="large-8 columns">
           <div id="bigimages">
@@ -120,25 +106,25 @@ function changeImage(current) {
       <div class="row collapse">
         <div class="large-6 columns">
           <div class="description-wrap">
-            <%= @property.sale_description.html %>
+            <%= @property.rent_description.html if @property.rent_description %>
           </div>
           <h2 style="margin-top: 1em;">Local Recommendations</h2>
           <div class="favourites-wrap">
             <ul>
-              <li>Try the lovely restaurant.</li>
-              <li>The gardens at Budock are our favourite.</li>
-              <li>Maenporth beach is a must.</li>
-              <li>Try swimming at Durgan beach.</li>
-              <li>Falmouth town is a lot of fun.</li>
-              <li>We have a lovely BBQ terrace here.</li>
-              <li>Explore Pendennis castle.</li>
-              <li>Have fun at Cornwall's Crealy.</li>
+              <li><%= @property.recommendation_1 %></li>
+              <li><%= @property.recommendation_2 %></li>
+              <li><%= @property.recommendation_3 %></li>
+              <li><%= @property.recommendation_4 %></li>
+              <li><%= @property.recommendation_5 %></li>
+              <li><%= @property.recommendation_6 %></li>
+              <li><%= @property.recommendation_7 %></li>
+              <li><%= @property.recommendation_8 %></li>
             </ul>
           </div>
         </div>
         <div class="large-6 columns">
           <div class="prop-type">
-            <h2><%= @property.property_type %></h2>
+            <h2><%= @property.property_sale_type %></h2>
             <div class="row collapse">
               <div class="large-4 columns">
                 <h3>Bedrooms</h3>
@@ -146,7 +132,7 @@ function changeImage(current) {
               </div>
               <div class="large-4 columns">
                 <h3>Sleeps</h3>
-                <h4>6</h4>
+                <h4><%= @property.sleeps %></h4>
               </div>
               <div class="large-4 columns">
                 <h3>Bathrooms</h3>
@@ -154,35 +140,67 @@ function changeImage(current) {
               </div>
             </div>
           </div>
-          <a href="/properties/<%= @property.id %>/enquire">
-            <button class="enq-btn">
-              Enquire Now
-            </button>
+          <a class="enq-btn" href="/properties/<%= @property.id %>/enquire">
+            Enquire Now
           </a>
           <div class="facilities-wrap">
-            <div class="">
-              <div class="row collapse">
-                <div class="large-6 columns">
-                  <ul>
-                    <li>View Type</li>
-                    <li>WiFi</li>
-                    <li>BBQ</li>
-                    <li>Towels</li>
-                    <li>Bath</li>
-                    <li>Shower</li>
-                  </ul>
-                </div>
-                <div class="large-6 columns">
-                  <ul>
-                    <li>Washing Machine</li>
-                    <li>Tumble Dryer</li>
-                    <li>Patio</li>
-                    <li>Balcony</li>
-                    <li>Lawn</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <style media="screen">
+              .facilities-wrap ul {
+                /* TODO richard put in styling */
+                /* clearfix for floating list elements*/
+                overflow: hidden;
+              }
+              .facilities-wrap li {
+                margin-left: 0;
+                list-style-position: inside;
+                float: left;
+                width: 50%;
+                box-sizing: border-box;
+              }
+            </style>
+            <ul>
+              <li><%= @property.view_type %></li>
+
+              <% if @property.wifi %>
+              <li>WiFi</li>
+              <% end %>
+
+              <% if @property.bbq %>
+              <li>BBQ</li>
+              <% end %>
+
+              <% if @property.towels %>
+              <li>Towels</li>
+              <% end %>
+
+              <% if @property.bath %>
+              <li>Bath</li>
+              <% end %>
+
+              <% if @property.shower %>
+              <li>Shower</li>
+              <% end %>
+
+              <% if @property.washing_machine %>
+              <li>Washing Machine</li>
+              <% end %>
+
+              <% if @property.tumble_dryer %>
+              <li>Tumble Dryer</li>
+              <% end %>
+
+              <% if @property.patio %>
+              <li>Patio</li>
+              <% end %>
+
+              <% if @property.balcony %>
+              <li>Balcony</li>
+              <% end %>
+
+              <% if @property.lawn %>
+              <li>Lawn</li>
+              <% end %>
+            </ul>
           </div>
           <div class="map-wrap" onclick="document.getElementById('image-enlarge').style.display = 'inline'">
             <img style="width: 100%;" src="/img/property-map.jpg">
