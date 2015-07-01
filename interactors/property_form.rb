@@ -10,8 +10,6 @@ class PropertyForm < Vulcanize::Form
   attribute :balcony, Vulcanize::CheckBox, :default => false
   attribute :patio, Vulcanize::CheckBox, :default => false
   attribute :lawn, Vulcanize::CheckBox, :default => false
-  attribute :for_rent, Vulcanize::CheckBox, :default => false
-  attribute :for_sale, Vulcanize::CheckBox, :default => false
 
   def empty?
     false
