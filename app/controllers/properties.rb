@@ -39,13 +39,13 @@ module Maenporth
       render :'edit-rent-profile'
     end
 
-    patch '/:id' do |id|
+    patch '/:id/sale-profile' do |id|
       # TODO test
       @property = Estate.fetch(id) do
         not_found
         halt
       end
-      form = PropertyForm.new request.POST['property']
+      form = PropertySaleForm.new request.POST['property']
       @property.update form
       render :'edit-sale-profile'
     end
