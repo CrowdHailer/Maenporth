@@ -74,5 +74,15 @@ module Property
       record = Record.new :balcony => true
       assert_equal true, record.balcony
     end
+
+    def test_can_be_for_sale
+      record = Record.new :for_sale => true
+      assert_equal true, record.for_sale
+    end
+
+    def test_can_be_for_rent
+      record = Record.new :for_rent => true
+      assert_equal true, record.for_rent
+    end
   end
 end
