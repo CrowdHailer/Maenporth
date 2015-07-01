@@ -40,13 +40,13 @@ module Maenporth
       assert_ok get('/new')
     end
 
-    def test_edit_page_is_available_for_property
+    def test_edit_sale_profile_page_is_available_for_property
       property = Estate.create
-      assert_ok get("/#{property.id}/edit")
+      assert_ok get("/#{property.id}/edit-sale-profile")
     end
 
-    def test_edit_page_is_unavailable_for_nonexistant_property
-      response = get('/0/edit')
+    def test_edit_sale_profile_page_is_unavailable_for_nonexistant_property
+      response = get('/0/edit-sale-profile')
       assert_equal 404, response.status
     end
 

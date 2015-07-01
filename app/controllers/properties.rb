@@ -10,7 +10,7 @@ module Maenporth
     get '/new' do
       # Might want to be 'new in future'
       @property = Property::Record.create
-      render :edit
+      render :'edit-sale-profile'
     end
 
     get '/for-rent' do
@@ -23,12 +23,12 @@ module Maenporth
       render :'all-for-sale'
     end
 
-    get '/:id/edit' do |id|
+    get '/:id/edit-sale-profile' do |id|
       @property = Estate.fetch(id) do
         not_found
         halt
       end
-      render :edit
+      render :'edit-sale-profile'
     end
 
     patch '/:id' do |id|
@@ -39,7 +39,7 @@ module Maenporth
       end
       form = PropertyForm.new request.POST['property']
       @property.update form
-      render :edit
+      render :'edit-sale-profile'
     end
 
     patch '/:id/status' do |id|
