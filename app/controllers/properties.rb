@@ -40,12 +40,15 @@ module Maenporth
         halt
       end
       form = PropertyForm.new request.POST['property']
-      ap request.POST
       @property.update form
       render :edit
     end
 
-    get '/1/for-rent' do
+    get '/:id/for-rent' do |id|
+      @property = Estate.fetch(id) do
+        not_found
+        halt
+      end
       render :'for-rent'
     end
 
