@@ -19,13 +19,13 @@ gem 'redcarpet'
 
 gem 'money'
 
-gem 'vulcanize', :git => 'git@github.com:CrowdHailer/vulcanize.git'
+gem 'vulcanize', '~> 0.1.0'
 
 gem 'pg'
 
 gem 'sequel'
 
-gem 'errol', :git => 'git@github.com:CrowdHailer/Errol.git'
+gem 'errol', '~> 0.0.1'
 
 gem 'carrierwave'
 gem 'carrierwave-sequel'
