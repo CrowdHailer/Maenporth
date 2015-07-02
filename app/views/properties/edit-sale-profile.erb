@@ -47,31 +47,31 @@
                   <p>Image 1</p>
                 </li>
                 <li style="float: right;margin-bottom: 1em; ">
-                  <img src="<%= @property.sale_image_1.path %>" alt="" />
+                  <img src="<%= @property.sale_image_4.url %>" alt="" />
                   <p>Image 4</p>
                 </li>
                 <li style="float: left; margin-bottom: 1em">
-                  <img src="/img/upload.svg" alt="" />
+                  <img src="<%= @property.sale_image_2.url %>" alt="" />
                   <p>Image 2</p>
                 </li>
                 <li style="float: right;margin-bottom: 1em;">
-                  <img src="/img/upload.svg" alt="" />
+                  <img src="<%= @property.sale_image_3.url %>" alt="" />
                   <p>Image 3</p>
                 </li>
                 <li style="float: left; margin-bottom: 1em">
-                  <img src="/img/upload.svg" alt="" />
+                  <img src="<%= @property.sale_image_4.url %>" alt="" />
                   <p>Image 5</p>
                 </li>
                 <li style="float: right;margin-bottom: 1em;">
-                  <img src="/img/upload.svg" alt="" />
+                  <img src="<%= @property.sale_image_8.url %>" alt="" />
                   <p>Image 8</p>
                 </li>
                 <li style="float: left; margin-bottom: 1em">
-                  <img src="/img/upload.svg" alt="" />
+                  <img src="<%= @property.sale_image_6.url %>" alt="" />
                   <p>Image 6</p>
                 </li>
                 <li style="float: right;margin-bottom: 1em;">
-                  <img src="/img/upload.svg" alt="" />
+                  <img src="<%= @property.sale_image_7.url %>" alt="" />
                   <p>Image 7</p>
                 </li>
               </ul>
@@ -230,8 +230,8 @@
             <p>Please upload an image to show where this property is on the map.</p>
           </div>
           <div class="large-5 columns end">
-            <img src="/img/upload.svg" alt="" />
-            <input type="file"><br>
+            <img src="<%= @property.map_image.url %>" alt="" />
+            <input type="file" name="property[map_image]"><br>
             <input type="submit" value="UPLOAD" style="margin-top: 1em;">
           </div>
         </div>
@@ -241,7 +241,7 @@
             <h2>Edit Property Profile</h2>
           </div>
           <div class="large-3 columns">
-            <a href=""><button>Save</button></a>
+            <button>Save</button>
             <p style="font-style: italic;">Save the form regularly.</p>
           </div>
         </div>
