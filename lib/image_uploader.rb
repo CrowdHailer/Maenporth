@@ -11,7 +11,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   def store_dir
-    "uploads/images/#{model.id}"
+    super + "uploads/images/#{model.id}"
   end
 
   def default_url(*args)
