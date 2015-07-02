@@ -19,6 +19,8 @@ module Maenporth
     controller '/', HomeController
 
     after :status => 404 do
+      error = NotFoundError.new "Attempted Path: #{request.path}"
+      Bugsnag.notify(error, :severity => "info")
       response.body = render :'errors/404'
     end
 
