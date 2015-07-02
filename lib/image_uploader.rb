@@ -28,6 +28,10 @@ class ImageUploader < CarrierWave::Uploader::Base
     "uploads/images/#{model.id}"
   end
 
+  def default_url(*args)
+    "/img/upload.svg"
+  end
+
   def filename
     "#{mounted_as}.#{file.extension.downcase}" if file
   end
