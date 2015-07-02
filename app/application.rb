@@ -23,6 +23,7 @@ module Maenporth
     end
 
     error do
+      # TODO respond to staging
       if production?
         response.status = 500
         response.body = render :'errors/500'
