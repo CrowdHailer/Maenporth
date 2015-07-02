@@ -5,7 +5,7 @@
         <a onclick="document.getElementById('image-enlarge').style.display = 'none'">&#x2716;</a>
         <h1>Property Name</h1>
         <h2>Location on Maenporth Estate</h2>
-        <img style="width: 100%;" src="/img/property-map.jpg">
+        <img style="width: 100%;" src="<%= @property.map_image.url %>">
       </div>
     </div>
   </div>
@@ -46,31 +46,31 @@ function changeImage(current) {
             </div>
 
             <div id="normal2">
-              <img class="large-image" src="/img/nature2.jpg" alt=""/>
+              <img class="large-image" src="<%= @property.sale_image_2.url %>" alt=""/>
             </div>
 
             <div id="normal3">
-              <img class="large-image" src="/img/nature3.jpg" alt=""/>
+              <img class="large-image" src="<%= @property.sale_image_3.url %>" alt=""/>
             </div>
 
             <div id="normal4">
-              <img class="large-image" src="/img/nature4.jpg" alt=""/>
+              <img class="large-image" src="<%= @property.sale_image_4.url %>" alt=""/>
             </div>
 
             <div id="normal5">
-              <img class="large-image" src="/img/nature5.jpg" alt=""/>
+              <img class="large-image" src="<%= @property.sale_image_5.url %>" alt=""/>
             </div>
 
             <div id="normal6">
-              <img class="large-image" src="/img/nature6.jpg" alt=""/>
+              <img class="large-image" src="<%= @property.sale_image_6.url %>" alt=""/>
             </div>
 
             <div id="normal7">
-              <img class="large-image" src="/img/nature7.jpg" alt=""/>
+              <img class="large-image" src="<%= @property.sale_image_7.url %>" alt=""/>
             </div>
 
             <div id="normal8">
-              <img class="large-image" src="/img/nature8.jpg" alt=""/>
+              <img class="large-image" src="<%= @property.sale_image_8.url %>" alt=""/>
             </div>
           </div>
         </div>
@@ -79,10 +79,10 @@ function changeImage(current) {
             <div id="thumbs">
               <div class="row collapse">
                 <ul class="large-block-grid-1 medium-block-grid-1 small-block-grid-2">
-                  <li><a href="javascript: changeImage(1);"><img src="/img/nature1.jpg" alt="" /></a></li>
-                  <li><a href="javascript: changeImage(2);"><img src="/img/nature2.jpg" alt="" /></a></li>
-                  <li><a href="javascript: changeImage(3);"><img src="/img/nature3.jpg" alt="" /></a></li>
-                  <li><a href="javascript: changeImage(4);"><img src="/img/nature4.jpg" alt="" /></a></li>
+                  <li><a href="javascript: changeImage(1);"><img src="<%= @property.sale_image_1.url %>" alt="" /></a></li>
+                  <li><a href="javascript: changeImage(2);"><img src="<%= @property.sale_image_2.url %>" alt="" /></a></li>
+                  <li><a href="javascript: changeImage(3);"><img src="<%= @property.sale_image_3.url %>" alt="" /></a></li>
+                  <li><a href="javascript: changeImage(4);"><img src="<%= @property.sale_image_4.url %>" alt="" /></a></li>
                 </ul>
               </div>
             </div>
@@ -93,10 +93,10 @@ function changeImage(current) {
             <div id="thumbs">
               <div class="row collapse">
                 <ul class="large-block-grid-1 medium-block-grid-1 small-block-grid-2">
-                  <li><a href="javascript: changeImage(5);"><img src="/img/nature5.jpg" alt="" /></a></li>
-                  <li><a href="javascript: changeImage(6);"><img src="/img/nature6.jpg" alt="" /></a></li>
-                  <li><a href="javascript: changeImage(7);"><img src="/img/nature7.jpg" alt="" /></a></li>
-                  <li><a href="javascript: changeImage(8);"><img src="/img/nature8.jpg" alt="image-alt" /></a></li>
+                  <li><a href="javascript: changeImage(5);"><img src="<%= @property.sale_image_5.url %>" alt="" /></a></li>
+                  <li><a href="javascript: changeImage(6);"><img src="<%= @property.sale_image_6.url %>" alt="" /></a></li>
+                  <li><a href="javascript: changeImage(7);"><img src="<%= @property.sale_image_7.url %>" alt="" /></a></li>
+                  <li><a href="javascript: changeImage(8);"><img src="<%= @property.sale_image_8.url %>" alt="image-alt" /></a></li>
                 </ul>
               </div>
             </div>
@@ -176,7 +176,7 @@ function changeImage(current) {
             </ul>
           </div>
           <div class="map-wrap" onclick="document.getElementById('image-enlarge').style.display = 'inline'">
-            <img style="width: 100%;" src="/img/property-map.jpg">
+            <img style="width: 100%;" src="<%= @property.map_image.url %>">
           </div>
         </div>
       </div>
