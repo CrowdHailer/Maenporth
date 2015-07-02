@@ -47,6 +47,7 @@ module Maenporth
       end
       form = PropertySaleForm.new request.POST['property']
       @property.update form
+      @property.save
       render :'edit-sale-profile'
     end
 
@@ -58,6 +59,7 @@ module Maenporth
       end
       form = PropertyRentForm.new request.POST['property']
       @property.update form
+      @property.save
       render :'edit-rent-profile'
     end
 
