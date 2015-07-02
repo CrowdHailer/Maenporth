@@ -11,7 +11,6 @@ CarrierWave.configure do |config|
       access_key_id:     ENV.fetch('AWS_ACCESS_KEY_ID'),
       secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY')
     }
-    config.cache_dir = "tmp/uploads"
     config.root = ''
 
   else
