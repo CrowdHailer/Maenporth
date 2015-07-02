@@ -294,6 +294,11 @@ margin-bottom: 0em;
   width: 100%;
 }
 
+.thumb-wrap {
+  height: 5em;
+  overflow: hidden;
+}
+
 #thumbs img {
   width: 100%;
   height: auto;
@@ -388,6 +393,7 @@ margin-bottom: 0em;
   background-color: #ea2182 !important;
   font-size: 1.3em !important;
   margin-top: 0em !important;
+  display: inline-block;
 }
 
 .est-btn {
