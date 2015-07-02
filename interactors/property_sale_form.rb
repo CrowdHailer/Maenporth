@@ -1,9 +1,3 @@
-module NoopAttribute
-  def self.new(arg)
-    arg
-  end
-end
-
 class PropertySaleForm < Vulcanize::Form
   attribute :property_name, PropertyName
   attribute :sale_description, Description
