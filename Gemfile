@@ -27,6 +27,10 @@ gem 'sequel'
 
 gem 'errol', :git => 'git@github.com:CrowdHailer/Errol.git'
 
+gem 'carrierwave'
+gem 'carrierwave-sequel'
+gem 'carrierwave-aws'
+
 group :test do
   gem 'rack-test', :require => 'rack/test'
   gem 'minitest', :require => 'minitest/autorun'

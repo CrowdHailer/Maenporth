@@ -36,6 +36,23 @@ Sequel.migration do
       String :recommendation_6
       String :recommendation_7
       String :recommendation_8
+      String :sale_image_1
+      String :sale_image_2
+      String :sale_image_3
+      String :sale_image_4
+      String :sale_image_5
+      String :sale_image_6
+      String :sale_image_7
+      String :sale_image_8
+      String :rent_image_1
+      String :rent_image_2
+      String :rent_image_3
+      String :rent_image_4
+      String :rent_image_5
+      String :rent_image_6
+      String :rent_image_7
+      String :rent_image_8
+      String :map_image
     end
   end
 

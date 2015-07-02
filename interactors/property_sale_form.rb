@@ -1,3 +1,9 @@
+module NoopAttribute
+  def self.new(arg)
+    arg
+  end
+end
+
 class PropertySaleForm < Vulcanize::Form
   attribute :property_name, PropertyName
   attribute :sale_description, Description
@@ -10,6 +16,15 @@ class PropertySaleForm < Vulcanize::Form
   attribute :balcony, Vulcanize::CheckBox, :default => false
   attribute :patio, Vulcanize::CheckBox, :default => false
   attribute :lawn, Vulcanize::CheckBox, :default => false
+  attribute :sale_image_1, NoopAttribute
+  attribute :sale_image_2, NoopAttribute
+  attribute :sale_image_3, NoopAttribute
+  attribute :sale_image_4, NoopAttribute
+  attribute :sale_image_5, NoopAttribute
+  attribute :sale_image_6, NoopAttribute
+  attribute :sale_image_7, NoopAttribute
+  attribute :sale_image_8, NoopAttribute
+  attribute :map_image, NoopAttribute
 
   def empty?
     false

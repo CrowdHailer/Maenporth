@@ -46,6 +46,7 @@ module Maenporth
         halt
       end
       form = PropertySaleForm.new request.POST['property']
+      ap form.sale_image_1
       @property.update form
       render :'edit-sale-profile'
     end
