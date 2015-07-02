@@ -1,5 +1,6 @@
 .env
 .sass-cache/
+public/uploads
 
 *.gem
 *.rbc

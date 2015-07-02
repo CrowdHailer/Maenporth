@@ -56,6 +56,7 @@ module Maenporth
         not_found
         halt
       end
+      ap request.POST
       form = PropertyRentForm.new request.POST['property']
       @property.update form
       render :'edit-rent-profile'

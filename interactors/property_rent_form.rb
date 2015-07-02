@@ -29,6 +29,15 @@ class PropertyRentForm < Vulcanize::Form
   attribute :recommendation_6, String
   attribute :recommendation_7, String
   attribute :recommendation_8, String
+  attribute :rent_image_1, NoopAttribute
+  attribute :rent_image_2, NoopAttribute
+  attribute :rent_image_3, NoopAttribute
+  attribute :rent_image_4, NoopAttribute
+  attribute :rent_image_5, NoopAttribute
+  attribute :rent_image_6, NoopAttribute
+  attribute :rent_image_7, NoopAttribute
+  attribute :rent_image_8, NoopAttribute
+  attribute :map_image, NoopAttribute
 
   def empty?
     false

@@ -1,5 +1,6 @@
 require_relative '../random_identifier'
 require_relative '../property_attributes'
+require_relative '../image_uploader'
 
 module Property
   class Record < Sequel::Model(:properties)
@@ -15,6 +16,24 @@ module Property
     serialize_attributes [->(x){x}, Bathrooms.method(:new)], :bathrooms
     serialize_attributes [->(x){x}, PropertyType.method(:new)], :property_sale_type, :property_rent_type
     serialize_attributes [->(x){x}, ViewType.method(:new)], :view_type
+
+    mount_uploader :sale_image_1, ImageUploader
+    mount_uploader :sale_image_2, ImageUploader
+    mount_uploader :sale_image_3, ImageUploader
+    mount_uploader :sale_image_4, ImageUploader
+    mount_uploader :sale_image_5, ImageUploader
+    mount_uploader :sale_image_6, ImageUploader
+    mount_uploader :sale_image_7, ImageUploader
+    mount_uploader :sale_image_8, ImageUploader
+    mount_uploader :rent_image_1, ImageUploader
+    mount_uploader :rent_image_2, ImageUploader
+    mount_uploader :rent_image_3, ImageUploader
+    mount_uploader :rent_image_4, ImageUploader
+    mount_uploader :rent_image_5, ImageUploader
+    mount_uploader :rent_image_6, ImageUploader
+    mount_uploader :rent_image_7, ImageUploader
+    mount_uploader :rent_image_8, ImageUploader
+    mount_uploader :map_image, ImageUploader
 
     def sale_description
       # TODO move to enitity and test
