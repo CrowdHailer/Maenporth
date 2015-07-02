@@ -120,16 +120,14 @@
           </div>
           <div class="large-8 columns end">
             <div id="">
-              <h2>Sending Enquiries to a Third Party CONDITIONAl</h2>
-              <p>You have selected to send enquiries about your rental property to a booking agent.</p>
-              <p>Please provide a URL (website address) for your booking agent.  This might be a profile page for your property that you have already set-up with your booking agent.</p>
+              <h2>Sending Enquiries to a Third Party</h2>
+              <p>If you would like to send enquiries about your rental property to a booking agent, please provide a URL (website address) for your booking agent.  This might be a profile page for your property that you have already set-up with your booking agent.</p>
               <p>URLS must begin http:// or https://</p>
               <input style="width: 100%"type="URL" name="property[enquiry_link]" value="<%= @property.enquiry_link %>">
             </div>
             <div id="">
-              <h2>Sending Enquiries Directly to You CONDITIONAL</h2>
-              <p>You have selected to send enquiries about your rental property to an email address that you control.</p>
-              <p>Please provide a valid email address.  We will email you everytime an enquiry is made about your property.  Please make sure your email address is correct. We cannot guarantee successful delivery of emails to invalid email addresses.</p>
+              <h2 style="margin-top: 1.5em;">Sending Enquiries Directly to You</h2>
+              <p>If you would like to send enquiries about your rental property to an email address that you control, please provide a valid email address.  We will email you everytime an enquiry is made about your property.  Please make sure your email address is correct. We cannot guarantee successful delivery of emails to invalid email addresses.</p>
               <input type="email" name="property[enquiry_email]" value="<%= @property.enquiry_email %>">
             </div>
           </div>
