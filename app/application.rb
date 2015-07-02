@@ -23,6 +23,11 @@ module Maenporth
       Bugsnag.notify(error, :severity => "info")
       response.body = render :'errors/404'
     end
+    
+    error do |err|
+      env["rack.exception"] = err
+      false
+    end
 
     error do
       # TODO respond to staging
