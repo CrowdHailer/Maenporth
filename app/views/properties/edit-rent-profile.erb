@@ -27,6 +27,7 @@
       <li><a href="#">For rent</a></li>
     </ul>
   </div>
+  <main id="edit-wrap">
   <form id="form_id" action="/properties/<%= @property.id %>/rent-profile" accept-charset="UTF-8" enctype="multipart/form-data" method="post">
     <input type="hidden" name="_method" value="PATCH">
 
@@ -303,5 +304,6 @@
       </section>
     </div>
   </form>
+</main>
   <!-- END For Rent Form -->
 </div>
