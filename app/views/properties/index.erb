@@ -45,7 +45,7 @@
 
 <% @properties.each do |property| %>
 <div class="row collapse admin-listing">
-  <div class="large-8 columns">
+  <div class="large-7 columns">
     <h3>Property Name <%= property.property_name %></h3>
   </div>
   <div class="large-2 columns">
@@ -57,12 +57,14 @@
       <div class="stat-wrap">
         <input type="checkbox" name="property[for_rent]" <%= 'checked' if property.for_rent %>><p>For Rent</p><img src="/img/sun-09.svg">
       </div>
-      <button type="submit">Update</button>
       <!-- <div class="stat-wrap">
         <input type="checkbox" checked><p>Hide</p><img src="/img/hidden-02.svg">
       </div> -->
-    </form>
+      </div>
+  <div class="large-1 columns">
+    <button type="submit">UPDATE</button>
   </div>
+</form>
   <div class="large-2 columns">
     <form class="" action="/properties/<%= property.id %>" method="post">
       <input type="hidden" name="_method" value="DELETE">
