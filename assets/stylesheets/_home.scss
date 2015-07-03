@@ -405,11 +405,11 @@ margin-bottom: 0em;
   display: inline-block;
   text-align: center;
   margin-bottom: 1em;
-  padding: 1em 0em;
+  padding: 1em 0em !important;
 }
 
 .enq-btn:hover {
-  opacity: 0.8;  
+  opacity: 0.8;
 }
 
 .est-btn {
