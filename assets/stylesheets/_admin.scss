@@ -201,3 +201,29 @@
 #edit-wrap p {
   padding-right: 1em;
 }
+
+#error-main {
+  height: 100%;
+  background: #39C0D7;
+}
+
+.error-wrap {
+  border: 0.1em solid white;
+  padding: 1em;
+  margin: 2em;
+}
+
+.error-wrap h1 {
+  color: white;
+  font-size: 3em;
+
+}
+
+.error-wrap h2 {
+  color: white;
+  font-size: 1.5em;
+}
+
+.error-wrap p {
+  color: white;
+}
