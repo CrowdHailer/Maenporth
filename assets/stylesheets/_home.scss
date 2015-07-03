@@ -188,6 +188,11 @@ font-size: 1.75em;
 margin-bottom: 0em;
   }
 
+  .property-box button {
+    padding: 0.6em;
+    width: 100%;
+  }
+
 .property-box-icon {
   width: 1.3em;
   margin-top: -0.4em;
@@ -297,6 +302,10 @@ margin-bottom: 0em;
 .thumb-wrap {
   height: 5em;
   overflow: hidden;
+}
+
+.thumb-wrap:hover {
+  opacity: 0.8;
 }
 
 #thumbs img {
