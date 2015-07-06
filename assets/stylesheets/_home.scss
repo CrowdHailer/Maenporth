@@ -593,6 +593,14 @@ footer p {
     font-size: 1em;
   }
 
+  .thumb-wrap {
+    height: 7.2vw;
+  }
+
+  .large-image {
+    height: auto;
+  }
+
  } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 
 // Large screens
