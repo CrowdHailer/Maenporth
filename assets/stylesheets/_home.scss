@@ -540,6 +540,13 @@ footer p {
   border-right: 2px solid white;
 }
 
+.mob-display-img {
+  display: inline;
+  height: auto;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
 // Small screens
 @media only screen { } /* Define mobile styles */
 
