@@ -342,6 +342,7 @@ margin-bottom: 0em;
   margin-top: 1em;
   padding: 0.75em;
   margin-right: 1em;
+  margin-bottom: 1.5em;
 }
 
 .favourites-wrap li{
@@ -510,6 +511,35 @@ footer p {
   font-size: 0.9em;
 }
 
+footer h2 {
+text-align: center;
+color: #24678d;
+}
+
+.foot-small p {
+  text-align: center;
+  font-size: 0.8em;
+
+}
+
+.foot-mnu-wrap ul {
+  margin: 0em !important;
+}
+
+.foot-mnu-wrap li {
+  float: left;
+  font-family: 'Muli' sans-serif !important;
+  list-style: none;
+  padding: 0.5em;
+}
+
+.foot-mnu-wrap a {
+  font-family: 'Muli' sans-serif !important;
+  color: #24678d !important;
+}
+.foot-mnu-wrap a:hover {
+color: #ff1493;
+}
 .mnav-1{
   background: #39C0D7 !important;
   margin-bottom: 0em !important;
@@ -599,6 +629,10 @@ footer p {
 
   .large-image {
     height: auto;
+  }
+
+  #white-bg {
+    padding: 0em;
   }
 
  } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
