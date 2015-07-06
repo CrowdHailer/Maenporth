@@ -1,4 +1,4 @@
-<div class="row collapse">
+<div class="row collapse show-for-large-up">
   <div class="large-12 columns">
     <div id="image-enlarge">
       <div class="large-map">
@@ -30,7 +30,7 @@ function changeImage(current) {
     <div class="property-box property-box-large for-rent">
       <div class="row collapse">
         <div class="large-10 medium-10 columns">
-          <h2>Property Name <%= @property.property_name %></h2>
+          <h2>Property Name: <%= @property.property_name %></h2>
         </div>
         <div class="large-2 medium-2 columns">
           <h2>For Sale <img class="property-box-icon" src="/img/house-svg-09.svg"></h2>
@@ -175,7 +175,10 @@ function changeImage(current) {
               <% end %>
             </ul>
           </div>
-          <div class="map-wrap" onclick="document.getElementById('image-enlarge').style.display = 'inline'">
+          <div class="map-wrap show-for-large-up" onclick="document.getElementById('image-enlarge').style.display = 'inline'">
+            <img style="width: 100%;" src="<%= @property.map_image.url %>">
+          </div>
+          <div class="map-wrap hide-for-large-up">
             <img style="width: 100%;" src="<%= @property.map_image.url %>">
           </div>
         </div>
