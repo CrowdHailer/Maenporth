@@ -509,3 +509,33 @@ footer p {
   text-align: center;
   font-size: 0.9em;
 }
+
+.mnav-1{
+  background: #39C0D7 !important;
+  margin-bottom: 0em !important;
+  color: white !important;
+  border: 0.1em solid white !important;
+}
+
+.mnav-2{
+  background:#25a3b8 !important;
+  margin-bottom: 0em !important;
+  color: white !important;
+  border: 0.1em solid white !important;
+}
+
+.mnav-1:hover, .mnav-1:active{
+  background: #FF1493 !important;
+}
+
+.mnav-2:hover, .mnav-2:active{
+  background:#FF1493 !important;
+}
+
+.bdbt {
+  border-bottom: 2px solid white;
+}
+
+.bdlr {border-left: 2px solid white;
+  border-right: 2px solid white;
+}
