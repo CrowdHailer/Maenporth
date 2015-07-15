@@ -30,10 +30,10 @@ function changeImage(current) {
     <div class="property-box property-box-large for-rent">
       <div class="row collapse">
         <div class="large-10 medium-10 columns">
-          <h2>Property Name: <%= @property.property_name %></h2>
+          <h2>For Sale: <%= @property.property_name %></h2>
         </div>
-        <div class="large-2 medium-2 columns">
-          <h2>For Sale <img class="property-box-icon" src="/img/house-svg-09.svg"></h2>
+        <div class="large-2 medium-2 columns for-status-icon">
+          <a href="/properties/for-sale"><h2>All For Sale <img class="property-box-icon" src="/img/house-svg-09.svg"></h2></a>
         </div>
       </div>
       <hr>
@@ -174,6 +174,10 @@ function changeImage(current) {
               <li>Lawn</li>
               <% end %>
             </ul>
+          </div>
+          <div class="map-notes">
+            <h2>Property Location on Estate</h2>
+            <p>Click to enlarge map</p>
           </div>
           <div class="map-wrap show-for-large-up" onclick="document.getElementById('image-enlarge').style.display = 'inline'">
             <img style="width: 100%;" src="<%= @property.map_image.url %>">
