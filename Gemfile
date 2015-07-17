@@ -27,6 +27,8 @@ gem 'sequel'
 
 gem 'errol', '~> 0.0.1'
 
+gem 'mail'
+
 gem 'carrierwave'
 gem 'carrierwave-sequel'
 gem 'carrierwave-aws'

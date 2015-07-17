@@ -9,6 +9,7 @@
     <p>This message will be sent directly to the owner of this property.</p>
     <p>Please ensure your provide accurate contact details so they may respond to your enquiry.</p>
     <form action="/enquiries" method="post">
+      <input type="hidden" name="enquiry[property_id]" value="<%= @property.id %>">
       <p>Your Name</p>
       <input type="text" name="enquiry[name]"><br>
       <p>Your Email Address</p>
