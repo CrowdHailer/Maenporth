@@ -79,6 +79,12 @@ module Maenporth
         not_found
         halt
       end
+      # TODO Belongs in View/Page object
+      if @property.enquiry_route == 'agent'
+        @enquiry_location =  @property.enquiry_link
+      else
+        @enquiry_location = "/properties/#{@property.id}/enquire"
+      end
       render :'for-rent'
     end
 
