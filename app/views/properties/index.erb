@@ -70,9 +70,10 @@
   </div>
 </form>
   <div class="large-2 columns">
-    <form class="" action="/properties/<%= property.id %>" method="post">
+    <form class="" action="/properties/<%= property.id %>" method="post" onsubmit="return confirm('Are you sure you want to delete this property')">
       <input type="hidden" name="_method" value="DELETE">
-      <button onclick="document.getElementById('are-you-sure').style.display = 'inline'" style="background: red;">DELETE</button>
+      <!-- <button onclick="document.getElementById('are-you-sure').style.display = 'inline'" style="background: red;">DELETE</button> -->
+      <button style="background: red;">DELETE</button>
     </form>
     <a href="/properties/<%= property.id %>/edit-sale-profile"><button style="background: #60c650;">EDIT</button></a>
   </div>
