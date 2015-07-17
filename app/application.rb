@@ -16,6 +16,7 @@ module Maenporth
 
     # Load further controllers before final root mounted controller
     controller '/properties', PropertiesController
+    controller '/enquiries', EnquiriesController
     controller '/', HomeController
 
     after :status => 404 do
