@@ -1,0 +1,39 @@
+<div class="row collapse" id="white-bg">
+  <h1>Properties For Sale</h1>
+  <a class="list-view-link" href="/properties/for-rent">Click to view properties for rent...</a>
+  <hr>
+  <!-- START REPEATING -->
+  <% @properties.each do |property| %>
+  <div class="property-box">
+    <div class="row collapse">
+      <div class="large-10 medium-10 columns">
+        <h2>Property Name: <%= property.property_name %></h2>
+      </div>
+      <div class="large-2 medium-2 columns">
+        <h2>For Sale <img class="property-box-icon" src="/img/house-svg-09.svg"></h2>
+      </div>
+    </div>
+    <hr>
+    <div class="row collapse">
+      <div class="large-3 medium-4 columns">
+        <img class="property-image" src="http://www.maenporthestate.com/uploads/3/1/1/2/31128549/2375611_orig.jpg">
+      </div>
+      <div class="large-7 medium-4 columns">
+        <div class="sale-content">
+          <ul>
+            <li><%= property.property_sale_type %></li>
+            <li><%= property.bedrooms %> Bedrooms</li>
+          </ul>
+          <h3><%= property.sale_price %></h3>
+        </div>
+      </div>
+      <div class="large-2 medium-4 columns">
+        <a href="/properties/<%= property.id %>/for-sale">
+          <button>Find Out More</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <!-- END REPEATING -->
+</div>

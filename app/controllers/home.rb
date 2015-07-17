@@ -6,5 +6,9 @@ module Maenporth
       render :index
     end
 
+    get '/test-error' do
+      raise TestError, 'This is a drill'
+    end
+
   end
 end

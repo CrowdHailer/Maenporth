@@ -10,15 +10,27 @@ end
 
 module Maenporth
   class App < BaseController
+    middleware << proc do |app|
+      use Bugsnag::Rack
+    end
 
     # Load further controllers before final root mounted controller
+    controller '/properties', PropertiesController
     controller '/', HomeController
 
     after :status => 404 do
+      # error = NotFoundError.new "Attempted Path: #{request.path}"
+      # Bugsnag.notify(error, :severity => "info")
       response.body = render :'errors/404'
     end
 
+    error do |err|
+      env["rack.exception"] = err
+      false
+    end
+
     error do
+      # TODO respond to staging
       if production?
         response.status = 500
         response.body = render :'errors/500'

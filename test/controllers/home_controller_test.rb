@@ -1,5 +1,4 @@
 require_relative '../test_config'
-require_relative '../../app/application'
 
 module Maenporth
   class HomeControllerTest < MiniTest::Test
