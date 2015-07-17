@@ -179,7 +179,7 @@ a:-webkit-any-link {
 .property-box {
   background: #ececf1;
   padding: 0.5em;
-  height: 13.7em;
+  height: 11.4em;
   margin-top: 1em;
 }
 
@@ -612,8 +612,8 @@ color: #ff1493;
 }
 
 .list-image-wrap {
-  height: 10.3em;
-  overflow: hidden;  
+  height: 8.2em;
+  overflow: hidden;
 }
 
 // Small screens
@@ -631,6 +631,15 @@ color: #ff1493;
 
 .property-box h2 {
   font-size: 1.2em;
+}
+
+.list-image-wrap {
+  height: auto;
+  overflow: hidden;
+}
+
+.image-disp {
+  height: auto;
 }
 
   #white-bg {
@@ -660,6 +669,15 @@ color: #ff1493;
 
   .property-box h2 {
     font-size: 1em;
+  }
+
+  .list-image-wrap {
+    height: auto;
+    overflow: hidden;
+  }
+
+  .image-disp {
+    height: auto;
   }
 
   .thumb-wrap {
