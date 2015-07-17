@@ -121,14 +121,14 @@
             <label>Send enquiries directly to me.<input class="enquiry-route-input" type="radio" data-hook="enquiry-route-direct-checkbox" value="direct" name="property[enquiry_route]" <%= 'checked' if @property.enquiry_route == 'direct' %>></label>
           </div>
           <div class="large-8 columns end">
-            <div id="" data-hook="enquiry-route-agent-section">
+            <div id="enquiry" data-hook="enquiry-route-agent-section">
               <h2>Sending Enquiries to a Third Party</h2>
               <p>If you would like to send enquiries about your rental property to a booking agent, please provide a URL (website address) for your booking agent.  This might be a profile page for your property that you have already set-up with your booking agent.</p>
               <p>URLS must begin http:// or https://</p>
               <input style="width: 100%"type="URL" name="property[enquiry_link]" value="<%= @property.enquiry_link %>">
             </div>
-            <div id="" data-hook="enquiry-route-direct-section">
-              <h2 style="margin-top: 1.5em;">Sending Enquiries Directly to You</h2>
+            <div id="enquiry" data-hook="enquiry-route-direct-section">
+              <h2>Sending Enquiries Directly to You</h2>
               <p>If you would like to send enquiries about your rental property to an email address that you control, please provide a valid email address.  We will email you everytime an enquiry is made about your property.  Please make sure your email address is correct. We cannot guarantee successful delivery of emails to invalid email addresses.</p>
               <input type="email" name="property[enquiry_email]" value="<%= @property.enquiry_email %>">
             </div>

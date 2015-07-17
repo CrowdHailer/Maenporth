@@ -290,6 +290,11 @@ margin-bottom: 0em;
   display: none;
 }
 
+.image-disp {
+  height: 21.5em;
+  overflow: hidden;
+}
+
 #bigimages {
   padding-right: 0.75em;
 }
@@ -323,7 +328,7 @@ margin-bottom: 0em;
 }
 
 .large-image {
-  height: 21.5em;
+
 }
 
 .description-wrap {
