@@ -11,6 +11,11 @@ module WWW
       render :create
     end
 
+    get '/conversion' do
+      @redirect_url = request.GET['redirect_url']
+      render :conversion
+    end
+
 
   end
 end
