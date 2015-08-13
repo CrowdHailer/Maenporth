@@ -270,18 +270,26 @@
             <p>If you have a rating awarded to your holiday home please upload an image here.  An example would be a Visit England ratings badges.</p>
             <p>If you do not have any ratings awarded, please do not upload any images.  You can have up to 3 images.  If you only have one ratings badge only upload it once.</p>
           </div>
-          <div class="large-3 columns">
-            Upload Ratings Badge 1: TODO <input type="file" name=""><br>
-            Image 2: TODO <input type="file" name=""><br>
-            Image 3: TODO <input type="file" name=""><br>
+          <div class="large-3 columns rating-badge-upload">
+            <div>Ratings Badge 1:<input type="file" name="TODO"></div>
+            <div>Ratings Badge 2:<input type="file" name="TODO"></div>
+            <div>Ratings Badge 3:<input type="file" name="TODO"></div>
           </div>
           <div class="large-4 columns">
-            <img src="<%= @property.TODO %>" alt="" />
-            <p>Ratings Badge 1</p>
-            <img src="<%= @property.TODO %>" alt="" />
-            <p>Ratings Badge 2</p>
-            <img src="<%= @property.TODO %>" alt="" />
-            <p>Ratings Badge 3</p>
+            <div class="ratings-badge-wrap">
+              <div class="rating-badge">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/183581/badge-test.png">
+                <p>Badge 1</p>
+              </div>
+              <div class="rating-badge">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/183581/badge-test.png">
+                <p>Badge 2</p>
+              </div>
+              <div class="rating-badge">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/183581/badge-test.png">
+                <p>Badge 3</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="row collapse">

@@ -29,11 +29,24 @@ function changeImage(current) {
   <div class="large-12 columns">
     <div class="property-box property-box-large for-rent">
       <div class="row collapse">
-        <div class="large-10 medium-10 columns">
+        <div class="for-status-icon">
+          <a href="/properties/for-rent"><h2>Back to - All To Rent <img class="property-box-icon" src="/img/sun-09.svg"></h2></a>
+        </div>
+        <div class="large-8 medium-10 columns">
           <h2>Rent <%= @property.property_name %></h2>
         </div>
-        <div class="large-2 medium-2 columns for-status-icon">
-          <a href="/properties/for-rent"><h2>All For Rent <img class="property-box-icon" src="/img/sun-09.svg"></h2></a>
+        <div class="large-4 medium-2 columns">
+          <div class="rating-badge-wrap">
+            <div class="rating-badge">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/183581/badge-test.png">
+            </div>
+            <div class="rating-badge">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/183581/badge-test.png">
+            </div>
+            <div class="rating-badge">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/183581/badge-test.png">
+            </div>
+          </div>
         </div>
       </div>
       <hr>
