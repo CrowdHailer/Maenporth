@@ -4,7 +4,7 @@
       <h1>Maenporth Estate System Admin</h1>
     </div>
     <div class="large-2 columns">
-      <a href="/properties"><button>Admin Home</button></a>
+      <a href="/admin/properties"><button>Admin Home</button></a>
     </div>
   </div>
 </div>
@@ -23,12 +23,12 @@
 
   <div id="tabvanilla" class="widget">
     <ul class="tabnav">
-      <li><a href="/properties/<%= @property.id %>/edit-sale-profile">For sale</a></li>
+      <li><a href="/admin/properties/<%= @property.id %>/edit-sale-profile">For sale</a></li>
       <li><a href="#">For rent</a></li>
     </ul>
   </div>
   <main id="edit-wrap">
-  <form id="form_id" action="/properties/<%= @property.id %>/rent-profile" accept-charset="UTF-8" enctype="multipart/form-data" method="post">
+  <form id="form_id" action="/admin/properties/<%= @property.id %>/rent-profile" accept-charset="UTF-8" enctype="multipart/form-data" method="post">
     <input type="hidden" name="_method" value="PATCH">
 
     <!-- For Rent Form -->
