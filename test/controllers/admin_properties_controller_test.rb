@@ -42,5 +42,34 @@ module WWW
       assert_equal 404, response.status
     end
 
+    def test_can_update_sale_profile
+      property = Estate.create
+      patch "/#{property.id}/sale-profile", {"property" => {"sale_description" => "new description"}}
+      property.reload
+      assert_ok last_response
+      assert_equal "new description", property.sale_description.raw
+    end
+
+    def test_can_update_rent_profile
+      property = Estate.create
+      patch "/#{property.id}/rent-profile", {"property" => {"rent_description" => "new description"}}
+      property.reload
+      assert_ok last_response
+      assert_equal "new description", property.rent_description.raw
+    end
+
+    def test_can_update_current_status
+      property = Estate.create
+      patch "/#{property.id}/status", {"property" => {"for_rent" => "on", "for_sale" => "on"}}
+      property.reload
+      assert property.for_sale
+      assert property.for_rent
+    end
+
+    def test_can_delete_property
+      property = Estate.create
+      delete "/#{property.id}"
+      assert Estate.empty?
+    end
   end
 end
