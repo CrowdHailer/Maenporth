@@ -2,7 +2,6 @@
   <h1>Properties For Rent</h1>
   <a class="list-view-link" href="/properties/for-sale">Click to view properties for sale...</a>
   <hr>
-  <!-- START REPEATING -->
   <% @properties.each do |property| %>
   <div class="property-box for-rent">
     <div class="row collapse">
@@ -34,19 +33,24 @@
           <button class="find-out-more-rent-btn">Find Out More</button>
         </a>
         <div class="rating-badge-wrap">
+          <% if property.rent_badge_1.url %>
           <div class="rating-badge">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/183581/badge-test.png">
+            <img src="<%= property.rent_badge_1.url %>">
           </div>
+          <% end %>
+          <% if property.rent_badge_2.url %>
           <div class="rating-badge">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/183581/badge-test.png">
+            <img src="<%= property.rent_badge_2.url %>">
           </div>
+          <% end %>
+          <% if property.rent_badge_3.url %>
           <div class="rating-badge">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/183581/badge-test.png">
+            <img src="<%= property.rent_badge_3.url %>">
           </div>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
   <% end %>
-  <!-- END REPEATING -->
 </div>
