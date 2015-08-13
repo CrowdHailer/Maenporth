@@ -1,3 +1,4 @@
+# Also handles review
 class Description
   Options = {autolink: true, tables: true}
   Renderer = Redcarpet::Markdown.new Redcarpet::Render::HTML, Options

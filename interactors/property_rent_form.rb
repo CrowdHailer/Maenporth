@@ -1,6 +1,7 @@
 class PropertyRentForm < Vulcanize::Form
   attribute :property_name, PropertyName
   attribute :rent_description, Description
+  attribute :review, Description
   # TODO destringify
   attribute :enquiry_route, String
   attribute :enquiry_link, Link
