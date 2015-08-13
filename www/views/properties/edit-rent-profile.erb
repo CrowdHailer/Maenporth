@@ -107,6 +107,19 @@
             <textarea rows="15" cols="70" placeholder="Type your property description here..." style="padding: 1em; margin-bottom: 1em;" name="property[rent_description]"><%= @property.rent_description.raw if @property.rent_description %></textarea>
           </div>
         </div>
+
+        <div class="row collapse">
+          <hr>
+          <div class="large-5 columns">
+            <h2>Reviews</h2>
+            <p>Please provide some reviews of your property.</p>
+            <p>This text editor uses Markdown to help you format your text.  Use the return key to add paragraph spacing.</p>
+          </div>
+          <div class="large-7 columns">
+            <textarea rows="15" cols="70" placeholder="Type your reviews here..." style="padding: 1em; margin-bottom: 1em;" name="property[review]"></textarea>
+          </div>
+        </div>
+
         <div class="row collapse enquiry-route">
           <hr>
           <h2>Enquiry Route</h2>

@@ -140,8 +140,13 @@ function changeImage(current) {
       <!-- -->
       <div class="row collapse">
         <div class="large-6 columns">
+          <h2>Description</h2>
           <div class="description-wrap">
             <%= @property.rent_description.html if @property.rent_description %>
+          </div>
+          <h2>Reviews</h2>
+          <div class="reviews-wrap">
+            <%= @property.review.html if @property.review %>
           </div>
           <h2 style="margin-top: 1em;">Local Recommendations</h2>
           <div class="favourites-wrap">
