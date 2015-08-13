@@ -1,4 +1,4 @@
-module Maenporth
+module WWW
   class EnquiriesController < BaseController
     render_defaults[:dir] += '/enquiries'
 

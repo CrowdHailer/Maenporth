@@ -1,4 +1,4 @@
-module Maenporth
+module WWW
   class BaseController < Scorched::Controller
     # TODO add session middleware
     # middleware << proc do |app|

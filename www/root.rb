@@ -11,8 +11,8 @@ def production?
   RACK_ENV == 'production'
 end
 
-module Maenporth
-  class App < BaseController
+module WWW
+  class Root < BaseController
     middleware << proc do |app|
       use Bugsnag::Rack
     end
@@ -20,6 +20,7 @@ module Maenporth
     # Load further controllers before final root mounted controller
     controller '/properties', PropertiesController
     controller '/enquiries', EnquiriesController
+    controller '/admin', AdminController
     controller '/', HomeController
 
     after :status => 404 do
