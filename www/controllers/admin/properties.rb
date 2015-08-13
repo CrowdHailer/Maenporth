@@ -32,7 +32,6 @@ module WWW
       end
 
       patch '/:id/sale-profile' do |id|
-        # TODO test
         @property = Estate.fetch(id) do
           not_found
           halt
@@ -44,7 +43,6 @@ module WWW
       end
 
       patch '/:id/rent-profile' do |id|
-        # TODO test
         @property = Estate.fetch(id) do
           not_found
           halt
@@ -56,7 +54,6 @@ module WWW
       end
 
       patch '/:id/status' do |id|
-        # TODO test
         @property = Estate.fetch(id) do
           not_found
           halt
