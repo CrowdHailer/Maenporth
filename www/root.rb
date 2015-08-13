@@ -20,6 +20,7 @@ module WWW
     # Load further controllers before final root mounted controller
     controller '/properties', PropertiesController
     controller '/enquiries', EnquiriesController
+    controller '/admin', AdminController
     controller '/', HomeController
 
     after :status => 404 do
