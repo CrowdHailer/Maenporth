@@ -42,7 +42,20 @@ RACK_ENV=test rake db:migrate:up
 touch .env
 ```
 
-required *none*
+required
+- ADMIN_EMAIL
+- BUGSNAG_API_KEY
+- AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
+- MANDRILL_USERNAME
+- MANDRILL_APIKEY
+- S3_BUCKET_NAME
+
+##### Amazon
+Account under Richards management  
+Account URL: https://039877457256.signin.aws.amazon.com/console
+Peter username: peter-saxton
+
 
 ## Usage
 
