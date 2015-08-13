@@ -1,6 +1,7 @@
 require_relative '../random_identifier'
 require_relative '../property_attributes'
 require_relative '../image_uploader'
+require_relative '../badge_uploader'
 
 module Property
   class Record < Sequel::Model(:properties)
@@ -34,6 +35,9 @@ module Property
     mount_uploader :rent_image_7, ImageUploader
     mount_uploader :rent_image_8, ImageUploader
     mount_uploader :map_image, ImageUploader
+    mount_uploader :rent_badge_1, BadgeUploader
+    mount_uploader :rent_badge_2, BadgeUploader
+    mount_uploader :rent_badge_3, BadgeUploader
 
     def sale_description
       # TODO move to enitity and test

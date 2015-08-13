@@ -29,11 +29,30 @@ function changeImage(current) {
   <div class="large-12 columns">
     <div class="property-box property-box-large for-rent">
       <div class="row collapse">
-        <div class="large-10 medium-10 columns">
+        <div class="for-status-icon">
+          <a href="/properties/for-rent"><h2>Back to - All To Rent <img class="property-box-icon" src="/img/sun-09.svg"></h2></a>
+        </div>
+        <div class="large-8 medium-10 columns">
           <h2>Rent <%= @property.property_name %></h2>
         </div>
-        <div class="large-2 medium-2 columns for-status-icon">
-          <a href="/properties/for-rent"><h2>All For Rent <img class="property-box-icon" src="/img/sun-09.svg"></h2></a>
+        <div class="large-4 medium-2 columns">
+          <div class="rating-badge-wrap">
+            <% if @property.rent_badge_1.url %>
+            <div class="rating-badge">
+              <img src="<%= @property.rent_badge_1.url %>">
+            </div>
+            <% end %>
+            <% if @property.rent_badge_2.url %>
+            <div class="rating-badge">
+              <img src="<%= @property.rent_badge_2.url %>">
+            </div>
+            <% end %>
+            <% if @property.rent_badge_3.url %>
+            <div class="rating-badge">
+              <img src="<%= @property.rent_badge_3.url %>">
+            </div>
+            <% end %>
+          </div>
         </div>
       </div>
       <hr>

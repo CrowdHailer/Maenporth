@@ -186,6 +186,7 @@ a:-webkit-any-link {
 .property-box h2{
 font-size: 1.75em;
 margin-bottom: 0em;
+padding-top: 1em;
   }
 
   .property-box button {
@@ -595,6 +596,8 @@ color: #ff1493;
   color: #2190a3 !important;
   font-size: 1.2em !important;
   margin-top: 0.5em;
+  text-align: right;
+  padding: 0.35em;
 }
 
 .for-status-icon h2:hover {
@@ -615,6 +618,24 @@ color: #ff1493;
   height: 8.2em;
   overflow: hidden;
 }
+
+  .find-out-more-rent-btn {
+    width: 10em !important;
+    float: right;
+  }
+
+  .ratings-badge-wrap {
+    width: 100%;
+    float: right;
+  }
+
+  .rating-badge {
+    float: right;
+    width: 70px;
+    height: 100px;
+    margin: 0 0.5em;
+    overflow: hidden;
+  }
 
 // Small screens
 @media only screen { } /* Define mobile styles */
