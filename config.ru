@@ -1,3 +1,3 @@
-require File.expand_path("../app/application.rb", __FILE__)
+require File.expand_path("../www/root.rb", __FILE__)
 
-run Maenporth::App
+run WWW::Root

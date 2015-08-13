@@ -12,7 +12,7 @@ def production?
 end
 
 module WWW
-  class App < BaseController
+  class Root < BaseController
     middleware << proc do |app|
       use Bugsnag::Rack
     end
