@@ -146,7 +146,7 @@ function changeImage(current) {
           </div>
           <h2>Reviews</h2>
           <div class="reviews-wrap">
-            <p>TODO</p>
+            <%= @property.review.html if @property.review %>
           </div>
           <h2 style="margin-top: 1em;">Local Recommendations</h2>
           <div class="favourites-wrap">
