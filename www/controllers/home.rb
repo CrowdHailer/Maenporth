@@ -1,4 +1,4 @@
-module Maenporth
+module WWW
   class HomeController < BaseController
     render_defaults[:dir] += '/home'
 

@@ -1,6 +1,6 @@
 require_relative '../test_config'
 
-module Maenporth
+module WWW
   class PropertiesControllerTest < MiniTest::Test
     include ControllerTesting
     include DatabaseTesting

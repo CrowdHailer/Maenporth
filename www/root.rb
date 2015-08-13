@@ -11,7 +11,7 @@ def production?
   RACK_ENV == 'production'
 end
 
-module Maenporth
+module WWW
   class App < BaseController
     middleware << proc do |app|
       use Bugsnag::Rack

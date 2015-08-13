@@ -1,4 +1,4 @@
-module Maenporth
+module WWW
   class PropertiesController < BaseController
     render_defaults[:dir] += '/properties'
 
