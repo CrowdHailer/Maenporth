@@ -1,0 +1,41 @@
+<div class="row collapse" id="white-bg">
+  <h1>Properties For Rent</h1>
+  <a class="list-view-link" href="/properties/for-sale">Click to view properties for sale...</a>
+  <hr>
+  <!-- START REPEATING -->
+  <% @properties.each do |property| %>
+  <div class="property-box for-rent">
+    <div class="row collapse">
+      <div class="large-10 medium-10 columns">
+        <h2>Property Name: <%= property.property_name %></h2>
+      </div>
+      <div class="large-2 medium-2 columns">
+        <h2>For Rent <img class="property-box-icon" src="/img/sun-09.svg"></h2>
+      </div>
+    </div>
+    <hr>
+    <div class="row collapse">
+      <div class="large-3 medium-4 columns">
+        <div class="list-image-wrap">
+          <img class="property-image" src="<%= property.rent_image_1.url %>">
+        </div>
+      </div>
+      <div class="large-7 medium-4 columns">
+        <div class="sale-content">
+          <ul>
+            <li><%= property.bedrooms %> Bedrooms</li>
+            <li>Sleeps 6</li>
+            <li><%= property.view_type %></li>
+          </ul>
+        </div>
+      </div>
+      <div class="large-2 medium-4 columns">
+        <a href="/properties/<%= property.id %>/for-rent">
+          <button>Find Out More</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <!-- END REPEATING -->
+</div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <title>Maenporth Estate | Properties for sale and holiday rent</title>
+
+    <meta name="description" content="Maenporth Estate Properties for sale and holiday rent.">
+    <meta name="author" content="Workshop 14 Limited">
+    <link rel="canonical" href="TODO set canonical url" />
+    <link rel="shortcut icon" type="image/ico" href="/img/favicon.ico"/>
+    <!-- Mobile-friendly viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/application.css">
+</head>
+<body>
+    <%= render File.expand_path('../../partials/header.erb', __FILE__).to_sym %>
+
+    <%= yield %>
+
+    <%= render File.expand_path('../../partials/footer.erb', __FILE__).to_sym %>
+
+</body>
+</html>

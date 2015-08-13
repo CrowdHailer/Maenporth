@@ -1,0 +1,241 @@
+.admin-head {
+  width: 100%;
+  height: 3em;
+  background: #39C0D7;
+  color: white;
+  margin-bottom: 1em;
+}
+
+.admin-head h1 {
+  color: white;
+  font-size: 1.8em;
+  padding-top: 0.2em;
+}
+
+.admin-head button {
+  padding: 0.8em;
+  float: right;
+}
+
+.admin-list button {
+  float: right;
+}
+
+.admin-list h2 {
+  padding-top: 0.5em;
+}
+
+.admin-listing {
+  border-bottom: 0.15em solid #C0C0C0 !important;
+  margin-bottom: 1em !important;
+}
+
+.prop-name input {
+  width: 35em;
+}
+
+.admin-listing p {
+  margin-bottom: 0em;
+  line-height: 23px;
+  float: right;
+}
+
+.admin-listing img {
+  float: right;
+  width: 1.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.stat-wrap {
+  display: inline-block;
+}
+
+.admin-listing button {
+  float: right;
+  padding: 0.5em;
+  margin-left: 0.5em;
+}
+
+.admin-listing button:hover {
+  opacity: 0.7;
+}
+
+#enquiry {
+  padding: 1em;
+  border: 0.1em solid #222;
+  margin-bottom: 1em;
+
+}
+
+/* TAB CSS */
+.widget {
+   width: 100%;
+   margin-right: auto;
+   margin-left: auto;
+   padding-bottom: 15px;
+   margin-top:25px;
+   box-sizing: border-box;
+}
+
+.tabnav li {
+  display: inline-block;
+  list-style: none;
+  padding-right: 5px;
+  font-size: 17px;
+}
+
+.tabnav li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #39C0D7;
+  color: #fff;
+  font-weight: 300;
+  padding: 10px;
+  outline: none;
+  font-size: 17px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.tabnav li a:hover,.tabnav li a:active {
+  background: #ea2182;
+  color: #222;
+  text-decoration: none;
+}
+
+.tabnav li.ui-tabs-selected a {
+  background: #ea2182;
+  color:#222;
+}
+
+.tabdiv {
+  padding: 0px;
+  width: 100%;
+  height: auto;
+  margin-top: 1em;
+  box-sizing: border-box;
+}
+
+.tabdiv li {
+  list-style: none;
+  margin-left: 0px;
+}
+
+.ui-tabs-hide {
+  display: none;
+}
+
+.edit-gallery img {
+  cursor: default;
+  height: 73px;
+  width: 100%;
+}
+
+.checklist-wrap {
+  background: #f7f7f9;
+  padding: 1em;
+  height: auto;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+.checklist-wrap p {
+  margin-bottom: 0em;
+}
+
+.checklist-wrap td {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.checklist-wrap select {
+  margin-bottom: 0.2em;
+}
+
+#are-you-sure {
+  display: none;
+  width: 100%;
+  height: 1000em;
+  position: fixed;
+  z-index: 999;
+  background: rgba(204,204,204,0.7);
+  margin-top: -9em;
+}
+
+#are-you-sure button {
+  float: right;
+  margin-left: 1em;
+}
+
+.sure-content {
+  height: 10em;
+  margin-top: 10vh;
+  background: white;
+  padding: 2em;
+}
+
+.local-recs input {
+  width: 100%;
+}
+
+.enquiry-route-input {
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 0.5em;
+  margin-left: 1em;
+}
+
+.enquiry-text label {
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 2em;
+}
+
+#agent-enquiry {
+  display: none;
+}
+
+.agent-enquiry {
+  background: #ea2182;
+  padding: 0.3em;
+  color: white;
+  width: 6em;
+}
+
+.form-checks select input {
+  margin-bottom: 1em;
+}
+
+#edit-wrap p {
+  padding-right: 1em;
+}
+
+#error-main {
+  height: 100%;
+  background: #39C0D7;
+}
+
+.error-wrap {
+  border: 0.1em solid white;
+  padding: 1em;
+  margin: 2em;
+}
+
+.error-wrap h1 {
+  color: white;
+  font-size: 3em;
+
+}
+
+.error-wrap h2 {
+  color: white;
+  font-size: 1.5em;
+}
+
+.error-wrap p {
+  color: white;
+}
+
+.foot-mnu-wrap a {
+  font-family: 'Muli' sans-serif !important;
+  color: #24678d !important;
+}

@@ -1,0 +1,32 @@
+<head>
+  <meta name="googlebot" content="noindex">
+  <meta name="robots" content="noindex">
+</head>
+
+<div class="row collapse">
+  <div class="large-6 columns form">
+    <h2>Enquire with the owner of <%= @property.property_name %></h2>
+    <p>This message will be sent directly to the owner of this property.</p>
+    <p>Please ensure your provide accurate contact details so they may respond to your enquiry.</p>
+    <form action="/enquiries" method="post">
+      <input type="hidden" name="enquiry[property_id]" value="<%= @property.id %>">
+      <p>Your Name</p>
+      <input type="text" name="enquiry[name]"><br>
+      <p>Your Email Address</p>
+      <input type="email" name="enquiry[email]"><br>
+      <p>Your Telephone Number</p>
+      <input type="number" name="enquiry[telephone]"><br>
+      <p>Desired Dates of Stay</p>
+      <input type="text" name="enquiry[dates]">
+      <p>Personal Message</p>
+      <textarea name="enquiry[message]" rows="7" cols="40"></textarea>
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <div class="large-5 columns">
+    <img style="margin-bottom: 0.5em; width: 100%;" src="<%= @property.rent_image_1.url %>">
+    <img style="margin-bottom: 0.5em; width: 100%;" src="<%= @property.rent_image_2.url %>">
+    <p><%= @property.property_name %></p>
+  </div>
+</div>

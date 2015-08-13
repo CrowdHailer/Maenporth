@@ -1,0 +1,3 @@
+class ViewType < String
+
+end

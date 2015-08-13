@@ -1,0 +1,254 @@
+<div class="admin-head">
+  <div class="row collapse">
+    <div class="large-10 columns">
+      <h1>Maenporth Estate System Admin</h1>
+    </div>
+    <div class="large-2 columns">
+      <a href="/admin/properties"><button>Admin Home</button></a>
+    </div>
+  </div>
+</div>
+
+<div class="row collapse admin-list">
+  <div class="large-9 columns">
+    <h2>Edit Property Profile</h2>
+  </div>
+  <div class="large-3 columns">
+    <a href=""><button>Save</button></a>
+    <p style="font-style: italic;">Save the form regularly.</p>
+  </div>
+</div>
+<div class="row collapse">
+  <hr>
+
+  <div id="tabvanilla" class="widget">
+    <ul class="tabnav">
+      <li><a href="#">For Sale</a></li>
+      <li><a href="/admin/properties/<%= @property.id %>/edit-rent-profile">For rent</a></li>
+    </ul>
+  </div>
+  <!-- For Sale Form -->
+<main id="edit-wrap">
+  <form id="form_id" action="/admin/properties/<%= @property.id %>/sale-profile" accept-charset="UTF-8" enctype="multipart/form-data" method="post">
+    <input type="hidden" name="_method" value="PATCH">
+    <div class="tabdiv">
+      <section id="for-sale">
+        <div class="row collapse">
+          <h1>For Sale Property Profile Form</h1>
+          <div class="large-5 columns">
+            <h2>Image Upload</h2>
+            <p>Upload 8 images using the 'Browse' buttons below.</p>
+            <p>Image Size.  The large display image is 644 pixels wide by 344 pixels high.  The thumbnail images are 160 pixels wide by 80 pixels high.  Your image uploads will be cropped to these sizes automatically. </p>
+          </div>
+          <div class="large-7 columns">
+            <div class="edit-gallery">
+              <ul class="large-block-grid-4 medium-block-grid-2 small-block-grid-2">
+                <li style="float: left; margin-bottom:  1em;">
+                  <img src="<%= @property.sale_image_1.url %>" alt="" />
+                  <p>Image 1</p>
+                </li>
+                <li style="float: right;margin-bottom: 1em; ">
+                  <img src="<%= @property.sale_image_4.url %>" alt="" />
+                  <p>Image 4</p>
+                </li>
+                <li style="float: left; margin-bottom: 1em">
+                  <img src="<%= @property.sale_image_2.url %>" alt="" />
+                  <p>Image 2</p>
+                </li>
+                <li style="float: right;margin-bottom: 1em;">
+                  <img src="<%= @property.sale_image_3.url %>" alt="" />
+                  <p>Image 3</p>
+                </li>
+                <li style="float: left; margin-bottom: 1em">
+                  <img src="<%= @property.sale_image_4.url %>" alt="" />
+                  <p>Image 5</p>
+                </li>
+                <li style="float: right;margin-bottom: 1em;">
+                  <img src="<%= @property.sale_image_8.url %>" alt="" />
+                  <p>Image 8</p>
+                </li>
+                <li style="float: left; margin-bottom: 1em">
+                  <img src="<%= @property.sale_image_6.url %>" alt="" />
+                  <p>Image 6</p>
+                </li>
+                <li style="float: right;margin-bottom: 1em;">
+                  <img src="<%= @property.sale_image_7.url %>" alt="" />
+                  <p>Image 7</p>
+                </li>
+              </ul>
+            </div>
+            Image 1: <input type="file" name="property[sale_image_1]"><br>
+            Image 2: <input type="file" name="property[sale_image_2]"><br>
+            Image 3: <input type="file" name="property[sale_image_3]"><br>
+            Image 4: <input type="file" name="property[sale_image_4]"><br>
+            Image 5: <input type="file" name="property[sale_image_5]"><br>
+            Image 6: <input type="file" name="property[sale_image_6]"><br>
+            Image 7: <input type="file" name="property[sale_image_7]"><br>
+            Image 8: <input type="file" name="property[sale_image_8]"><br>
+            Upload-: <input type="submit" value="UPLOAD" style="margin-top: 1em;">
+          </div>
+        </div>
+        <div class="row collapse">
+          <hr>
+          <div class="large-12 columns prop-name">
+            <h2>Property Name</h2>
+            <input type="text" name='property[property_name]' value="<%= @property.property_name %>">
+          </div>
+        </div>
+        <div class="row collapse">
+          <hr>
+          <div class="large-5 columns">
+            <h2>Description</h2>
+            <p>Please provide a long description of the property for sale.  Recommended word count 130 words.</p>
+            <p>This text editor uses Markdown to help you format your text.  Use the return key to add paragraph spacing.</p>
+          </div>
+          <div class="large-7 columns">
+            <textarea rows="15" cols="70" placeholder="Type your property description here..." style="padding: 1em; margin-bottom: 1em;" name="property[sale_description]"><%= @property.sale_description.raw %></textarea>
+          </div>
+        </div>
+        <div class="row collapse">
+          <hr>
+          <h2>Sale Price</h2>
+          <div class="large-5 columns">
+            <p>Numbers only, do not include the currency symbol.</p>
+          </div>
+          <div class="large-7 columns">
+            <input class="sale-price-input" type="number" placeholder="e.g. 280000" name="property[sale_price]" value="<%= @property.sale_price.pounds if @property.sale_price %>">
+          </div>
+        </div>
+        <div class="row collapse">
+          <hr>
+          <h2>Estate Agent Website Link</h2>
+          <div class="large-5 columns">
+            <p>URL format http(s)://www.example.com</p>
+          </div>
+          <div class="large-7 columns">
+            <input class="sale-price-input" type="url" placeholder="http://www.example.com" name="property[estate_agent_link]" value="<%= @property.estate_agent_link %>">
+          </div>
+        </div>
+        <div class="row collapse">
+          <hr>
+          <div class="large-5 columns">
+            <h2>Checklist</h2>
+            <p>Please select from these variables the statements that best describes your property.  If you do not have a balcony, patio or lawn, leave the checkbox unchecked.</p>
+          </div>
+          <div class="large-7 columns">
+            <div class="checklist-wrap">
+              <table>
+                <tr>
+                  <td>
+                    <p>Property Type:
+                    </p>
+                  </td>
+                  <td>
+                    <select name="property[property_sale_type]">
+                      <option <%= 'selected' if @property.property_sale_type == 'Flat' %>>Flat</option>
+                      <option <%= 'selected' if @property.property_sale_type == 'Apartment' %>>Apartment</option>
+                      <option <%= 'selected' if @property.property_sale_type == 'Semi Detached' %>>Semi Detached</option>
+                      <option <%= 'selected' if @property.property_sale_type == 'Terraced' %>>Terraced</option>
+                      <option <%= 'selected' if @property.property_sale_type == 'End of Terrace' %>>End of Terrace</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Bedrooms:
+                    </p>
+                  </td>
+                  <td>
+                    <select name="property[bedrooms]">
+                      <option <%= 'selected' if @property.bedrooms == '1' %>>1</option>
+                      <option <%= 'selected' if @property.bedrooms == '2' %>>2</option>
+                      <option <%= 'selected' if @property.bedrooms == '3' %>>3</option>
+                      <option <%= 'selected' if @property.bedrooms == '4' %>>4</option>
+                      <option <%= 'selected' if @property.bedrooms == '5' %>>5</option>
+                      <option <%= 'selected' if @property.bedrooms == '5+' %>>5+</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Bathrooms:
+                    </p>
+                  </td>
+                  <td>
+                    <select name="property[bathrooms]">
+                      <option <%= 'selected' if @property.bathrooms == '1' %>>1</option>
+                      <option <%= 'selected' if @property.bathrooms == '2' %>>2</option>
+                      <option <%= 'selected' if @property.bathrooms == '3' %>>3</option>
+                      <option <%= 'selected' if @property.bathrooms == '3+' %>>3+</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>View Type:
+                    </p>
+                  </td>
+                  <td>
+                    <select name="property[view_type]">
+                      <option <%= 'selected' if @property.view_type == 'Sea View' %>>Sea View</option>
+                      <option <%= 'selected' if @property.view_type == 'Sea Glimpses' %>>Sea Glimpses</option>
+                      <option <%= 'selected' if @property.view_type == 'Woodland View' %>>Woodland View</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Balcony
+                    </p>
+                  </td>
+                  <td>
+                    <input name="property[balcony]" type="checkbox" <%= 'checked' if @property.balcony %>>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Patio
+                    </p>
+                  </td>
+                  <td>
+                    <input name="property[patio]" type="checkbox" <%= 'checked' if @property.patio %>>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Lawn
+                    </p>
+                  </td>
+                  <td>
+                    <input name="property[lawn]" type="checkbox" <%= 'checked' if @property.lawn %>>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="row collapse" style="margin-bottom: 2em;">
+          <hr>
+          <div class="large-5 columns">
+            <h2>Map</h2>
+            <p>Please upload an image to show where this property is on the map.</p>
+          </div>
+          <div class="large-5 columns end">
+            <img src="<%= @property.map_image.url %>" alt="" />
+            <input type="file" name="property[map_image]"><br>
+            <input type="submit" value="UPLOAD" style="margin-top: 1em;">
+          </div>
+        </div>
+        <div class="row collapse admin-list">
+          <hr>
+          <div class="large-9 columns">
+            <h2>Edit Property Profile</h2>
+          </div>
+          <div class="large-3 columns">
+            <button>Save</button>
+            <p style="font-style: italic;">Save the form regularly.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- END For Sale Form -->
+  </form>
+</main>
+</div>

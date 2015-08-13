@@ -10,7 +10,7 @@ Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_opti
 
 Dir[File.expand_path('../support/**/*.rb', __FILE__)].each { |file| require file}
 
-require_relative '../app/application'
+require_relative '../www/root'
 
 class MyTest < MiniTest::Test
   # TODO FactoryGirl methods

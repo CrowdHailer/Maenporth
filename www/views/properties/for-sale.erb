@@ -1,0 +1,208 @@
+<div class="row collapse show-for-large-up">
+  <div class="large-12 columns">
+    <div id="image-enlarge">
+      <div class="large-map">
+        <a onclick="document.getElementById('image-enlarge').style.display = 'none'">&#x2716;</a>
+        <h1>Property Name</h1>
+        <h2>Location on Maenporth Estate</h2>
+        <img style="width: 100%;" src="<%= @property.map_image.url %>">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function changeImage(current) {
+  var imagesNumber = 8;
+
+  for (i=1; i<=imagesNumber; i++) {
+    if (i == current) {
+      document.getElementById("normal" + current).style.display = "block";
+    } else {
+      document.getElementById("normal" + i).style.display = "none";
+    }
+  }
+}
+</script>
+
+<div class="row collapse" id="white-bg">
+  <div class="large-12 columns">
+    <div class="property-box property-box-large for-rent">
+      <div class="row collapse">
+        <div class="large-10 medium-10 columns">
+          <h2>For Sale: <%= @property.property_name %></h2>
+        </div>
+        <div class="large-2 medium-2 columns for-status-icon">
+          <a href="/properties/for-sale"><h2>All For Sale <img class="property-box-icon" src="/img/house-svg-09.svg"></h2></a>
+        </div>
+      </div>
+      <hr>
+      <!-- -->
+      <div class="row collapse">
+        <div class="large-8 medium-8 columns">
+          <div id="bigimages">
+            <div id="normal1">
+              <div class="image-disp">
+                <img class="large-image mob-display-image" src="<%= @property.sale_image_1.url %>" alt=""/>
+              </div>
+            </div>
+
+            <div id="normal2">
+              <div class="image-disp">
+                <img class="large-image" src="<%= @property.sale_image_2.url %>" alt=""/>
+              </div>
+            </div>
+
+            <div id="normal3">
+              <div class="image-disp">
+                <img class="large-image" src="<%= @property.sale_image_3.url %>" alt=""/>
+              </div>
+            </div>
+
+            <div id="normal4">
+              <div class="image-disp">
+                <img class="large-image" src="<%= @property.sale_image_4.url %>" alt=""/>
+              </div>
+            </div>
+
+            <div id="normal5">
+              <div class="image-disp">
+                <img class="large-image" src="<%= @property.sale_image_5.url %>" alt=""/>
+              </div>
+            </div>
+
+            <div id="normal6">
+              <div class="image-disp">
+                <img class="large-image" src="<%= @property.sale_image_6.url %>" alt=""/>
+              </div>
+            </div>
+
+            <div id="normal7">
+              <div class="image-disp">
+                <img class="large-image" src="<%= @property.sale_image_7.url %>" alt=""/>
+              </div>
+            </div>
+
+            <div id="normal8">
+              <div class="image-disp">
+                <img class="large-image" src="<%= @property.sale_image_8.url %>" alt=""/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="large-2 medium-2 hide-for-small columns">
+          <div id="gallery">
+            <div id="thumbs">
+              <div class="row collapse">
+                <ul class="large-block-grid-1 medium-block-grid-1 small-block-grid-1">
+                  <li><a href="javascript: changeImage(1);"><div class="thumb-wrap"><img src="<%= @property.sale_image_1.url %>" alt="" /></div></a></li>
+                  <li><a href="javascript: changeImage(2);"><div class="thumb-wrap"><img src="<%= @property.sale_image_2.url %>" alt="" /></div></a></li>
+                  <li><a href="javascript: changeImage(3);"><div class="thumb-wrap"><img src="<%= @property.sale_image_3.url %>" alt="" /></div></a></li>
+                  <li><a href="javascript: changeImage(4);"><div class="thumb-wrap"><img src="<%= @property.sale_image_4.url %>" alt="" /></div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="large-2 medium-2 hide-for-small columns">
+          <div id="gallery">
+            <div id="thumbs">
+              <div class="row collapse">
+                <ul class="large-block-grid-1 medium-block-grid-1 small-block-grid-1">
+                  <li><a href="javascript: changeImage(5);"><div class="thumb-wrap"><img src="<%= @property.sale_image_5.url %>" alt="" /></div></a></li>
+                  <li><a href="javascript: changeImage(6);"><div class="thumb-wrap"><img src="<%= @property.sale_image_6.url %>" alt="" /></div></a></li>
+                  <li><a href="javascript: changeImage(7);"><div class="thumb-wrap"><img src="<%= @property.sale_image_7.url %>" alt="" /></div></a></li>
+                  <li><a href="javascript: changeImage(8);"><div class="thumb-wrap"><img src="<%= @property.sale_image_8.url %>" alt="" /></div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="row collapse">
+        <div class="large-6 columns">
+          <div class="description-wrap">
+            <%= @property.sale_description.html %>
+          </div>
+          <h2 style="margin-top: 1em;">Why Buy at Maenporth</h2>
+          <div class="favourites-wrap">
+            <ul>
+              <li>Reason 1</li>
+              <li>Reason 2</li>
+              <li>Reason 3</li>
+              <li>Reason 4</li>
+              <li>Reason 5</li>
+              <li>Reason 6</li>
+              <li>Reason 7</li>
+              <li>Reason 8</li>
+            </ul>
+          </div>
+        </div>
+        <div class="large-6 columns">
+          <div class="prop-type">
+            <h1><%= @property.formatted_sale_price %></h1>
+            <div class="row collapse">
+              <div class="large-6 medium-6 small-6 columns">
+                <h3>Bedrooms</h3>
+                <h4><%= @property.bedrooms %></h4>
+              </div>
+              <div class="large-6 medium-6 small-6 columns">
+                <h3>Bathrooms</h3>
+                <h4><%= @property.bathrooms %></h4>
+              </div>
+            </div>
+          </div>
+          <a class="enq-btn" href="<%= @property.estate_agent_link %>">
+            Visit Estate Agent Website
+          </a>
+          <style media="screen">
+            .facilities-wrap ul {
+              /* TODO richard put in styling */
+              /* TODO should be grouped with edit page stuff*/
+              /* clearfix for floating list elements*/
+              overflow: hidden;
+            }
+            .facilities-wrap li {
+              margin-left: 0;
+              list-style-position: inside;
+              float: left;
+              width: 50%;
+              box-sizing: border-box;
+            }
+          </style>
+          <div class="facilities-wrap" style="margin-top: 1em;">
+            <ul>
+              <li><%= @property.property_sale_type %></li>
+              <li>Bedrooms: <%= @property.bedrooms %></li>
+              <li>Bathrooms: <%= @property.bathrooms %></li>
+              <li><%= @property.view_type %></li>
+
+              <% if @property.patio %>
+              <li>Patio</li>
+              <% end %>
+
+              <% if @property.balcony %>
+              <li>Balcony</li>
+              <% end %>
+
+              <% if @property.lawn %>
+              <li>Lawn</li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="map-notes">
+            <h2>Property Location on Estate</h2>
+            <p>Click to enlarge map</p>
+          </div>
+          <div class="map-wrap show-for-large-up" onclick="document.getElementById('image-enlarge').style.display = 'inline'">
+            <img style="width: 100%;" src="<%= @property.map_image.url %>">
+          </div>
+          <div class="map-wrap hide-for-large-up">
+            <img style="width: 100%;" src="<%= @property.map_image.url %>">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
