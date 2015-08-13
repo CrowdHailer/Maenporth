@@ -7,8 +7,8 @@ Dir[File.expand_path('../controllers/*.rb', __FILE__)].each { |file| require fil
 # Load all mailers
 Dir[File.expand_path('../mailers/*.rb', __FILE__)].each { |file| require file}
 
-def production?
-  RACK_ENV == 'production'
+def deployed?
+  RACK_ENV == 'production' || RACK_ENV == 'staging'
 end
 
 module WWW
@@ -36,7 +36,7 @@ module WWW
 
     error do
       # TODO respond to staging
-      if production?
+      if deployed?
         response.status = 500
         response.body = render :'errors/500'
       end
