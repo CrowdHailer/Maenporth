@@ -1,6 +1,7 @@
 require_relative '../random_identifier'
 require_relative '../property_attributes'
 require_relative '../image_uploader'
+require_relative '../badge_uploader'
 
 module Property
   class Record < Sequel::Model(:properties)
