@@ -1,6 +1,7 @@
 class PropertyRentForm < Vulcanize::Form
   attribute :property_name, PropertyName
   attribute :rent_description, Description
+  attribute :review, Description
   # TODO destringify
   attribute :enquiry_route, String
   attribute :enquiry_link, Link
@@ -29,6 +30,7 @@ class PropertyRentForm < Vulcanize::Form
   attribute :recommendation_6, String
   attribute :recommendation_7, String
   attribute :recommendation_8, String
+  # Images untested
   attribute :rent_image_1, NoopAttribute
   attribute :rent_image_2, NoopAttribute
   attribute :rent_image_3, NoopAttribute
@@ -38,6 +40,9 @@ class PropertyRentForm < Vulcanize::Form
   attribute :rent_image_7, NoopAttribute
   attribute :rent_image_8, NoopAttribute
   attribute :map_image, NoopAttribute
+  attribute :rent_badge_1, NoopAttribute
+  attribute :rent_badge_2, NoopAttribute
+  attribute :rent_badge_3, NoopAttribute
 
   def empty?
     false

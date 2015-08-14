@@ -14,6 +14,13 @@ class PropertyRentFormTest < Minitest::Test
     assert_equal description, form.rent_description
   end
 
+  def test_obtains_review
+    raw = '# Hello'
+    review = Description.new raw
+    form = PropertyRentForm.new :review => raw
+    assert_equal review, form.review
+  end
+
   def test_obtains_enquiry_route
     method = 'email'
     form = PropertyRentForm.new :enquiry_route => method

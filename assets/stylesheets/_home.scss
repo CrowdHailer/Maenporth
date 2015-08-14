@@ -186,6 +186,7 @@ a:-webkit-any-link {
 .property-box h2{
 font-size: 1.75em;
 margin-bottom: 0em;
+padding-top: 1em;
   }
 
   .property-box button {
@@ -338,6 +339,18 @@ margin-bottom: 0em;
   margin-top: 2em;
   padding: 0.75em;
   margin-right: 1em;
+}
+
+.reviews-wrap {
+  border: 0.1em solid #909090;
+  background: #f7f7f9;
+  border-radius: 0.4em;
+  margin-top: 2em;
+  padding: 0.75em;
+  padding-bottom: 1em;
+  margin-right: 1em;
+  height: 8em;
+  overflow-y: scroll;
 }
 
 .favourites-wrap {
@@ -595,6 +608,8 @@ color: #ff1493;
   color: #2190a3 !important;
   font-size: 1.2em !important;
   margin-top: 0.5em;
+  text-align: right;
+  padding: 0.35em;
 }
 
 .for-status-icon h2:hover {
@@ -616,10 +631,33 @@ color: #ff1493;
   overflow: hidden;
 }
 
+  .find-out-more-rent-btn {
+    width: 10em !important;
+    float: right;
+  }
+
+  .rating-badge {
+    float: right;
+    width: 70px;
+    height: 100px;
+    margin: 0 0.5em;
+    overflow: hidden;
+  }
+
+.no-padding {
+  padding-top: 0em !important;
+}
+
 // Small screens
 @media only screen { } /* Define mobile styles */
 
 @media only screen and (max-width: 40em) {
+
+  .rating-badge-wrap {
+    margin-top: 0.5em;
+    width: 100%;
+    float: right;
+  }
 
 .property-image {
   margin-bottom: 1em;
@@ -662,7 +700,11 @@ color: #ff1493;
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
 
-
+  .rating-badge-wrap {
+    margin-top: 0.5em;
+    width: 100%;
+    float: right;
+  }
   .property-box {
     height: auto;
   }

@@ -3,7 +3,6 @@
     <div id="image-enlarge">
       <div class="large-map">
         <a onclick="document.getElementById('image-enlarge').style.display = 'none'">&#x2716;</a>
-        <h1>Property Name</h1>
         <h2>Location on Maenporth Estate</h2>
         <img style="width: 100%;" src="<%= @property.map_image.url %>">
       </div>
@@ -33,7 +32,7 @@ function changeImage(current) {
           <h2>For Sale: <%= @property.property_name %></h2>
         </div>
         <div class="large-2 medium-2 columns for-status-icon">
-          <a href="/properties/for-sale"><h2>All For Sale <img class="property-box-icon" src="/img/house-svg-09.svg"></h2></a>
+          <a href="/properties/for-sale"><h2>Back to - All For Sale <img class="property-box-icon" src="/img/house-svg-09.svg"></h2></a>
         </div>
       </div>
       <hr>
@@ -192,7 +191,7 @@ function changeImage(current) {
             </ul>
           </div>
           <div class="map-notes">
-            <h2>Property Location on Estate</h2>
+            <h2>Holiday Home Location on Estate</h2>
             <p>Click to enlarge map</p>
           </div>
           <div class="map-wrap show-for-large-up" onclick="document.getElementById('image-enlarge').style.display = 'inline'">

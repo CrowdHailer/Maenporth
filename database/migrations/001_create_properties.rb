@@ -5,6 +5,7 @@ Sequel.migration do
       String :property_name
       String :sale_description
       String :rent_description
+      String :review
       String :sale_price
       String :estate_agent_link
       String :enquiry_route
@@ -53,6 +54,9 @@ Sequel.migration do
       String :rent_image_7
       String :rent_image_8
       String :map_image
+      String :rent_badge_1
+      String :rent_badge_2
+      String :rent_badge_3
     end
   end
 

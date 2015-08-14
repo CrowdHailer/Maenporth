@@ -1,6 +1,7 @@
 require_relative '../random_identifier'
 require_relative '../property_attributes'
 require_relative '../image_uploader'
+require_relative '../badge_uploader'
 
 module Property
   class Record < Sequel::Model(:properties)
@@ -9,6 +10,7 @@ module Property
 
     serialize_attributes [Description.method(:dump), Description.method(:new)], :sale_description
     serialize_attributes [Description.method(:dump), Description.method(:new)], :rent_description
+    serialize_attributes [Description.method(:dump), Description.method(:new)], :review
     serialize_attributes [SalePrice.method(:dump), SalePrice.method(:new)], :sale_price
     serialize_attributes [->(x){x}, Link.method(:new)], :estate_agent_link
     serialize_attributes [->(x){x}, Link.method(:new)], :enquiry_link
@@ -34,6 +36,9 @@ module Property
     mount_uploader :rent_image_7, ImageUploader
     mount_uploader :rent_image_8, ImageUploader
     mount_uploader :map_image, ImageUploader
+    mount_uploader :rent_badge_1, BadgeUploader
+    mount_uploader :rent_badge_2, BadgeUploader
+    mount_uploader :rent_badge_3, BadgeUploader
 
     def sale_description
       # TODO move to enitity and test
