@@ -22,6 +22,7 @@ class PropertyRentForm < Vulcanize::Form
   attribute :balcony, Vulcanize::CheckBox, :default => false
   attribute :patio, Vulcanize::CheckBox, :default => false
   attribute :lawn, Vulcanize::CheckBox, :default => false
+  attribute :short_breaks, Vulcanize::CheckBox, :default => false
   attribute :recommendation_1, String
   attribute :recommendation_2, String
   attribute :recommendation_3, String
