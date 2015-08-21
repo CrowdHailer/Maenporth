@@ -69,7 +69,7 @@ module WWW
           halt
         end
         piece.destroy
-        redirect '/properties'
+        redirect '/admin/properties'
       end
 
       def not_found
