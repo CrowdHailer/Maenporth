@@ -29,6 +29,7 @@ Sequel.migration do
       TrueClass :lawn, :default => false
       TrueClass :for_sale, :default => false
       TrueClass :for_rent, :default => false
+      TrueClass :short_breaks, :default => false
       String :recommendation_1
       String :recommendation_2
       String :recommendation_3
