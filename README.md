@@ -49,6 +49,7 @@ required
 - AWS_SECRET_ACCESS_KEY
 - MANDRILL_USERNAME
 - MANDRILL_APIKEY
+- MAIL_SERVER_HOST=smtp.mandrillapp.com
 - S3_BUCKET_NAME
 
 ##### Amazon
