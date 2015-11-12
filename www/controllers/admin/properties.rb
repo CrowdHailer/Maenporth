@@ -58,7 +58,7 @@ module WWW
           not_found
           halt
         end
-        form = PropertyStatusForm.new request.POST['property']
+        form = PropertyStatusForm.new(request.POST.fetch('property', {}))
         @property.update form
         redirect('/admin/properties')
       end
