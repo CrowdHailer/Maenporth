@@ -73,9 +73,9 @@ h1,h2,h3,h4,h5,h6,p {
    z-index: 25;
    margin: 0 auto;
  }
- #socialicons {
-   margin-left: 875px;
-   margin-top: 20px;
+ #socialicons a{
+   float: right;
+   display: block;
  }
  #contactnumber {
    color: #186b79;
@@ -87,10 +87,9 @@ h1,h2,h3,h4,h5,h6,p {
  }
  #navigation{
    float: right;
-   width: 1000px;
+   width: auto;
    margin-top: 30px;
-   margin-bottom: 0px;
-   margin-right: -300px;
+   margin-bottom: 30px;
    margin-left: 0px;
    z-index: 25;
    background: #fff;
@@ -100,33 +99,27 @@ h1,h2,h3,h4,h5,h6,p {
    list-style: none;
  }
  #navigation ul li {
-   display: block;
    float: left;
-   max-width: 190px;
-   padding: 15px 15px 22px 40px;
-   text-align: center;
-   margin-left: -40px;
  }
  #navigation ul li a {
    text-transform: uppercase;
    line-height: 1;
    letter-spacing: 1px;
    padding-top: 15px;
-   padding-bottom: 20px;
-   padding-right: 5px;
-   padding-left: 5px;
+   padding-bottom: 18px;
+   padding-right: 8px;
+   padding-left: 8px;
    color: #186b79;
    overflow: none;
+   margin-bottom: 1em;
+   font-size: 12px !important;
  }
  #navigation a, #wsite-menus .wsite-menu li a, #wsite-menus .wsite-menu li a{
    color: #00645E;
  }
  #navigation a:hover, #active a {
    background: rgba(57,192,215,0.6);
-   color: #FF1493; padding-top: 15px;
-   padding-bottom: 20px;
-   padding-right: 5px;
-   padding-left: 5px;
+   color: #FF1493;
    -webkit-transition: .3s ease-out;
    -moz-transition: .3s ease-out;
    -o-transition: .3s ease-out;
@@ -510,6 +503,7 @@ footer {
   margin: 0 auto;
   width: 100%;
   min-height: 31em;
+  margin-top: 2em;
 }
 
 .footer-logo-wrap {
