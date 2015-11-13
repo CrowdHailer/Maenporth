@@ -78,12 +78,14 @@ h1,h2,h3,h4,h5,h6,p {
    display: block;
  }
  #contactnumber {
-   color: #186b79;
-   font-family: 'Muli';
-   margin-top: -20px;
-   font-size: 13px;
-   margin-left: 775px;
-   z-index: 35;
+   color: #186b78;
+    font-family: 'Muli';
+    margin-top: 6px;
+    font-size: 13px;
+    z-index: 35;
+    text-align: right;
+    float: right;
+    display: block;
  }
  #navigation{
    float: right;
