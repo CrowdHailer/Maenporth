@@ -3,12 +3,12 @@ module WWW
     render_defaults[:dir] += '/properties'
 
     get '/for-rent' do
-      @properties = Estate.for_rent
+      @properties = Estate.for_rent.shuffle
       render :'all-for-rent'
     end
 
     get '/for-sale' do
-      @properties = Estate.for_sale
+      @properties = Estate.for_sale.shuffle
       render :'all-for-sale'
     end
 
