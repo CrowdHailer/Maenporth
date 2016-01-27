@@ -19,6 +19,10 @@ h1,h2,h3,h4,h5,h6,p {
   width: 100%;
 }
 
+body {
+  overflow:hidden;
+}
+
 #white-bg {
   background: white;
   padding: 1em;
@@ -671,11 +675,11 @@ width:4em;
 #mob-nav-mnu li {
 width:100%;
 text-align:center;
-padding:0.5em;
+padding:0.5em 0em;
 }
 
 #mob-nav-mnu a {
-    width: 100%;
+    width: 85%;
     text-align: center;
     padding: 0.5em;
     font-family: 'Muli';
