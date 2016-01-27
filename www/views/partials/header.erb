@@ -128,33 +128,34 @@
     </div>
     </header>
   </div>
-  <div class="hide-for-large-up">
-    <div class="row collapse">
-      <div class="small-12 columns">
-        <div id="logomain2"><a href="http://www.maenporthestate.com/"><img src="http://www.weebly.com/uploads/3/1/1/2/31128549/custom_themes/335895460405797472/files/Logo%20for%20new%20site-04%20250%20px%20wide.png?1403086597702"></a></div>
-        <a href="http://www.maenporthestate.com/" class="button expand mnav-1 bdbt">Maenporth Home</a>
-      </div>
+  <div id="nav-head-height-fix" class="hide-for-large-up">
+<div class="hide-for-large-up row collapse">
+  <div class="small-8 columns">
+    <div id="logomain2"><a href="http://www.maenporthestate.com/"><img src="http://www.weebly.com/uploads/3/1/1/2/31128549/custom_themes/335895460405797472/files/Logo%20for%20new%20site-04%20250%20px%20wide.png?1403086597702"></a></div>
+  </div>
+  <div class="small-4 columns">
+    <div onclick="document.getElementById('mobile-nav').style.display = 'inline'">
+            <img class="mb-menu-icon" src="/files/theme/mporth-mob-mnu-icon.svg">
+        </div>
+  </div>
+</div>
+</div>
+<div id="mobile-nav">
+<div id="mob-nav-head">
+  <div class="hide-for-large-up row collapse">
+    <div class="small-8 columns">
+      <div id="logomain2"><a href="http://www.maenporthestate.com/"><img src="http://www.weebly.com/uploads/3/1/1/2/31128549/custom_themes/335895460405797472/files/Logo%20for%20new%20site-04%20250%20px%20wide.png?1403086597702"></a></div>
     </div>
-    <div class="row collapse">
-      <div class="small-6 columns">
-        <a href="/properties/for-sale" class="button expand mnav-1 bdbt">For Sale</a>
-      </div>
-      <div class="small-6 columns">
-        <a href="/properties/for-rent" class="button expand mnav-1 bdbt">For Rent</a>
-      </div>
-    </div>
-    <div class="row collapse">
-      <div class="small-4 columns">
-        <a href="http://www.maenporthestate.com/leisure.html" class="button expand mnav-1 bdbt">Leisure</a>
-        <a href="http://www.maenporthestate.com/gardens" class="button expand mnav-2">Gardens</a>
-      </div>
-      <div class="small-4 columns">
-        <a href="http://www.maenporthestate.com/places-to-visit-mobile.html" class="button expand mnav-2 bdbt bdlr">Visit</a>
-        <a href="http://www.maenporthestate.com/gallery-mobile.html" class="button expand mnav-1 bdlr">Gallery</a>
-      </div>
-      <div class="small-4 columns">
-        <a href="http://www.maenporthestate.com/history-mobile.html" class="button expand mnav-1 bdbt bdlronly">History</a>
-        <a href="http://www.maenporthestate.com/find-us-mobile.html" class="button expand mnav-2 bdlronly">Find Us</a>
+    <div class="small-4 columns">
+      <div onclick="document.getElementById('mobile-nav').style.display = 'none'">
+        <img class="mb-menu-icon" src="/files/theme/close-mnu.svg">
       </div>
     </div>
   </div>
+  <div class="row collapse">
+    <div id="mob-nav-mnu">
+      {menu}
+    </div>
+  </div>
+</div>
+</div>

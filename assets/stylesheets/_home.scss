@@ -644,6 +644,53 @@ color: #ff1493;
   padding-top: 0em !important;
 }
 
+#mobile-nav {
+display:none;
+}
+
+#mob-nav-head {
+    background: white;
+    position: absolute;
+    width: 100%;
+    margin-top: -9em;
+    height: auto;
+    padding-bottom: 1em;
+    border-bottom: 0.1em solid #0099ff;
+  z-index:10;
+}
+
+.mb-menu-icon {
+padding:0.3em;
+float:right;
+height:4em;
+width:4em;
+    margin: 0.5em;
+}
+
+
+#mob-nav-mnu li {
+width:100%;
+text-align:center;
+padding:0.5em;
+}
+
+#mob-nav-mnu a {
+    width: 100%;
+    text-align: center;
+    padding: 0.5em;
+    font-family: 'Muli';
+    font-size: 1.5em;
+    display: inline-block;
+    background: #41BDD5;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.3em;
+}
+
+#nav-head-height-fix {
+height:9em;
+}
+
 // Small screens
 @media only screen { } /* Define mobile styles */
 
