@@ -113,6 +113,7 @@ input:not([type]), input[type="email"], input[type="number"], input[type="search
     -ms-transition: border-color 0.15s linear, background 0.15s linear;
     -o-transition: border-color 0.15s linear, background 0.15s linear;
     transition: border-color 0.15s linear, background 0.15s linear;
+    font-family: 'Muli';
 }
 
 @media only screen and (max-width: 40em) {
