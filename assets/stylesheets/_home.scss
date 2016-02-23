@@ -15,6 +15,91 @@ h1,h2,h3,h4,h5,h6,p {
  .bdlr {border-left: 2px solid white; border-right: 2px solid white; margin-bottom: 0;}
  .bdlronly{border-left: 2px solid white; margin-bottom: 0;}
 
+ .top-bar-cstm {
+    width: 100%;
+    height: 1.6em;
+    background: #39C0D7;
+cursor: pointer;
+}
+
+.top-bar-cstm:hover {
+background:#ea2182;
+}
+
+.top-bar-cstm p {
+color:white;
+font-family: Muli;
+font-size: 0.9em;
+margin-bottom:0;
+line-height:1.7;
+}
+
+#top-bar-sign-up {
+display:none;
+}
+
+.top-bar-sign-up-attr {
+background: #39C0D7;
+margin-top: -1.6m;
+position:absolute;
+width:100%;
+z-index:10;
+padding:1em 0;
+}
+
+.top-bar-sign-up-attr h1 {
+color: white;
+font-family: 'Muli';
+font-size:1.5em;
+}
+
+.top-bar-sign-up-attr h2 {
+color:white;
+font-family: 'Muli';
+font-size:1.1em;
+padding-right:4em;
+margin-bottom:1em;
+}
+
+.top-bar-sign-up-attr h4 {
+color: white;
+font-size:1.2em;
+font-family: 'Muli';
+}
+
+.top-bar-sign-up-attr p {
+color: white;
+font-size:1em;
+font-family: 'Muli';
+}
+
+.top-bar-sign-up-attr button {
+font-family: 'Muli';
+}
+
+.closebtn {
+padding:1em;
+border:0.1em solid white;
+cursor:pointer;
+display:inline-block;
+}
+
+.closebtn:hover {
+background:#ea2182;
+}
+
+@media only screen and (max-width: 40em) {
+.top-bar-cstm {
+    height: auto !important;
+    padding: 0 0.5em;
+}
+
+.top-bar-sign-up-attr {
+  padding:1em;
+}
+
+}
+
 #wrapper {
   width: 100%;
 }
