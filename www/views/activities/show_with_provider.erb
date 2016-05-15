@@ -1,0 +1,147 @@
+
+<div class="row collapse leisure" id="white-bg">
+  <div class="banner-image-wrap">
+    <img src="/img/kayak-big.jpg">
+  </div>
+  <div class="row collapse">
+    <div class="large-9 medium-9 small-12 columns">
+      <h1><%= @activity.activity_name %></h1>
+      <h2 class="provider-detail">The Maenporth Kayak Club</h2>
+    </div>
+    <div class="large-3 medium-3 small-6 end columns" id="logo">
+      <img src="/img/logo.png">
+    </div>
+  </div>
+  <hr>
+  <div class="large-7 medium-6 small-12 columns">
+    <div class="main-cont">
+      <p>Kayaking with the guys at Maenporth Kayak club is excellent fun. We'll provide a kayak, full instruction and all safety gear before heading out for a coastal adventure you will never forget.</p>
+      <ol>
+        <li>Kayaking is brilliant because it is on water.</li>
+        <li>All safety equipment is provided.</li>
+        <li>Water is free of charge.</li>
+        <li>Full instructions will be provided.</li>
+        <li>The sun is guaranteed to shine.</li>
+      </ol>
+      <div class="review">
+        <h3>Customer Review</h3>
+        <p>Dy'a know we had just the best time eva. It was flippin 'mazin. Would love to go again like.  Suzie Q, Marlborough.</p>
+      </div>
+      <div class="gallery">
+        <div class="row collapse">
+          <div class="large-6 columns">
+            <div id="big">
+              <div id="gallery1">
+                <div class="image-disp">
+                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image1.jpg" alt=""/>
+                </div>
+              </div>
+              <div id="gallery2">
+                <div class="image-disp">
+                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image2.jpg" alt=""/>
+                </div>
+              </div>
+              <div id="gallery3">
+                <div class="image-disp">
+                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image3.jpg" alt=""/>
+                </div>
+              </div>
+              <div id="gallery4">
+                <div class="image-disp">
+                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image4.jpg" alt=""/>
+                </div>
+              </div>
+              <div id="gallery5">
+                <div class="image-disp">
+                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image5.jpg" alt=""/>
+                </div>
+              </div>
+              <div id="gallery6">
+                <div class="image-disp">
+                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image6.jpg" alt=""/>
+                </div>
+              </div>
+              <div id="gallery7">
+                <div class="image-disp">
+                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image7.jpg" alt=""/>
+                </div>
+              </div>
+              <div id="gallery8">
+                <div class="image-disp">
+                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image8.jpg" alt=""/>
+                </div>
+              </div>
+              <div id="gallery9">
+                <div class="image-disp">
+                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image9.jpg" alt=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="large-6 columns">
+            <div class="row collapse">
+              <ul class="large-block-grid-3 medium-block-grid-1 small-block-grid-2 gallery-thumbs">
+                <li><a href="javascript: changeImage(1);"><div class="thumb-gallery"><img src="/img/gallery-example/image1.jpg" alt="" /></div></a></li>
+                <li><a href="javascript: changeImage(2);"><div class="thumb-gallery"><img src="/img/gallery-example/image2.jpg" alt="" /></div></a></li>
+                <li><a href="javascript: changeImage(3);"><div class="thumb-gallery"><img src="/img/gallery-example/image3.jpg" alt="" /></div></a></li>
+                <li><a href="javascript: changeImage(4);"><div class="thumb-gallery"><img src="/img/gallery-example/image4.jpg" alt="" /></div></a></li>
+                <li><a href="javascript: changeImage(5);"><div class="thumb-gallery"><img src="/img/gallery-example/image5.jpg" alt="" /></div></a></li>
+                <li><a href="javascript: changeImage(6);"><div class="thumb-gallery"><img src="/img/gallery-example/image6.jpg" alt="" /></div></a></li>
+                <li><a href="javascript: changeImage(7);"><div class="thumb-gallery"><img src="/img/gallery-example/image7.jpg" alt="" /></div></a></li>
+                <li><a href="javascript: changeImage(8);"><div class="thumb-gallery"><img src="/img/gallery-example/image8.jpg" alt="" /></div></a></li>
+                <li><a href="javascript: changeImage(9);"><div class="thumb-gallery"><img src="/img/gallery-example/image9.jpg" alt="" /></div></a></li>
+              </ul>
+            </div>
+          </div>
+          <script>
+          function changeImage(current) {
+            var imagesNumber = 9;
+
+            for (i=1; i<=imagesNumber; i++) {
+              if (i == current) {
+                document.getElementById("gallery" + current).style.display = "block";
+              } else {
+                document.getElementById("gallery" + i).style.display = "none";
+              }
+            }
+          }
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="large-4 medium-5 small-12 columns">
+    <div class="add-info">
+      <h3>Availability</h3>
+      <p>9am - 6:30pm, Tue - Sun</p>
+      <h3>Suitability</h3>
+      <p>Suitable for ages 6+</p>
+    </div>
+    <div id="video">
+      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/fr8GMC_NXlU?list=PLRhEP6R05_iXNDlsbVi3EZQxlDZJUNrUF" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+<section id="cta-prov">
+  <div class="row collapse" id="white-bg">
+    <hr>
+    <div class="large-8 columns">
+      <h4>Exclusive discounts and offers are available when you book this activity with a Maenporth Estate Offer Code.</h4>
+      <div class="show-for-large-up">
+        <p>Click on 'Get Offer Code' to receive a personalised offer code.  This offer code can be redeemed for this activity with the Maenporth Kayak Club.  The activity provider's details are provided when the offer code is generated.</p>
+        <p>Please feel free to generate as many offer codes as you like for as many different activities as you like.  Please note that each offer code is unique to the activity so if you would like to generate an offer code for another activity advertised on this website, please visit that activity's profile page and press 'Get Offer Code'.</p>
+      </div>
+    </div>
+    <div class="large-4 columns">
+      <form>
+        <input type="text" placeholder="Your name" required>
+        <input type="email" placeholder="Your email address" required>
+        <input type="submit" value="Get Offer Code">
+      </form>
+      <div class="hide-for-large-up">
+        <p>Click on 'Get Offer Code' to receive a personalised offer code.  This offer code can be redeemed for this activity with the Maenporth Kayak Club.  The activity provider's details are provided when the offer code is generated.</p>
+        <p>Please feel free to generate as many offer codes as you like for as many different activities as you like.  Please note that each offer code is unique to the activity so if you would like to generate an offer code for another activity advertised on this website, please visit that activity's profile page and press 'Get Offer Code'.</p>
+      </div>
+    </div>
+  </div>
+</section>

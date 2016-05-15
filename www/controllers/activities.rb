@@ -13,10 +13,17 @@ module WWW
       render :category
     end
 
-    get "/:id" do
-      # Item should return if it has a provider and this sets the view
-      "Stuff"
+    get "/:id" do |id|
+      @activity = Activity::Record.find(id: id)
+      if @activity
+        if @activity.has_provider?
+          render :show_with_provider
+        else
+          render :show_without_provider
+        end
+      else
+        response.status = 404
+      end
     end
-
   end
 end

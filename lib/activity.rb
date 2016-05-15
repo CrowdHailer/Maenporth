@@ -8,6 +8,11 @@ module Activity
 
   class Record < Sequel::Model(:activities)
     include RandomIdentifier
+
+    def has_provider?
+      # TODO fix this
+      false
+    end
   end
 
   class Category

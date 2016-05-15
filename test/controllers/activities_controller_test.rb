@@ -14,9 +14,20 @@ module WWW
     end
 
     def test_individual_category_page_shows
-      # TODO create activity
       assert_ok get('/category/discover')
     end
+
+    def test_individual_activity_page_show
+      activity = Activity.new(
+        :activity_name => "Kayaking"
+      ).save
+
+      response = get("/#{activity.id}")
+      assert_ok response
+      assert_includes response.body, "Kayaking"
+    end
+
+    # TODO test w w/out provider
 
   end
 end
