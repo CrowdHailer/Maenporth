@@ -14,8 +14,13 @@ module WWW
     end
 
     def test_index_page_is_availabe_when_activities_to_show
-      # TODO create activity
-      assert_ok get('/')
+      Activity.new(
+        :activity_name => "Kayaking"
+      ).save
+
+      response = get('/')
+      assert_ok response
+      assert_includes response.body, "Kayaking"
     end
 
     def test_new_page_is_availabe

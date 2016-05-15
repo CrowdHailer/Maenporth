@@ -5,13 +5,12 @@ module WWW
       render_defaults[:dir] += '/admin/activities'
 
       get '/' do
-        # TODO list
-        @activities = []
+        @activities = Activity::Record.all
         render :index
       end
 
       get '/new' do
-        @activity = {}
+        @activity = Activity::Record.new
         render :edit
       end
 
