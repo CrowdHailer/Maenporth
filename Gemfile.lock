@@ -57,11 +57,12 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
-    money (6.5.1)
+    money (6.7.1)
       i18n (>= 0.6.4, <= 0.7.0)
+      sixarm_ruby_unaccent (>= 1.1.1, < 2)
     parslet (1.7.1)
       blankslate (>= 2.0, <= 4.0)
-    pg (0.18.2)
+    pg (0.18.4)
     rack (1.6.4)
     rack-accept (0.4.5)
       rack (>= 0.4)
@@ -80,6 +81,7 @@ GEM
     sequel (4.34.0)
     shotgun (0.9.1)
       rack (>= 1.0)
+    sixarm_ruby_unaccent (1.1.1)
     thin (1.6.4)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
@@ -116,5 +118,8 @@ DEPENDENCIES
   thin
   vulcanize (~> 0.1.0)
 
+RUBY VERSION
+   ruby 2.3.1p112
+
 BUNDLED WITH
-   1.10.6
+   1.12.3
