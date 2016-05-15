@@ -3,7 +3,7 @@ module WWW
     render_defaults[:dir] += '/activities'
 
     get "/all-categories" do
-      "TODO make categories page"
+      render :categories
     end
 
     get "/:id" do

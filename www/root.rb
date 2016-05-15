@@ -20,6 +20,7 @@ module WWW
     # Load further controllers before final root mounted controller
     controller '/properties', PropertiesController
     controller '/enquiries', EnquiriesController
+    controller '/activities', ActivitiesController
     controller '/admin', AdminController
     controller '/', HomeController
 
