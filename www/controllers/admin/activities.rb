@@ -15,11 +15,12 @@ module WWW
       end
 
       get '/:id/edit' do |id|
-        # @activity = Estate.fetch(id) do
+        @activity = Activity::Record.find(id: id)
+        if @activity
+          render :edit
+        else
           not_found
-          halt
-        # end
-        render :edit
+        end
       end
 
       patch '/:id' do |id|
