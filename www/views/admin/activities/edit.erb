@@ -1,1 +1,297 @@
-TODO this page
+<section id="admin-nav">
+  <div class="row collapse">
+    <ul>
+      <li><a href="">Holiday Homes</a></li>
+      <li><a href="">Add Property</a></li>
+      <li><a href="">Leisure</a></li>
+      <li><a href="">Add Activity</a></li>
+      <li><a href="">Offer Codes</a></li>
+    </ul>
+  </div>
+</section>
+
+<div class="row collapse" id="add-activity">
+  <h2>Add a Activity With Provider</h2>
+  <hr>
+  <form action="/admin/activities/<%= @activity.id %>" method="post">
+    <input type="hidden" name="_method" value="PATCH">
+    <main id="edit-wrap">
+      <h3>Category</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>What category does this activity belong in?</p>
+        </div>
+        <div class="large-5 columns">
+          <select name="category">
+            <% Activity::Category.all.each do |category| %>
+            <option value="<%= category.name %>"><%= category.name %></option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+      <hr>
+      <h3>Activity Name</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>What is the name of this activity?  This will appear as the heading in the activity listing and at the top of the activity profile page.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="Activity name" name="activity_name" value="<%= @activity.activity_name %>">
+        </div>
+      </div>
+      <hr>
+      <h3>Header Image</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Select a file to use for the activity's header image.  The image should be a landscape and ideally 968px wide by 272px tall.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="file">
+          <img src="/img/upload.svg" alt="">
+        </div>
+      </div>
+      <hr>
+      <h3>Listings Image</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Select a file to use in the activity's listing.  The image should be a rectangle and ideally 311px wide by 208px tall.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="file">
+          <img src="/img/upload.svg" alt="">
+        </div>
+      </div>
+      <hr>
+      <h3>Listings Description</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Describe the activity.  This description will appear on the activity listing page for this activity.</p>
+        </div>
+        <div class="large-5 columns">
+          <textarea placeholder="Activity description"></textarea>
+        </div>
+      </div>
+      <hr>
+      <h3>Main Description</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Describe the activity.  This description will appear on the activity profile page.</p>
+        </div>
+        <div class="large-5 columns">
+          <textarea placeholder="Activity description"></textarea>
+        </div>
+      </div>
+      <hr>
+      <h3>Selling Points</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Please list 5 individual selling points.  These will appear under the activity description on the activity profile page.</p>
+        </div>
+        <div class="large-5 columns">
+          <ul>
+            <li><input type="text" placeholder="Selling point1"></li>
+            <li><input type="text" placeholder="Selling point2"></li>
+            <li><input type="text" placeholder="Selling point3"></li>
+            <li><input type="text" placeholder="Selling point4"></li>
+            <li><input type="text" placeholder="Selling point5"></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <h3>Customer Review</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Please provide one customer review.  This will be displayed in the pink box on the activity profile page.</p>
+        </div>
+        <div class="large-5 columns">
+          <textarea placeholder="Customer review"></textarea>
+        </div>
+      </div>
+      <hr>
+      <h3>Gallery</h3>
+      <div class="row collapse">
+        <div class="large-3 columns">
+          <p>Upload up to 8 images for the gallery.</p>
+        </div>
+        <div class="large-9 columns">
+          <div class="row collapse" id="gallery-upload">
+            <ul class="large-block-grid-3">
+              <li>
+                <input type="file">
+                <img src="/img/upload.svg" alt="">
+              </li>
+              <li>
+                <input type="file">
+                <img src="/img/upload.svg" alt="">
+              </li>
+              <li>
+                <input type="file">
+                <img src="/img/upload.svg" alt="">
+              </li>
+              <li>
+                <input type="file">
+                <img src="/img/upload.svg" alt="">
+              </li>
+              <li>
+                <input type="file">
+                <img src="/img/upload.svg" alt="">
+              </li>
+              <li>
+                <input type="file">
+                <img src="/img/upload.svg" alt="">
+              </li>
+              <li>
+                <input type="file">
+                <img src="/img/upload.svg" alt="">
+              </li>
+              <li>
+                <input type="file">
+                <img src="/img/upload.svg" alt="">
+              </li>
+              <li>
+                <input type="file">
+                <img src="/img/upload.svg" alt="">
+              </li>
+            </ul>
+          </div>
+          <input type="checkbox"> <span class="check-label">Tick this box to hide the Gallery for this activity.</span>
+        </div>
+      </div>
+      <hr>
+      <h3>Availability</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>What is the availability of this activity?</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="Availability">
+          <input type="checkbox"> <span class="check-label">Tick this box to hide 'Availability'.</span>
+        </div>
+      </div>
+      <hr>
+      <h3>Suitability</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Who is this activity suitable for?</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="Suitability">
+          <input type="checkbox"> <span class="check-label">Tick this box to hide 'Suitability'.</span>
+        </div>
+      </div>
+      <hr>
+      <h3>Does this activity have a YouTube Video?</h3>
+      <input type="radio" name="youtube?" value="yes-video"> Yes<br>
+      <input type="radio" name="youtube?" value="no-video"> No<br>
+      IF YES
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Please provide a link to the YouTube video.  To do this, go to the video on YouTube and select the 'Share' option which is usually shown underneath the video.  Copy the 'Share URL' and paste it into this box.</p>
+          <p>The share URL will look something like this: https://youtu.be/GFJQJX6D0I0</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="YouTube URL">
+        </div>
+      </div>
+      <hr>
+      <h3>Provider's Name</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>What is the name of the company or organisation providing this activity?</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="Provider's name">
+        </div>
+      </div>
+      <hr>
+      <h3>Provider's Phone Number</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Public contact telephone number of the provider.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="Provider's telephone number">
+        </div>
+      </div>
+      <hr>
+      <h3>Provider's Email Address</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Public contact email address for the provider.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="email" placeholder="Provider's email address">
+        </div>
+      </div>
+      <hr>
+      <h3>Provider's Website</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Public website address for the provider.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="Provider's website including http:// or https:// and wwww.">
+        </div>
+      </div>
+      <hr>
+      <h3>Offer Code Unique Prefix</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Create a unique offer code prefix to identify offer codes generated for this provider.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="Enter an offer code prefis e.g. KAYAK">
+        </div>
+      </div>
+      <hr>
+      <h3>Offer Code Details</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Detail what offer this code entitles the user to. Provide information on how to redeem the offer, the expiry date of the offer (e.g. 12 months after generation) and any terms and conditions stipulated by the provider in relation to using this offer code.</p>
+        </div>
+        <div class="large-5 columns">
+          <textarea placeholder="Offer code details"></textarea>
+        </div>
+      </div>
+      <hr>
+      <h3>Provider's Logo</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Please upload an image to use as the provider's logo.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="file">
+          <img src="/img/upload.svg" alt="">
+        </div>
+      </div>
+      <hr>
+      <h3>Provider's Terms and Conditions</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Please upload a PDF of the provider's terms and conditions.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="file">
+        </div>
+      </div>
+      <hr>
+      <h3>Provider's Address</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Please provide the full address of the provider's address.</p>
+        </div>
+        <div class="large-5 columns">
+          <ul>
+            <li><input type="text" placeholder="Address Line 1"></li>
+            <li><input type="text" placeholder="Address Line 2"></li>
+            <li><input type="text" placeholder="Address Line 3"></li>
+            <li><input type="text" placeholder="City"></li>
+            <li><input type="text" placeholder="County"></li>
+            <li><input type="text" placeholder="Postcode"></li>
+          </ul>
+        </div>
+      </div>
+      <button type="submit" name="button">Submit</button>
+    </main>
+  </form>
+</div>

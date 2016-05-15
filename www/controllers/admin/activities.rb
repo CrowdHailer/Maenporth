@@ -10,7 +10,7 @@ module WWW
       end
 
       get '/new' do
-        @activity = Activity::Record.new
+        @activity = Activity::Record.create
         render :edit
       end
 
@@ -24,23 +24,23 @@ module WWW
       end
 
       patch '/:id' do |id|
-        # @property = Estate.fetch(id) do
-        #   not_found
-        #   halt
-        # end
-        # form = PropertySaleForm.new request.POST['property']
-        # @property.update form
-        # @property.save
-        render :'edit'
+        @activity = Activity::Record.find(id: id)
+        if @activity
+          render :edit
+          # Probably redirect somewhere
+        else
+          not_found
+        end
       end
 
       delete '/:id' do |id|
-        # piece = Estate.fetch(id) do
-        #   not_found
-        #   halt
-        # end
-        piece.destroy
-        redirect '/admin/activities'
+        activity = Activity::Record.find(id: id)
+        if activity
+          activity.destroy
+          redirect '/admin/activities'
+        else
+          not_found
+        end
       end
 
       def not_found
