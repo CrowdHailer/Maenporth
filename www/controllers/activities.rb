@@ -6,12 +6,17 @@ module WWW
       render :categories
     end
 
-    get "/:id" do
-      # Item should return if it has a provider and this sets the view
+    get "/category/:category" do |category|
+      @category = Activity::Category.all.find{ |c| c.name.downcase == category }
+      # TODO filter
+      @activities = Activity::Record.all
+      render :category
     end
 
-    # Get index with activity chosen
-    # /?category=discover
-    # redirect to all category page if not found
+    get "/:id" do
+      # Item should return if it has a provider and this sets the view
+      "Stuff"
+    end
+
   end
 end

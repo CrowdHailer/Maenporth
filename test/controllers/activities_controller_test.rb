@@ -9,8 +9,13 @@ module WWW
       ActivitiesController
     end
 
-    def test_index_page_is_available
+    def test_all_categories_page_is_available
       assert_ok get('/all-categories')
+    end
+
+    def test_individual_category_page_shows
+      # TODO create activity
+      assert_ok get('/category/discover')
     end
 
   end
