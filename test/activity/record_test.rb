@@ -16,12 +16,11 @@ module Activity
       assert_equal activity_name, record.activity_name
     end
 
-    # TODO types of descriptions
-    def test_can_activity_description
+    def test_can_activity_listings_description
       raw = '# Hello'
-      description = Description.new raw
-      record = Record.new :description => description
-      assert_equal description, record.description
+      listings_description = Description.new raw
+      record = Record.new :listings_description => listings_description
+      assert_equal listings_description, record.listings_description
     end
 
     def test_can_have_selling_point_1
