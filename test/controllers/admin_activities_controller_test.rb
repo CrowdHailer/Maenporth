@@ -49,7 +49,7 @@ module WWW
       activity = Activity.new(
         :activity_name => "Kayaking"
       ).save
-      assert_ok patch("/#{activity.id}", {activity_name: "Kayaking!"})
+      response = patch("/#{activity.id}", {activity_name: "Kayaking!"})
       assert_equal "Kayaking!", Activity::Record.first.activity_name
     end
 

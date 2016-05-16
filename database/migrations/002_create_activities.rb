@@ -25,7 +25,7 @@ Sequel.migration do
       String :gallery_image_8
       String :availability
       String :suitability
-      String :you_tube_video
+      String :youtube_video
       String :providers_name
       String :providers_phone_number
       String :providers_email_address

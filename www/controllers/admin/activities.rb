@@ -10,11 +10,12 @@ module WWW
       end
 
       get '/new' do
-        @activity = Activity::Record.new
+        @activity = Activity::Record.create
         render :edit
       end
 
       post '/' do
+        # DEBT not used
         activity = Activity::Record.create(request.POST)
         redirect "/#{activity.id}"
       end
@@ -31,8 +32,10 @@ module WWW
       patch '/:id' do |id|
         @activity = Activity::Record.find(id: id)
         if @activity
-          @activity.update(request.POST)
-          render :edit
+          updates = request.POST.clone
+          updates.delete("_method") # Mutable Eurgh DEBT
+          @activity.update(updates)
+          redirect '/admin/activities'
           # Probably redirect somewhere
         else
           not_found
