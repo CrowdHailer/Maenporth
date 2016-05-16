@@ -27,9 +27,17 @@ module WWW
       assert_ok get('/new')
     end
 
+    def test_can_create_new_activity
+      response = post('/', {activity_name: "Walking"})
+      assert_match /^\/[^\/]{10,32}$/, response.location
+      assert_equal 1, Activity::Record.count
+    end
+
     def test_edit_page_is_available_for_activity
-      # TODO create activity
-      # assert_ok get("/#{activity.id}/edit")
+      activity = Activity.new(
+        :activity_name => "Kayaking"
+      ).save
+      assert_ok get("/#{activity.id}/edit")
     end
 
     def test_edit_page_is_unavailable_for_nonexistant_activity
@@ -38,13 +46,19 @@ module WWW
     end
 
     def test_can_update_activity
-      # TODO
+      activity = Activity.new(
+        :activity_name => "Kayaking"
+      ).save
+      assert_ok patch("/#{activity.id}", {activity_name: "Kayaking!"})
+      assert_equal "Kayaking!", Activity::Record.first.activity_name
     end
 
     def test_can_delete_activity
-      # property = Estate.create
-      # delete "/#{property.id}"
-      # assert Estate.empty?
+      activity = Activity.new(
+        :activity_name => "Kayaking"
+      ).save
+      delete "/#{activity.id}"
+      assert Activity::Record.empty?
     end
   end
 end

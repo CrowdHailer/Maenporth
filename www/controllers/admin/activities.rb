@@ -10,8 +10,13 @@ module WWW
       end
 
       get '/new' do
-        @activity = Activity::Record.create
+        @activity = Activity::Record.new
         render :edit
+      end
+
+      post '/' do
+        activity = Activity::Record.create(request.POST)
+        redirect "/#{activity.id}"
       end
 
       get '/:id/edit' do |id|
@@ -26,6 +31,7 @@ module WWW
       patch '/:id' do |id|
         @activity = Activity::Record.find(id: id)
         if @activity
+          @activity.update(request.POST)
           render :edit
           # Probably redirect somewhere
         else
