@@ -10,8 +10,8 @@ module Activity
     include RandomIdentifier
 
     def has_provider?
-      # TODO fix this
-      false
+      return false if providers_name.nil?
+      return false if providers_name == ""
     end
   end
 
