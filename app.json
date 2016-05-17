@@ -1,7 +1,7 @@
 {
   "name":"wks14-ccml-staging-maenporth",
   "scripts":{
-    "postdeploy":"bundle exec 'rake db:migrate:up' && heroku restart"
+    "postdeploy":"bundle exec 'rake db:migrate:up'"
   },
   "env":{
     "MANDRILL_USERNAME": {
