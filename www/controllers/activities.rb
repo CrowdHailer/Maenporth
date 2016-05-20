@@ -1,15 +1,14 @@
 module WWW
   class ActivitiesController < BaseController
-    render_defaults[:dir] += '/activities'
+    render_defaults[:dir] += '/leisure'
 
-    get "/all-categories" do
+    get "/" do
       render :categories
     end
 
-    get "/category/:category" do |category|
-      @category = Activity::Category.all.find{ |c| c.name.downcase == category }
-      # TODO filter
-      @activities = Activity::Record.all
+    get "/category/:category" do |category_string|
+      @category = Activity::Category.all.find { |c| c.name.downcase == category_string }
+      @activities = Activity.send("#{@category.name.downcase}_activities")
       render :category
     end
 

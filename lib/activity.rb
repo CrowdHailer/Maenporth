@@ -12,6 +12,7 @@ module Activity
     def has_provider?
       return false if providers_name.nil?
       return false if providers_name == ""
+      true
     end
   end
 
@@ -33,6 +34,12 @@ module Activity
     end
 
     attr_reader :name, :description
+  end
+
+  Category.all.each do |category|
+    define_singleton_method "#{category.name.downcase}_activities" do
+      Activity::Record.where(category: category.name).all
+    end
   end
 
   Name = Class.new(String)

@@ -20,7 +20,7 @@ module WWW
     # Load further controllers before final root mounted controller
     controller '/properties', PropertiesController
     controller '/enquiries', EnquiriesController
-    controller '/activities', ActivitiesController
+    controller '/leisure', ActivitiesController
     controller '/admin', AdminController
     controller '/', HomeController
 
@@ -36,7 +36,6 @@ module WWW
     end
 
     error do
-      # TODO respond to staging
       if deployed?
         response.status = 500
         response.body = render :'errors/500'

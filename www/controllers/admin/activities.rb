@@ -2,15 +2,18 @@ module WWW
   module Admin
     class ActivitiesController < BaseController
       # In the future this might make more sense to be relative to some admin root
-      render_defaults[:dir] += '/admin/activities'
+      render_defaults[:dir] += '/admin/leisure'
 
       get '/' do
-        @activities = Activity::Record.all
+        @categories = Activity::Category.all.map do |c|
+          [c, Activity.send("#{c.name.downcase}_activities")]
+        end
         render :index
       end
 
       get '/new' do
-        @activity = Activity::Record.create
+        # DEBT sets values
+        @activity = Activity::Record.create(:category => "", activity_name: "")
         render :edit
       end
 
@@ -35,7 +38,7 @@ module WWW
           updates = request.POST.clone
           updates.delete("_method") # Mutable Eurgh DEBT
           @activity.update(updates)
-          redirect '/admin/activities'
+          redirect '/admin/leisure'
           # Probably redirect somewhere
         else
           not_found
@@ -46,7 +49,7 @@ module WWW
         activity = Activity::Record.find(id: id)
         if activity
           activity.destroy
-          redirect '/admin/activities'
+          redirect '/admin/leisure'
         else
           not_found
         end

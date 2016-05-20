@@ -1,5 +1,5 @@
 
-<div class="owl-carousel">
+<!-- <div class="owl-carousel">
   <div id="slider-img"><img src="/img/slider/swimming.jpg"></div>
   <div id="slider-img"><img src="/img/slider/sauna.jpg"></div>
   <div id="slider-img"><img src="/img/slider/tennis.jpg"></div>
@@ -15,7 +15,7 @@
 </div>
 <div class="row collapse">
 
-</div>
+</div> -->
 
 <div class="row collapse leisure" id="white-bg">
   <div id="top-section">
@@ -30,7 +30,7 @@
   <ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1" id="cat-home">
     <% Activity::Category.all.each do |category| %>
     <li>
-      <a href="/activities/category/<%= category.name.downcase %>">
+      <a href="/leisure/category/<%= category.name.downcase %>">
         <div id="cat-image">
           <!-- THIS IMAGE SIZE HAS TO BE THE SAME AS ALL THE OTHER CATEGORY IMAGES -->
           <img src="/img/<%= category.name.downcase %>.jpg">

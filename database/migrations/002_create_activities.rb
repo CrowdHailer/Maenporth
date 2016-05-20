@@ -2,8 +2,9 @@ Sequel.migration do
   up do
     create_table :activities do
       primary_key :id, :type => :varchar, :auto_increment => false, :unique => true
-      String :category
-      String :activity_name
+      String :category, :null => false
+      String :activity_name, :null => false
+      # TODO set required fields
       String :header_image
       String :listings_image
       String :public_website

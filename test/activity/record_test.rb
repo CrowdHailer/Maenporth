@@ -5,8 +5,26 @@ module Activity
     include DatabaseTesting
 
     def test_assert_has_id
-      record = Record.create
+      record = Record.create(
+        :category => "Discover",
+        :activity_name => "Climbing"
+      )
       assert record.id
+    end
+
+    def test_can_find_activities_by_category
+      kayaking = Record.create(
+        :category => "Discover",
+        :activity_name => "Climbing"
+      )
+      spa = Record.create(
+        :category => "Relax",
+        :activity_name => "Climbing"
+      )
+
+      activities = Activity.discover_activities
+      assert_equal 1, activities.count
+      assert_equal 0, Activity.experience_activities.count
     end
 
     def test_can_have_activity_name

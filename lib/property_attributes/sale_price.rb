@@ -3,7 +3,6 @@ class SalePrice
 
   class << self
     def dump(item)
-      # TODO test
       item.pounds
     end
   end
@@ -23,7 +22,6 @@ class SalePrice
 
   def ==(other)
     if other.respond_to? :pounds
-      # TODO test conditional
       pounds == other.pounds
     end
   end

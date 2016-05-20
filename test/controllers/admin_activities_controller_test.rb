@@ -15,7 +15,8 @@ module WWW
 
     def test_index_page_is_availabe_when_activities_to_show
       Activity.new(
-        :activity_name => "Kayaking"
+        :activity_name => "Kayaking",
+        :category => "Discover"
       ).save
 
       response = get('/')
@@ -28,13 +29,14 @@ module WWW
     end
 
     def test_can_create_new_activity
-      response = post('/', {activity_name: "Walking"})
+      response = post('/', {activity_name: "Walking", category: "Discover"})
       assert_match /^\/[^\/]{10,32}$/, response.location
       assert_equal 1, Activity::Record.count
     end
 
     def test_edit_page_is_available_for_activity
       activity = Activity.new(
+        :category => "Discover",
         :activity_name => "Kayaking"
       ).save
       assert_ok get("/#{activity.id}/edit")
@@ -47,6 +49,7 @@ module WWW
 
     def test_can_update_activity
       activity = Activity.new(
+        :category => "Discover",
         :activity_name => "Kayaking"
       ).save
       response = patch("/#{activity.id}", {activity_name: "Kayaking!"})
@@ -55,6 +58,7 @@ module WWW
 
     def test_can_delete_activity
       activity = Activity.new(
+        :category => "Discover",
         :activity_name => "Kayaking"
       ).save
       delete "/#{activity.id}"

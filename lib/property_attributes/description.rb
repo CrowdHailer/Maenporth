@@ -4,7 +4,7 @@ class Description
   Renderer = Redcarpet::Markdown.new Redcarpet::Render::HTML, Options
   class << self
     def dump(item)
-      # TODO test
+      # DEBT test
       item.raw
     end
   end
@@ -21,7 +21,7 @@ class Description
 
   def ==(other)
     if other.respond_to? :raw
-      # TODO test more
+      # DEBT test more
       raw == other.raw
     end
   end
