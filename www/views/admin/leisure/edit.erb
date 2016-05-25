@@ -68,7 +68,7 @@
           <p>Describe the activity.  This description will appear on the activity listing page for this activity.</p>
         </div>
         <div class="large-5 columns">
-          <textarea placeholder="Activity description" name="listings_description" value="<%= @activity.listings_description %>"></textarea>
+          <textarea placeholder="Activity description" name="listings_description"><%= @activity.listings_description %></textarea>
         </div>
       </div>
       <hr>
@@ -78,7 +78,7 @@
           <p>Describe the activity.  This description will appear on the activity profile page.</p>
         </div>
         <div class="large-5 columns">
-          <textarea placeholder="Activity description" name="main_description" value="<%= @activity.main_description %>"></textarea>
+          <textarea placeholder="Activity description" name="main_description"><%= @activity.main_description %></textarea>
         </div>
       </div>
       <hr>
@@ -104,7 +104,7 @@
           <p>Please provide one customer review.  This will be displayed in the pink box on the activity profile page.</p>
         </div>
         <div class="large-5 columns">
-          <textarea placeholder="Customer review" name="customer_review" value="<%= @activity.customer_review %>"></textarea>
+          <textarea placeholder="Customer review" name="customer_review"><%= @activity.customer_review %></textarea>
         </div>
       </div>
       <hr>
@@ -244,7 +244,7 @@
           <p>Detail what offer this code entitles the user to. Provide information on how to redeem the offer, the expiry date of the offer (e.g. 12 months after generation) and any terms and conditions stipulated by the provider in relation to using this offer code.</p>
         </div>
         <div class="large-5 columns">
-          <textarea placeholder="Offer code details" name="providers_offer_details" value="<%= @activity.providers_offer_details %>"></textarea>
+          <textarea placeholder="Offer code details" name="providers_offer_details"><%= @activity.providers_offer_details %></textarea>
         </div>
       </div>
       <hr>
