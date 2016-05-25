@@ -165,7 +165,6 @@
         </div>
         <div class="large-5 columns">
           <input type="text" placeholder="Availability" name="availability" value="<%= @activity.availability %>">
-          <input type="checkbox"> <span class="check-label">Tick this box to hide 'Availability'.</span>
         </div>
       </div>
       <hr>
@@ -176,14 +175,9 @@
         </div>
         <div class="large-5 columns">
           <input type="text" placeholder="Suitability" name="suitability" value="<%= @activity.suitability %>">
-          <input type="checkbox"> <span class="check-label">Tick this box to hide 'Suitability'.</span>
         </div>
       </div>
       <hr>
-      <h3>Does this activity have a YouTube Video?</h3>
-      <input type="radio" name="youtube?" value="yes-video"> Yes<br>
-      <input type="radio" name="youtube?" value="no-video"> No<br>
-      IF YES
       <div class="row collapse">
         <div class="large-7 columns">
           <p>Please provide a link to the YouTube video.  To do this, go to the video on YouTube and select the 'Share' option which is usually shown underneath the video.  Copy the 'Share URL' and paste it into this box.</p>
