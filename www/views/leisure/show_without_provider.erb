@@ -7,17 +7,17 @@
   <hr>
   <div class="large-7 medium-6 small-12 columns">
     <div class="main-cont">
-      <p>Kayaking with the guys at Maenporth Kayak club is excellent fun. We'll provide a kayak, full instruction and all safety gear before heading out for a coastal adventure you will never forget.</p>
+      <p><%= @activity.main_description %></p>
       <ol>
-        <li>Kayaking is brilliant because it is on water.</li>
-        <li>All safety equipment is provided.</li>
-        <li>Water is free of charge.</li>
-        <li>Full instructions will be provided.</li>
-        <li>The sun is guaranteed to shine.</li>
+        <li><%= @activity.selling_point_1 %></li>
+        <li><%= @activity.selling_point_2 %></li>
+        <li><%= @activity.selling_point_3 %></li>
+        <li><%= @activity.selling_point_4 %></li>
+        <li><%= @activity.selling_point_5 %></li>
       </ol>
       <div class="review">
         <h3>Customer Review</h3>
-        <p>Dy'a know we had just the best time eva. It was flippin 'mazin. Would love to go again like.  Suzie Q, Marlborough.</p>
+        <p><%= @activity.customer_review %></p>
       </div>
       <div class="gallery">
         <div class="row collapse">
@@ -105,15 +105,15 @@
   <div class="large-4 medium-5 small-12 columns">
     <div class="add-info">
       <h3>Availability</h3>
-      <p>9am - 6:30pm, Tue - Sun</p>
+      <p><%= @activity.availability %></p>
       <h3>Suitability</h3>
-      <p>Suitable for ages 6+</p>
+      <p><%= @activity.suitability %></p>
     </div>
     <div id="video">
-      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/fr8GMC_NXlU?list=PLRhEP6R05_iXNDlsbVi3EZQxlDZJUNrUF" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="auto" src="<%= @activity.youtube_video %>" frameborder="0" allowfullscreen></iframe>
     </div>
     <div id="cta-basic">
-      <a href="https://www.southwestcoastpath.org.uk/">Find out more<img src="/img/white-rght.svg"></a>
+      <a href="<%= @activity.public_website %>">Find out more<img src="/img/white-rght.svg"></a>
     </div>
   </div>
 </div>
