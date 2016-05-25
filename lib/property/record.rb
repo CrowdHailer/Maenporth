@@ -41,12 +41,12 @@ module Property
     mount_uploader :rent_badge_3, BadgeUploader
 
     def sale_description
-      # TODO move to enitity and test
+      # DEBT move to enitity and test
       super || Description.new('')
     end
 
     def formatted_sale_price
-      # TODO move to page/presenter object
+      # DEBT move to page/presenter object
       sale_price.to_s.split('.')[0]
     end
   end

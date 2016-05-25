@@ -1,0 +1,21 @@
+
+<div class="row collapse leisure" id="white-bg">
+  <h1><%= @category.name.capitalize %></h1>
+  <hr>
+  <% @activities.each do |activity| %>
+  <div class="row collapse" id="activity-listing">
+    <div class="large-7 medium-8 small-12 columns">
+      <div class="med-padding">
+        <h2><%= activity.activity_name %></h2>
+        <p>TODO Kayaking with the guys at Maenporth Kayak club is excellent fun.  We'll provide a kayak, full instruction and all safety gear before heading out for a coastal adventure you will never forget.</p>
+        <a href="/leisure/<%= activity.id %>">
+          Find out More / Book
+        </a>
+      </div>
+    </div>
+    <div class="large-4 medium-4 small-12 columns">
+      <img src="/img/kayak.jpg">
+    </div>
+  </div>
+  <% end %>
+</div>

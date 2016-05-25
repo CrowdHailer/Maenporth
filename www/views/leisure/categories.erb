@@ -1,0 +1,70 @@
+
+<!-- <div class="owl-carousel">
+  <div id="slider-img"><img src="/img/slider/swimming.jpg"></div>
+  <div id="slider-img"><img src="/img/slider/sauna.jpg"></div>
+  <div id="slider-img"><img src="/img/slider/tennis.jpg"></div>
+  <div id="slider-img"><img src="/img/slider/bluebells.jpg"></div>
+  <div id="slider-img"><img src="/img/slider/cove.jpg"></div>
+  <div id="slider-img"><img src="/img/slider/beach.jpg"></div>
+  <div id="slider-img"><img src="/img/slider/cafe.jpg"></div>
+  <div id="slider-img"><img src="/img/slider/kayaks.jpg"></div>
+  <div id="slider-img"><img src="/img/slider/bbq.jpg"></div>
+  <div id="slider-img"><img src="/img/slider/flowers.jpg"></div>
+  <div id="slider-img"><img src="/img/slider/play.jpg"></div>
+  <div id="slider-img"><img src="/img/slider/footpath.jpg"></div>
+</div>
+<div class="row collapse">
+
+</div> -->
+
+<div class="row collapse leisure" id="white-bg">
+  <div id="top-section">
+    <h2>Sit back, relax and be pampered - or get out there, explore and feel the adrenaline!</h2>
+    <p>Whatever you prefer to get up to on your holiday, we can help you arrange it. As well as our great onsite facilities, we have linked with a variety of companies to give you some exciting opportunities exclusive to Maenporth residents.</p>
+    <p>From extra-special days out right down to little things that make your stay more enjoyable like morning deliveries, we can sort it.</p>
+    <p>Fancy something you don't see listed below? Contact us <a href="http://www.maenporthestate.com/find-us.html" style="color:#ea2182;">here </a>and we'll see what we can do for you.</p>
+  </div>
+  <p class="cat-p">Click on a category to view activities.</p>
+  <hr>
+
+  <ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1" id="cat-home">
+    <% Activity::Category.all.each do |category| %>
+    <li>
+      <a href="/leisure/category/<%= category.name.downcase %>">
+        <div id="cat-image">
+          <!-- THIS IMAGE SIZE HAS TO BE THE SAME AS ALL THE OTHER CATEGORY IMAGES -->
+          <img src="/img/<%= category.name.downcase %>.jpg">
+        </div>
+        <div class="cat-text">
+          <h2><%= category.name %></h2>
+          <p><%= category.description %></p>
+        </div>
+      </a>
+    </li>
+    <% end %>
+  </ul>
+</div>
+<script src="/vendor-css/jquerymin.js"></script>
+<script src="/vendor-css/owlmin.js"></script>
+
+<script>
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});
+
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+  items:1,
+  loop:true,
+  margin:0,
+  autoplay:true,
+  autoplayTimeout:8000,
+  autoplayHoverPause:false
+});
+$('.play').on('click',function(){
+  owl.trigger('autoplay.play.owl',[6000])
+})
+$('.stop').on('click',function(){
+  owl.trigger('autoplay.stop.owl')
+})
+</script>

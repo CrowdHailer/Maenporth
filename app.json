@@ -1,0 +1,23 @@
+{
+  "name":"wks14-ccml-staging-maenporth",
+  "scripts":{
+    "postdeploy":"bundle exec 'rake db:migrate:up'"
+  },
+  "env":{
+    "MANDRILL_USERNAME": {
+      "required": true
+    },
+    "MANDRILL_APIKEY": {
+      "required": true
+    },
+    "ADMIN_USERNAME": {
+      "required": true
+    },
+    "ADMIN_PASSWORD": {
+      "required": true
+    },
+    "MAIL_SERVER_HOST": {
+      "required": true
+    }
+  }
+}

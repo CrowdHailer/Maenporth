@@ -17,7 +17,7 @@ module WWW
         not_found
         halt
       end
-      # TODO Belongs in View/Page object
+      # DEBT Belongs in View/Page object
       if @property.enquiry_route == 'agent'
         @enquiry_location =  @property.enquiry_link
       else

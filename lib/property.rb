@@ -1,6 +1,6 @@
 module Property
   def self.new(*args, &block)
-    # TODO test move to entity
+    # DEBT test move to entity
     Record.new(*args, &block)
   end
 end
