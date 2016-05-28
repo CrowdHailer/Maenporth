@@ -18,8 +18,11 @@ module WWW
     end
     post "/redeem-offer" do
       code = request.POST["offer_code"]
-      puts code
-      code
+      offer = Offer::Record.where(code: code).first
+      pounds = request.POST["transaction_value"].to_f
+      pence = (pounds * 100).to_i
+      offer.redeem_for(pence)
+      "some page"
     end
     # FIXME route under activities
     get "/:id" do |id|

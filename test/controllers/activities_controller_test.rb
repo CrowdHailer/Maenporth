@@ -78,5 +78,29 @@ module WWW
       assert_ok response
     end
 
+    def test_can_redeem_an_offer
+      activity_record = Activity::Record.create(
+        :category => "Discover",
+        :activity_name => "Climbing",
+        :providers_name => "Bobs outings",
+        :providers_offer_prefix => "BOB"
+      )
+
+      record = Offer.new(
+      :customer_name => "Mike",
+      :customer_email_address => "mike@lovit.org",
+      :activity => activity_record
+      ).save
+
+      response = post("/redeem-offer", {
+        :offer_code => record.code,
+        :transaction_value => "12.50"
+      })
+
+      record = Offer::Record[record.id]
+      assert record.transaction_value
+      assert record.redeemed_at
+    end
+
   end
 end
