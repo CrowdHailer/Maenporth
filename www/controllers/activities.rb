@@ -1,5 +1,6 @@
 module WWW
   class ActivitiesController < BaseController
+    # DEBT to me named leisure controller
     render_defaults[:dir] += '/leisure'
 
     get "/" do
@@ -12,6 +13,14 @@ module WWW
       render :category
     end
 
+    get "/redeem-offer" do
+      render :redeem_offer
+    end
+    post "/redeem-offer" do
+      code = request.POST["offer_code"]
+      puts code
+      code
+    end
     # FIXME route under activities
     get "/:id" do |id|
       @activity = Activity::Record.find(id: id)
@@ -49,5 +58,6 @@ module WWW
         response.status = 404
       end
     end
+
   end
 end
