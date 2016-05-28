@@ -2,39 +2,40 @@
   <div class="banner-image-wrap">
     <img src="/img/kayak-big.jpg">
   </div>
-  <h1>Kayaking</h1>
-  <h2 class="provider-detail">The Maenporth Kayak Club</h2>
+  <h1><%= @offer.activity.activity_name %></h1>
+  <h2 class="provider-detail"><%= @offer.activity.providers_name %></h2>
   <hr>
   <div class="large-6 columns">
     <h2>Your Offer Code:</h2>
     <div class="code-wrap">
-      <span>KAYAK-MPORTH-070416-eer34ja</span>
+      <span><%= @offer.code %></span>
     </div>
-    <p>This offer code entitles you to whatever it is Maenporth have agreed with the activity provider.  Something like 10% off.  Here are also some special instructions for using the code.</p>
+    <p><%= @offer.activity.providers_offer_details %></p>
     <div class="offer-code-btns">
-      <a href="">Visit The Maenporth Kayak Club Website</a>
-      <a href="" download>Download Terms and Conditions</a>
+      <a href="<%= @offer.activity.providers_website %>">Visit The Maenporth Kayak Club Website</a>
+      <!-- FIXME ts and cs url method on offer -->
+      <a href="<%= @offer.activity.providers_terms_and_conditions %>" download>Download Terms and Conditions</a>
     </div>
   </div>
   <div class="large-4 columns">
     <div class="add-info">
       <h3>Address</h3>
       <div class="address">
-        <p>Address Line 1</p>
-        <p>Address Line 2</p>
-        <p>Address Line 3</p>
-        <p>City</p>
-        <p>County</p>
-        <p>Postcode</p>
+        <p><%= @offer.activity.providers_address_line_1 %></p>
+        <p><%= @offer.activity.providers_address_line_2 %></p>
+        <p><%= @offer.activity.providers_address_line_3 %></p>
+        <p><%= @offer.activity.providers_address_city %></p>
+        <p><%= @offer.activity.providers_address_county %></p>
+        <p><%= @offer.activity.providers_address_postcode %></p>
       </div>
       <h3>Availability</h3>
-      <p>9am - 6:30pm, Tue - Sun</p>
+      <p><%= @offer.activity.availability %></p>
       <h3>Phone</h3>
-      <p>01326 555 444</p>
+      <p><%= @offer.activity.providers_phone_number %></p>
       <h3>Email</h3>
-      <p><a href="mailto:">kayak@club.com</a></p>
+      <p><a href="mailto:"><%= @offer.activity.providers_email_address %></a></p>
       <h3>Website</h3>
-      <p><a href="">www.kayakclub.com</a></p>
+      <p><a href="<%= @offer.activity.providers_website %>"><%= @offer.activity.providers_website %></a></p>
     </div>
   </div>
 </div>

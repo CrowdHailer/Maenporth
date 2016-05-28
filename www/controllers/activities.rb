@@ -29,14 +29,25 @@ module WWW
     post "/activities/:id/generate-offer" do |id|
       activity = Activity::Record.find(id: id)
       if activity
-        redirect "/leisure/offers/123"
+        offer = Offer.new(
+          :customer_name => request.POST["customer_name"],
+          :customer_email_address => request.POST["customer_email_address"],
+          :activity => activity
+        ).save
+        redirect "/leisure/offers/#{offer.id}"
       else
         response.status = 404
       end
     end
 
     get "/offers/:id" do |id|
-      render :show_offer
+      offer = Offer::Record.find(id: id)
+      if offer
+        @offer = offer
+        render :show_offer
+      else
+        response.status = 404
+      end
     end
   end
 end

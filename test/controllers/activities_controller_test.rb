@@ -50,12 +50,31 @@ module WWW
         :providers_name => "kayaking times"
       ).save
 
-      response = post("/activities/#{activity.id}/generate-offer")
+      assert Offer::Record.empty?
+      response = post("/activities/#{activity.id}/generate-offer", {
+        :customer_name => "Danny",
+        :customer_email_address => "danny@boi.io"
+      })
       assert_equal 302, response.status
+      refute Offer::Record.empty?
     end
 
     def test_can_get_an_offer_page
-      response = get("/offers/123")
+
+      activity_record = Activity::Record.create(
+        :category => "Discover",
+        :activity_name => "Climbing",
+        :providers_name => "Bobs outings",
+        :providers_offer_prefix => "BOB"
+      )
+
+      record = Offer.new(
+      :customer_name => "Mike",
+      :customer_email_address => "mike@lovit.org",
+      :activity => activity_record
+      ).save
+
+      response = get("/offers/#{record.id}")
       assert_ok response
     end
 
