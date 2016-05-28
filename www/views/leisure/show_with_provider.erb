@@ -97,9 +97,9 @@
       </div>
     </div>
     <div class="large-4 columns">
-      <form>
-        <input type="text" placeholder="Your name" required>
-        <input type="email" placeholder="Your email address" required>
+      <form action="/leisure/activities/<%= @activity.id %>/generate-offer" method="post">
+        <input type="text" placeholder="Your name" required name="customer_name">
+        <input type="email" placeholder="Your email address" required name="customer_email">
         <input type="submit" value="Get Offer Code">
       </form>
       <div class="hide-for-large-up">

@@ -43,5 +43,21 @@ module WWW
       assert_includes response.body, "kayaking times"
     end
 
+    def test_creating_an_offer_code_for_activity
+      activity = Activity.new(
+        :activity_name => "Kayaking",
+        :category => "Discover",
+        :providers_name => "kayaking times"
+      ).save
+
+      response = post("/activities/#{activity.id}/generate-offer")
+      assert_equal 302, response.status
+    end
+
+    def test_can_get_an_offer_page
+      response = get("/offers/123")
+      assert_ok response
+    end
+
   end
 end
