@@ -93,6 +93,13 @@ module WWW
       ).save
 
       response = post("/redeem-offer", {
+        :offer_code => "bad code",
+        :transaction_value => "12.50"
+      })
+
+      assert_equal 404, response.status
+
+      response = post("/redeem-offer", {
         :offer_code => record.code,
         :transaction_value => "12.50"
       })
@@ -100,6 +107,13 @@ module WWW
       record = Offer::Record[record.id]
       assert record.transaction_value
       assert record.redeemed_at
+
+      response = post("/redeem-offer", {
+        :offer_code => record.code,
+        :transaction_value => "22.50"
+      })
+
+      assert_equal 404, response.status
     end
 
   end
