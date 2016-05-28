@@ -1,7 +1,7 @@
 
 <div class="row collapse leisure" id="white-bg">
   <div class="banner-image-wrap">
-    <img src="/img/kayak-big.jpg">
+    <img src="<%= @activity.header_image.url %>">
   </div>
   <div class="row collapse">
     <div class="large-9 medium-9 small-12 columns">
@@ -9,7 +9,7 @@
       <h2 class="provider-detail"><%= @activity.providers_name %></h2>
     </div>
     <div class="large-3 medium-3 small-6 end columns" id="logo">
-      <img src="/img/logo.png">
+      <img src="<%= @activity.providers_logo.url %>">
     </div>
   </div>
   <hr>
@@ -31,51 +31,11 @@
         <div class="row collapse">
           <div class="large-6 columns">
             <div id="big">
-              <div id="gallery1">
-                <div class="image-disp">
-                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image1.jpg" alt=""/>
-                </div>
+              <% (1..8).each do |i| %>
+              <div class="image-disp">
+                <img class="gallery-image mob-display-image" src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt=""/>
               </div>
-              <div id="gallery2">
-                <div class="image-disp">
-                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image2.jpg" alt=""/>
-                </div>
-              </div>
-              <div id="gallery3">
-                <div class="image-disp">
-                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image3.jpg" alt=""/>
-                </div>
-              </div>
-              <div id="gallery4">
-                <div class="image-disp">
-                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image4.jpg" alt=""/>
-                </div>
-              </div>
-              <div id="gallery5">
-                <div class="image-disp">
-                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image5.jpg" alt=""/>
-                </div>
-              </div>
-              <div id="gallery6">
-                <div class="image-disp">
-                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image6.jpg" alt=""/>
-                </div>
-              </div>
-              <div id="gallery7">
-                <div class="image-disp">
-                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image7.jpg" alt=""/>
-                </div>
-              </div>
-              <div id="gallery8">
-                <div class="image-disp">
-                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image8.jpg" alt=""/>
-                </div>
-              </div>
-              <div id="gallery9">
-                <div class="image-disp">
-                  <img class="gallery-image mob-display-image" src="/img/gallery-example/image9.jpg" alt=""/>
-                </div>
-              </div>
+              <% end %>
             </div>
           </div>
           <div class="large-6 columns">
