@@ -1,4 +1,3 @@
-# TODO untested
 class PropertyMailer
   def initialize(property)
     @property = property
