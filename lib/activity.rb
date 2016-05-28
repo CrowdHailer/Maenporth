@@ -27,6 +27,16 @@ module Activity
       return false if providers_name == ""
       true
     end
+
+    def selling_points
+      [
+        selling_point_1,
+        selling_point_2,
+        selling_point_3,
+        selling_point_4,
+        selling_point_5,
+      ].reject { |point| point.empty? }
+    end
   end
 
   class Category

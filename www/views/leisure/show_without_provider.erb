@@ -9,11 +9,9 @@
     <div class="main-cont">
       <p><%= @activity.main_description %></p>
       <ol>
-        <li><%= @activity.selling_point_1 %></li>
-        <li><%= @activity.selling_point_2 %></li>
-        <li><%= @activity.selling_point_3 %></li>
-        <li><%= @activity.selling_point_4 %></li>
-        <li><%= @activity.selling_point_5 %></li>
+        <% @activity.selling_points.each do |point| %>
+        <li><%= point %></li>
+        <% end %>
       </ol>
       <div class="review">
         <h3>Customer Review</h3>
