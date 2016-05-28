@@ -62,16 +62,16 @@
   </div>
   <div class="large-4 medium-5 small-12 columns">
     <div class="add-info">
-      <% unless @activity.availability.empty? %>
+      <% if @activity.has_availability? %>
       <h3>Availability</h3>
       <p><%= @activity.availability %></p>
       <% end %>
-      <% unless @activity.availability.empty? %>
+      <% if @activity.has_suitability? %>
       <h3>Suitability</h3>
       <p><%= @activity.suitability %></p>
       <% end %>
     </div>
-    <% unless @activity.youtube_video.empty? %>
+    <% if @activity.has_youtube_video? %>
     <div id="video">
       <iframe width="100%" height="auto" src="<%= @activity.youtube_video %>" frameborder="0" allowfullscreen></iframe>
     </div>

@@ -28,6 +28,24 @@ module Activity
       true
     end
 
+    def has_availability?
+      return false if availability.nil?
+      return false if availability == ""
+      true
+    end
+
+    def has_suitability?
+      return false if suitability.nil?
+      return false if suitability == ""
+      true
+    end
+
+    def has_youtube_video?
+      return false if youtube_video.nil?
+      return false if youtube_video == ""
+      true
+    end
+
     def selling_points
       [
         selling_point_1,
@@ -35,7 +53,7 @@ module Activity
         selling_point_3,
         selling_point_4,
         selling_point_5,
-      ].reject { |point| point.empty? }
+      ].reject { |point| point.nil? || point.empty? }
     end
   end
 
