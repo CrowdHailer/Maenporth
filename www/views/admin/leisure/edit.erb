@@ -13,7 +13,7 @@
 <div class="row collapse" id="add-activity">
   <h2>Add a Activity With Provider</h2>
   <hr>
-  <form action="/admin/leisure/<%= @activity.id %>" method="post">
+  <form action="/admin/leisure/<%= @activity.id %>" accept-charset="UTF-8" enctype="multipart/form-data" method="post">
     <input type="hidden" name="_method" value="PATCH">
     <main id="edit-wrap">
       <h3>Category</h3>
@@ -46,8 +46,8 @@
           <p>Select a file to use for the activity's header image.  The image should be a landscape and ideally 968px wide by 272px tall.</p>
         </div>
         <div class="large-5 columns">
-          <input type="file">
-          <img src="/img/upload.svg" alt="">
+          <input type="file" name="header_image">
+          <img src="<%= @activity.header_image.url || '/img/upload.svg' %>" alt="">
         </div>
       </div>
       <hr>
@@ -57,8 +57,8 @@
           <p>Select a file to use in the activity's listing.  The image should be a rectangle and ideally 311px wide by 208px tall.</p>
         </div>
         <div class="large-5 columns">
-          <input type="file">
-          <img src="/img/upload.svg" alt="">
+          <input type="file" name="listings_image">
+          <img src="<%= @activity.listings_image.url || '/img/upload.svg' %>" alt="">
         </div>
       </div>
       <hr>
@@ -116,42 +116,12 @@
         <div class="large-9 columns">
           <div class="row collapse" id="gallery-upload">
             <ul class="large-block-grid-3">
+              <% (1..8).each do |i| %>
               <li>
-                <input type="file">
-                <img src="/img/upload.svg" alt="">
+                <input type="file" name="gallery_image_<%= i %>">
+                <img src="<%= @activity.send('gallery_image_' + i.to_s).url || '/img/upload.svg' %>" alt="">
               </li>
-              <li>
-                <input type="file">
-                <img src="/img/upload.svg" alt="">
-              </li>
-              <li>
-                <input type="file">
-                <img src="/img/upload.svg" alt="">
-              </li>
-              <li>
-                <input type="file">
-                <img src="/img/upload.svg" alt="">
-              </li>
-              <li>
-                <input type="file">
-                <img src="/img/upload.svg" alt="">
-              </li>
-              <li>
-                <input type="file">
-                <img src="/img/upload.svg" alt="">
-              </li>
-              <li>
-                <input type="file">
-                <img src="/img/upload.svg" alt="">
-              </li>
-              <li>
-                <input type="file">
-                <img src="/img/upload.svg" alt="">
-              </li>
-              <li>
-                <input type="file">
-                <img src="/img/upload.svg" alt="">
-              </li>
+              <% end %>
             </ul>
           </div>
           <input type="checkbox"> <span class="check-label">Tick this box to hide the Gallery for this activity.</span>
@@ -254,8 +224,8 @@
           <p>Please upload an image to use as the provider's logo.</p>
         </div>
         <div class="large-5 columns">
-          <input type="file">
-          <img src="/img/upload.svg" alt="">
+          <input type="file" name="providers_logo">
+          <img src="<%= @activity.providers_logo.url || '/img/upload.svg' %>" alt="">
         </div>
       </div>
       <hr>

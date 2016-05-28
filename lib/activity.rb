@@ -1,4 +1,5 @@
 require_relative './random_identifier'
+require_relative './image_uploader'
 
 module Activity
   # The property entity is represented by the unwrapped record
@@ -8,6 +9,18 @@ module Activity
 
   class Record < Sequel::Model(:activities)
     include RandomIdentifier
+
+    mount_uploader :header_image, ImageUploader
+    mount_uploader :listings_image, ImageUploader
+    mount_uploader :gallery_image_1, ImageUploader
+    mount_uploader :gallery_image_2, ImageUploader
+    mount_uploader :gallery_image_3, ImageUploader
+    mount_uploader :gallery_image_4, ImageUploader
+    mount_uploader :gallery_image_5, ImageUploader
+    mount_uploader :gallery_image_6, ImageUploader
+    mount_uploader :gallery_image_7, ImageUploader
+    mount_uploader :gallery_image_8, ImageUploader
+    mount_uploader :providers_logo, ImageUploader
 
     def has_provider?
       return false if providers_name.nil?
