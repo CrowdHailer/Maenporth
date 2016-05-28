@@ -11,6 +11,11 @@ module WWW
         render :index
       end
 
+      get '/offers' do
+        @offers = Offer::Record.all
+        render :offers_index
+      end
+
       get '/new' do
         # DEBT sets values
         @activity = Activity::Record.create(:category => "", activity_name: "")

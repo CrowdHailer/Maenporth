@@ -1,0 +1,43 @@
+<section id="admin-nav">
+  <div class="row collapse">
+    <ul>
+      <li><a href="">Holiday Homes</a></li>
+      <li><a href="">Add Property</a></li>
+      <li><a href="">Leisure</a></li>
+      <li><a href="">Add Activity</a></li>
+      <li><a href="">Offer Codes</a></li>
+    </ul>
+  </div>
+</section>
+
+<div class="row collapse" id="add-activity">
+  <h2>Offer Codes Admin</h2>
+  <div class="large-12 columns" id="codes-db">
+    <table>
+      <thead>
+        <tr>
+          <th>Offer Codes Generated</th>
+          <th>Date Generated</th>
+          <th>Provider</th>
+          <th>User Email</th>
+          <th>Status</th>
+          <th>Transaction Value</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% @offers.each do |offer| %>
+        <tr>
+          <td><%= offer.code %></td>
+          <td><%= offer.created_at %></td>
+          <td><%= offer.activity.providers_name %></td>
+          <td><%= offer.customer_email_address %></td>
+          <td><%= offer.redeemed_at ? "Used" : "NOT USED"%></td>
+          <td><%= offer.transaction_value || "0p" %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <!-- <a href="" download>Download CSV</a> -->
+  </div>
+</div>
