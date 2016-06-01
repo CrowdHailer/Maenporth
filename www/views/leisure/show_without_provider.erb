@@ -73,7 +73,8 @@
     </div>
     <% if @activity.has_youtube_video? %>
     <div id="video">
-      <iframe width="100%" height="auto" src="<%= @activity.youtube_video %>" frameborder="0" allowfullscreen></iframe>
+      <%= @activity.youtube_video %>
+      <!-- <iframe width="100%" height="auto" src="" frameborder="0" allowfullscreen></iframe> -->
     </div>
     <% end %>
     <div id="cta-basic">
