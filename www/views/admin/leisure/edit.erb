@@ -154,7 +154,7 @@
           <p>The share iframe will look something like this: https://youtu.be/GFJQJX6D0I0</p>
         </div>
         <div class="large-5 columns">
-          <input type="text" placeholder="YouTube URL" name="youtube_video" value="<%= @activity.youtube_video %>">
+          <input type="text" placeholder="YouTube URL" name="youtube_video" value="<%= Rack::Utils.escape_html(@activity.youtube_video) %>">
         </div>
       </div>
       <hr>
