@@ -46,8 +46,8 @@ module WWW
       activity = Activity::Record.find(id: id)
       if activity
         offer = Offer.new(
-          :customer_name => request.POST["customer_name"],
-          :customer_email_address => request.POST["customer_email_address"],
+          :customer_name => Rack::Utils.escape_html(request.POST["customer_name"]),
+          :customer_email_address => Rack::Utils.escape_html(request.POST["customer_email_address"]),
           :activity => activity
         ).save
         email_offer_to_customer(offer)
