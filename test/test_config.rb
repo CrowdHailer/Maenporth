@@ -10,4 +10,7 @@ Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_opti
 
 Dir[File.expand_path('../support/**/*.rb', __FILE__)].each { |file| require file}
 
+# DEBT we might want to see log messages as test output
+Scorched::Controller.config[:logger] = Logger.new(nil)
+
 require_relative '../www/root'
