@@ -47,7 +47,8 @@ module WWW
       activity = Activity.new(
         :activity_name => "Kayaking",
         :category => "Discover",
-        :providers_name => "kayaking times"
+        :providers_name => "Bobs outings",
+        :providers_offer_prefix => "BOB"
       ).save
 
       assert Offer::Record.empty?
