@@ -1,9 +1,15 @@
 require_relative '../test_config'
+require_relative '../support/mailer_testing'
 
 module WWW
   class ActivitiesControllerTest < MiniTest::Test
     include ControllerTesting
     include DatabaseTesting
+    include MailerTesting
+
+    def setup
+      clear_mail
+    end
 
     def app
       ActivitiesController
@@ -57,6 +63,8 @@ module WWW
         :customer_email_address => "danny@boi.io"
       })
       assert_equal 302, response.status
+      assert last_message.subject
+      assert last_message.body
       refute Offer::Record.empty?
     end
 

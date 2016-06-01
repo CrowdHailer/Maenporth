@@ -50,6 +50,7 @@ module WWW
           :customer_email_address => request.POST["customer_email_address"],
           :activity => activity
         ).save
+        email_offer_to_customer(offer)
         redirect "/leisure/offers/#{offer.id}"
       else
         response.status = 404
@@ -63,6 +64,21 @@ module WWW
         render :show_offer
       else
         response.status = 404
+      end
+    end
+
+    def email_offer_to_customer(offer)
+      file_path = File.expand_path('../activities/offer_email.txt.erb', __FILE__)
+      template = ERB.new File.read(file_path)
+
+      # This has offer available but also a bunch of other stuff
+      text_body = template.result binding
+      Mail.deliver do
+        from     'no-reply@maenporthestate.com'
+        to       offer.customer_email_address
+        cc       ENV['ADMIN_EMAIL']
+        subject  'Here is your offer'
+        body     text_body
       end
     end
 
