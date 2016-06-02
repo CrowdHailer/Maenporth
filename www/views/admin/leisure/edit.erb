@@ -148,10 +148,22 @@
         </div>
       </div>
       <hr>
+      <h3>Embed YouTube video</h3>
       <div class="row collapse">
         <div class="large-7 columns">
-          <p>Please provide a link to the YouTube video.  To do this, go to the video on YouTube and select the 'Share' option which is usually shown underneath the video.  Copy the 'Share URL' and paste it into this box.</p>
-          <p>The share iframe will look something like this: https://youtu.be/GFJQJX6D0I0</p>
+          <p>If you would like to use a YouTube video on the page, please embed one here.  If you do not want to use a YouTube video on this page, please leave this field blank.</p>
+          <p>Instructions for embedding a YouTube Video.</p>
+          <ol>
+            <li>Find the video on YouTube that you would like to embed.</li>
+            <li>Click the 'Share' button underneath the video in YouTube.</li>
+            <li>Click the 'Embed' tab button.</li>
+            <li>You will be shown some embed code that looks like this:<br> < iframe readonly width="560" height="315" src="https://www.youtube.com/embed/RXn1g0xtUMk" frameborder="0" allowfullscreen></iframe ></li>
+            <li>Copy the 'Embed Code' and paste it into a text editor like Notepad or Word.</li>
+            <li>Look for the  'Width' and 'Height' values in the embed code, we are going to change them.</li>
+            <li>Change the width value so it looks exactly like this: width="100%"</li>
+            <li>Change the height value so it looks exactly like this: height="auto"</li>
+            <li>Finally, copy the edited code into the field here on this page.</li>
+          </ol>
         </div>
         <div class="large-5 columns">
           <input type="text" placeholder="YouTube URL" name="youtube_video" value="<%= Rack::Utils.escape_html(@activity.youtube_video) %>">
