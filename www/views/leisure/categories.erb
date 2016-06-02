@@ -25,7 +25,7 @@
   </div>
   <p class="cat-p">Click on a category to view activities.</p>
   <hr>
-
+  <div class="row">
   <ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1" id="cat-home">
     <% Activity::Category.all.each do |category| %>
     <li>
@@ -41,6 +41,7 @@
     </li>
     <% end %>
   </ul>
+  </div>
 </div>
 <script src="/vendor-css/jquerymin.js"></script>
 <script src="/vendor-css/owlmin.js"></script>
