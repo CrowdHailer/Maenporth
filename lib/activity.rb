@@ -47,6 +47,12 @@ module Activity
       true
     end
 
+    def has_public_website?
+      return false if public_website.nil?
+      return false if public_website == ""
+      true
+    end
+
     def selling_points
       [
         selling_point_1,

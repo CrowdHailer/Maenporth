@@ -71,8 +71,10 @@
       <!-- <iframe width="100%" height="auto" src="" frameborder="0" allowfullscreen></iframe> -->
     </div>
     <% end %>
+    <% if @activity.has_public_website? %>
     <div id="cta-basic">
       <a href="<%= @activity.public_website %>">Find out more<img src="/img/white-rght.svg"></a>
     </div>
+    <% end %>
   </div>
 </div>
