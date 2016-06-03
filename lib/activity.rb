@@ -20,6 +20,7 @@ module Activity
     mount_uploader :gallery_image_6, ImageUploader
     mount_uploader :gallery_image_7, ImageUploader
     mount_uploader :gallery_image_8, ImageUploader
+    mount_uploader :gallery_image_9, ImageUploader
     mount_uploader :providers_logo, ImageUploader
 
     def has_provider?

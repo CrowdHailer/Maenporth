@@ -116,7 +116,7 @@
         <div class="large-9 columns">
           <div class="row collapse" id="gallery-upload">
             <ul class="large-block-grid-3">
-              <% (1..8).each do |i| %>
+              <% (1..9).each do |i| %>
               <li>
                 <input type="file" name="gallery_image_<%= i %>">
                 <img src="<%= @activity.send('gallery_image_' + i.to_s).url || '/img/upload.svg' %>" alt="">
@@ -170,12 +170,12 @@
         </div>
       </div>
       <hr>
-      
+
       <h1>Provider details</h1>
       <p style="font-style: italic;">Leave this section blank if there is no provider.</p>
-      
+
       <hr>
-      
+
       <h3>Provider's Name</h3>
       <div class="row collapse">
         <div class="large-7 columns">

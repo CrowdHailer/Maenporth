@@ -24,6 +24,7 @@ Sequel.migration do
       String :gallery_image_6
       String :gallery_image_7
       String :gallery_image_8
+      String :gallery_image_9
       String :availability
       String :suitability
       String :youtube_video
