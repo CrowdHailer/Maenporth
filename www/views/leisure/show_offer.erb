@@ -1,6 +1,6 @@
 <div class="row collapse leisure" id="white-bg">
   <div class="banner-image-wrap">
-    <img src="/img/kayak-big.jpg">
+    <img src="<%= @offer.activity.listings_image %>">
   </div>
   <h1><%= @offer.activity.activity_name %></h1>
   <h2 class="provider-detail"><%= @offer.activity.providers_name %></h2>
@@ -12,7 +12,7 @@
     </div>
     <p><%= @offer.activity.providers_offer_details %></p>
     <div class="offer-code-btns">
-      <a href="<%= @offer.activity.providers_website %>">Visit The Maenporth Kayak Club Website</a>
+      <a href="<%= @offer.activity.providers_website %>">Visit The <%= @offer.activity.providers_name %> Website</a>
       <!-- FIXME ts and cs url method on offer -->
       <a href="<%= @offer.activity.providers_terms_and_conditions %>" download>Download Terms and Conditions</a>
     </div>
