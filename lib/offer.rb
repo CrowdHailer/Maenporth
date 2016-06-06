@@ -28,5 +28,13 @@ module Offer
       self.redeemed_at = DateTime.now
       save
     end
+
+    def transaction_value_string
+      in_pennies = self.transaction_value
+      return nil if in_pennies.nil?
+      pence = in_pennies % 100
+      pounds = in_pennies / 100
+      "£#{pounds}.#{"%02d" % pence}"
+    end
   end
 end

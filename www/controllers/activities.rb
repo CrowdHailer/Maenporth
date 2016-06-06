@@ -51,6 +51,8 @@ module WWW
           :activity => activity
         ).save
         email_offer_to_customer(offer)
+        # EOFError: end of file reached
+        # Caused by bad env variables for mail server
         redirect "/leisure/offers/#{offer.id}"
       else
         response.status = 404
@@ -72,11 +74,11 @@ module WWW
       template = ERB.new File.read(file_path)
 
       # This has offer available but also a bunch of other stuff
-      text_body = template.result binding
+      text_body = template.result(binding)
       Mail.deliver do
         from     'no-reply@maenporthestate.com'
         to       offer.customer_email_address
-        cc       ENV['ADMIN_EMAIL']
+        cc       [ENV['ADMIN_EMAIL']]
         subject  'Here is your offer'
         body     text_body
       end
