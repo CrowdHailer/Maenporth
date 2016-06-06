@@ -51,6 +51,7 @@ module WWW
           :activity => activity
         ).save
         email_offer_to_customer(offer)
+        email_offer_to_provider(offer)
         # EOFError: end of file reached
         # Caused by bad env variables for mail server
         redirect "/leisure/offers/#{offer.id}"
@@ -80,6 +81,20 @@ module WWW
         to       offer.customer_email_address
         cc       [ENV['ADMIN_EMAIL']]
         subject  'Here is your offer'
+        body     text_body
+      end
+    end
+    def email_offer_to_provider(offer)
+      file_path = File.expand_path('../activities/offer_email_to_provider.txt.erb', __FILE__)
+      template = ERB.new File.read(file_path)
+
+      # This has offer available but also a bunch of other stuff
+      text_body = template.result(binding)
+      Mail.deliver do
+        from     'no-reply@maenporthestate.com'
+        to       offer.activity.providers_email_address
+        cc       [ENV['ADMIN_EMAIL']]
+        subject  'Here is a new offer'
         body     text_body
       end
     end
