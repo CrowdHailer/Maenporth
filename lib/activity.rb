@@ -1,5 +1,6 @@
 require_relative './random_identifier'
 require_relative './image_uploader'
+require_relative './pdf_uploader'
 
 module Activity
   # The property entity is represented by the unwrapped record
@@ -22,6 +23,7 @@ module Activity
     mount_uploader :gallery_image_8, ImageUploader
     mount_uploader :gallery_image_9, ImageUploader
     mount_uploader :providers_logo, ImageUploader
+    mount_uploader :providers_terms_and_conditions, PDFUploader
 
     def has_provider?
       return false if providers_name.nil?

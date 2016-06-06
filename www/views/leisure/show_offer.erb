@@ -14,7 +14,7 @@
     <div class="offer-code-btns">
       <a href="<%= @offer.activity.providers_website %>">Visit The <%= @offer.activity.providers_name %> Website</a>
       <!-- FIXME ts and cs url method on offer -->
-      <a href="<%= @offer.activity.providers_terms_and_conditions %>" download>Download Terms and Conditions</a>
+      <a href="<%= @offer.activity.providers_terms_and_conditions.url %>" download>Download Terms and Conditions</a>
     </div>
   </div>
   <div class="large-4 columns">
