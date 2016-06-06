@@ -29,7 +29,7 @@
 <% activities.each do |activity| %>
 <div class="row collapse admin-listing">
   <div class="large-10 columns">
-    <h3><%= activity.activity_name %></h3>
+    <h3><%= activity.activity_name %> <% if activity.hidden? %><small>hidden</small><% end %></h3>
   </div>
 
   <div class="large-2 columns">

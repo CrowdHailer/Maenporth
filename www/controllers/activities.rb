@@ -9,7 +9,7 @@ module WWW
 
     get "/category/:category" do |category_string|
       @category = Activity::Category.all.find { |c| c.name.downcase == category_string }
-      @activities = Activity.send("#{@category.name.downcase}_activities")
+      @activities = Activity.send("#{@category.name.downcase}_activities").reject(&:hidden?)
       render :category
     end
 

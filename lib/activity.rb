@@ -64,6 +64,10 @@ module Activity
         selling_point_5,
       ].reject { |point| point.nil? || point.empty? }
     end
+
+    def hidden?
+      hidden
+    end
   end
 
   class Category

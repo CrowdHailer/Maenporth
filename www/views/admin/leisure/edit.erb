@@ -16,6 +16,16 @@
   <form action="/admin/leisure/<%= @activity.id %>" accept-charset="UTF-8" enctype="multipart/form-data" method="post">
     <input type="hidden" name="_method" value="PATCH">
     <main id="edit-wrap">
+      <h3>Hide</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Hide from public listings</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="checkbox" name="hidden" <%= "checked" if @activity.hidden? %>>
+        </div>
+      </div>
+      <hr>
       <h3>Category</h3>
       <div class="row collapse">
         <div class="large-7 columns">
