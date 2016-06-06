@@ -54,6 +54,7 @@ module WWW
         :activity_name => "Kayaking",
         :category => "Discover",
         :providers_name => "Bobs outings",
+        :providers_email_address => "bob@outings.com",
         :providers_offer_prefix => "BOB"
       ).save
 
