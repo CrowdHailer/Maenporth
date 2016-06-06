@@ -173,6 +173,7 @@
         <div class="large-7 columns">
           <p>If you would like to use a YouTube video on the page, please embed one here.  If you do not want to use a YouTube video on this page, please leave this field blank.</p>
           <p>Instructions for embedding a YouTube Video.</p>
+          <div class="order">
           <ol>
             <li>Find the video on YouTube that you would like to embed.</li>
             <li>Click the 'Share' button underneath the video in YouTube.</li>
@@ -184,6 +185,7 @@
             <li>Change the height value so it looks exactly like this: height="auto"</li>
             <li>Finally, copy the edited code into the field here on this page.</li>
           </ol>
+          </div>
         </div>
         <div class="large-5 columns">
           <input type="text" placeholder="YouTube URL" name="youtube_video" value="<%= Rack::Utils.escape_html(@activity.youtube_video) %>">

@@ -291,6 +291,13 @@ background:#ea2182;
 list-style:none;
 }
 
+.order li {
+    list-style: decimal;
+    font-family: 'Muli', sans-serif;
+    margin-left: 2em;
+    padding: 0.5em 0;
+ }
+
 #codes-db a {
 background:#39C0D7;
 padding:1em;
