@@ -19,15 +19,29 @@ module WWW
     post "/redeem-offer" do
       code = request.POST["offer_code"]
       offer = Offer::Record.where(code: code).first
+      # DEBT should redirect on id
       if offer.nil? || offer.redeemed_at
-        response.status = 404
+        redirect "/leisure/redeem-offer/#{Rack::Utils.escape_path(code)}"
       else
         pounds = request.POST["transaction_value"].to_f
         pence = (pounds * 100).to_i
+        # DEBT redeem_for should check for single redemtion
         offer.redeem_for(pence)
-        "ALL good"
+        redirect "/leisure/redeem-offer/#{offer.id}"
       end
     end
+    get "/redeem-offer/:offer_id" do |id|
+      offer = Offer::Record.where(id: id).first
+      # DEBT booleand redeemed?
+      if offer && offer.redeemed_at
+        @message = "This offer code is genuine. Thank you for submitting the transaction value."
+        render :redeem_offer
+      else
+        @message = "This offer code has failed. If you have already submitted this offer code this may be the reason for the failure as you can only submit an offer code one.  You may have typed the offer code incorrectly, in this case please try again.  If you need help, contact Jessica: jessica.hodges@maenporthestate.co.uk"
+        render :redeem_offer
+      end
+    end
+
     # FIXME route under activities
     get "/:id" do |id|
       @activity = Activity::Record.find(id: id)

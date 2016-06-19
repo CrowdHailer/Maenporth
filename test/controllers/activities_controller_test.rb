@@ -69,7 +69,7 @@ module WWW
       refute Offer::Record.empty?
     end
 
-    def test_can_get_an_offer_page
+    def test_can_get_an_offer_page_showing_open_offer_to_customer
 
       activity_record = Activity::Record.create(
         :category => "Discover",
@@ -102,12 +102,20 @@ module WWW
       :activity => activity_record
       ).save
 
+      # Trying to redem an offer that does not exist will redirect to the check page
       response = post("/redeem-offer", {
         :offer_code => "bad code",
         :transaction_value => "12.50"
       })
 
-      assert_equal 404, response.status
+      assert_equal 302, response.status
+      assert_equal "/leisure/redeem-offer/bad code", Rack::Utils.unescape(response.location)
+
+      # Viewing the redeemed page for a code that doesnt exist is a 404
+      destination =  response.location.split("/leisure").last
+      response = get(destination)
+      assert_equal 200, response.status
+      assert_includes response.body, "This offer code has failed"
 
       response = post("/redeem-offer", {
         :offer_code => record.code,
@@ -117,13 +125,22 @@ module WWW
       record = Offer::Record[record.id]
       assert record.transaction_value
       assert record.redeemed_at
+      original_redeemed_at = record.redeemed_at
+
+      destination =  response.location.split("/leisure").last
+      response = get(destination)
+      assert_equal 200, response.status
+      assert_includes response.body, "This offer code is genuine."
 
       response = post("/redeem-offer", {
         :offer_code => record.code,
         :transaction_value => "22.50"
       })
 
-      assert_equal 404, response.status
+      record = Offer::Record[record.id]
+      assert_equal 302, response.status
+      assert_equal original_redeemed_at, record.redeemed_at
+      # need to check is not re redeemed
     end
 
   end
