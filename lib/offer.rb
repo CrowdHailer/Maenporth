@@ -16,11 +16,11 @@ module Offer
       now = DateTime.now
       date_string = now.strftime('%d%m%y')
       random = (("a".."z").to_a + (0..9).to_a).sample(6).join
-      providers_prefix = activity.providers_offer_prefix
+      providers_offer_prefix = activity.providers_offer_prefix
       providers_name = activity.providers_name
-      raise MissingProviderError if providers_name.nil? || providers_name.empty? || providers_prefix.nil? || providers_prefix.empty?
+      raise MissingProviderError if providers_name.nil? || providers_name.empty? || providers_offer_prefix.nil? || providers_offer_prefix.empty?
       self.created_at = now
-      self.code = "#{providers_prefix}-#{date_string}-#{random}"
+      self.code = "#{providers_offer_prefix}-#{date_string}-#{random}"
     end
 
     def redeem_for(pence)

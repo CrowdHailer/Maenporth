@@ -64,5 +64,21 @@ module WWW
       delete "/#{activity.id}"
       assert Activity::Record.empty?
     end
+
+    def test_can_delete_activity_with_offers
+      activity = Activity.new(
+        :category => "Discover",
+        :activity_name => "Kayaking",
+        :providers_name => "outdoors corp",
+        :providers_offer_prefix => "OUC"
+      ).save
+      offer = Offer.new(
+        :customer_name => "Bill",
+        :customer_email_address => "bill@example.com",
+        :activity => activity
+      ).save
+      delete "/#{activity.id}"
+      assert Activity::Record.empty?
+    end
   end
 end

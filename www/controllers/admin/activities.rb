@@ -54,6 +54,8 @@ module WWW
       delete '/:id' do |id|
         activity = Activity::Record.find(id: id)
         if activity
+          offers = Offer::Record.where(activity: activity)
+          offers.destroy
           activity.destroy
           redirect '/admin/leisure'
         else
