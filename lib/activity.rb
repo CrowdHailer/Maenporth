@@ -68,6 +68,10 @@ module Activity
     def hidden?
       hidden
     end
+
+    def hide_gallery?
+      hide_gallery
+    end
   end
 
   class Category

@@ -17,6 +17,7 @@
         <h3>Customer Review</h3>
         <p><%= @activity.customer_review %></p>
       </div>
+      <% unless @activity.hide_gallery? %>
       <div class="gallery">
         <div class="row collapse">
           <div class="large-6 columns">
@@ -52,6 +53,7 @@
           </script>
         </div>
       </div>
+      <% end %>
     </div>
   </div>
   <div class="large-4 medium-5 small-12 columns">

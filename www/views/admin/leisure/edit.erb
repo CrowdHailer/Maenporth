@@ -144,7 +144,7 @@
               <% end %>
             </ul>
           </div>
-          <input type="checkbox"> <span class="check-label">Tick this box to hide the Gallery for this activity.</span>
+          <input type="checkbox" name="hide_gallery" <%= "checked" if @activity.hide_gallery? %>> <span class="check-label">Tick this box to hide the Gallery for this activity.</span>
         </div>
       </div>
       <hr>

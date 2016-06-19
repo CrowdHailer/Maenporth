@@ -43,6 +43,7 @@ module WWW
           updates = request.POST.clone
           updates.delete("_method") # Mutable Eurgh DEBT
           updates["hidden"] = (updates["hidden"] == "on")
+          updates["hide_gallery"] = (updates["hide_gallery"] == "on")
           @activity.update(updates)
           redirect '/admin/leisure'
           # Probably redirect somewhere
