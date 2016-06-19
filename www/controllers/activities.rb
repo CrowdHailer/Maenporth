@@ -19,7 +19,7 @@ module WWW
     post "/redeem-offer" do
       code = request.POST["offer_code"]
       offer = Offer::Record.where(code: code).first
-      # DEBT should redirect on id
+      # DEBT should redirect on id should redirect to a failure page if already redeemed
       if offer.nil? || offer.redeemed_at
         redirect "/leisure/redeem-offer/#{Rack::Utils.escape_path(code)}"
       else
