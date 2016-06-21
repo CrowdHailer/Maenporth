@@ -1,23 +1,57 @@
 {
-  "name":"wks14-ccml-staging-maenporth",
-  "scripts":{
-    "postdeploy":"bundle exec 'rake db:migrate:up'"
+  "name": "holidayhomes-maenporth",
+  "scripts": {
+    "postdeploy": "heroku run 'bundle exec rake db:migrate:up'"
   },
-  "env":{
-    "MANDRILL_USERNAME": {
-      "required": true
-    },
-    "MANDRILL_APIKEY": {
-      "required": true
-    },
-    "ADMIN_USERNAME": {
+  "env": {
+    "ADMIN_EMAIL": {
       "required": true
     },
     "ADMIN_PASSWORD": {
       "required": true
     },
+    "ADMIN_USERNAME": {
+      "required": true
+    },
+    "AWS_ACCESS_KEY_ID": {
+      "required": true
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "required": true
+    },
+    "BUGSNAG_API_KEY": {
+      "required": true
+    },
+    "LANG": {
+      "required": true
+    },
     "MAIL_SERVER_HOST": {
       "required": true
+    },
+    "MANDRILL_APIKEY": {
+      "required": true
+    },
+    "MANDRILL_USERNAME": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "S3_BUCKET_NAME": {
+      "required": true
     }
-  }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ]
 }
