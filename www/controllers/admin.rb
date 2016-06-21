@@ -9,6 +9,7 @@ module WWW
     end
 
     controller '/properties', Admin::PropertiesController
+    controller '/leisure', Admin::ActivitiesController
 
     get '/' do
       'on the admin page'

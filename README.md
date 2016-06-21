@@ -1,7 +1,7 @@
 Maenporth
 =========
 
-TODO Write application description, add to github repo description and add github link
+Maenporth Estate Properties for sale and holiday rent.
 
 ## Install
 

@@ -1,0 +1,301 @@
+<section id="admin-nav">
+  <div class="row collapse">
+    <ul>
+      <li><a href="/admin/properties">Holiday Homes</a></li>
+      <li><a href="/admin/properties/new">Add Property</a></li>
+      <li><a href="/admin/leisure">Leisure</a></li>
+      <li><a href="/admin/leisure/new">Add Activity</a></li>
+      <li><a href="/admin/leisure/offers">Offer Codes</a></li>
+    </ul>
+  </div>
+</section>
+
+<div class="row collapse" id="add-activity">
+  <h2>Add a Activity With Provider</h2>
+  <hr>
+  <form action="/admin/leisure/<%= @activity.id %>" accept-charset="UTF-8" enctype="multipart/form-data" method="post">
+    <input type="hidden" name="_method" value="PATCH">
+    <main id="edit-wrap">
+      <h3>Hide</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Hide from public listings</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="checkbox" name="hidden" <%= "checked" if @activity.hidden? %>>
+        </div>
+      </div>
+      <hr>
+      <h3>Category</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>What category does this activity belong in?</p>
+        </div>
+        <div class="large-5 columns">
+          <select name="category">
+            <% Activity::Category.all.each do |category| %>
+            <option value="<%= category.name %>" <%= "selected" if category.name == @activity.category %>><%= category.name %></option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+      <hr>
+      <h3>Activity Name</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>What is the name of this activity?  This will appear as the heading in the activity listing and at the top of the activity profile page.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="Activity name" name="activity_name" value="<%= @activity.activity_name %>">
+        </div>
+      </div>
+      <hr>
+      <h3>Header Image</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Select a file to use for the activity's header image.  The image should be a landscape and ideally 968px wide by 272px tall.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="file" name="header_image">
+          <img src="<%= @activity.header_image.url || '/img/upload.svg' %>" alt="">
+        </div>
+      </div>
+      <hr>
+      <h3>Listings Image</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Select a file to use in the activity's listing.  The image should be a rectangle and ideally 311px wide by 208px tall.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="file" name="listings_image">
+          <img src="<%= @activity.listings_image.url || '/img/upload.svg' %>" alt="">
+        </div>
+      </div>
+      <hr>
+      <h3>Listings Description</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Describe the activity.  This description will appear on the activity listing page for this activity.</p>
+        </div>
+        <div class="large-5 columns">
+          <textarea placeholder="Activity description" name="listings_description"><%= @activity.listings_description %></textarea>
+        </div>
+      </div>
+      <hr>
+      <h3>Website Link</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Provide a link to this activity's website using the full URL including http:// or https:// (Leave blank to hide)</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="Website URL" name="public_website" value="<%= @activity.public_website %>">
+        </div>
+      </div>
+      <hr>
+      <h3>Main Description</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Describe the activity.  This description will appear on the activity profile page.</p>
+        </div>
+        <div class="large-5 columns">
+          <textarea placeholder="Activity description" name="main_description"><%= @activity.main_description %></textarea>
+        </div>
+      </div>
+      <hr>
+      <h3>Selling Points</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Please list 5 individual selling points.  These will appear under the activity description on the activity profile page.</p>
+        </div>
+        <div class="large-5 columns">
+          <ul>
+            <li><input type="text" placeholder="Selling point1" name="selling_point_1" value="<%= @activity.selling_point_1 %>"></li>
+            <li><input type="text" placeholder="Selling point2" name="selling_point_2" value="<%= @activity.selling_point_2 %>"></li>
+            <li><input type="text" placeholder="Selling point3" name="selling_point_3" value="<%= @activity.selling_point_3 %>"></li>
+            <li><input type="text" placeholder="Selling point4" name="selling_point_4" value="<%= @activity.selling_point_4 %>"></li>
+            <li><input type="text" placeholder="Selling point5" name="selling_point_5" value="<%= @activity.selling_point_5 %>"></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <h3>Customer Review</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Please provide one customer review.  This will be displayed in the pink box on the activity profile page.</p>
+        </div>
+        <div class="large-5 columns">
+          <textarea placeholder="Customer review" name="customer_review"><%= @activity.customer_review %></textarea>
+        </div>
+      </div>
+      <hr>
+      <h3>Gallery</h3>
+      <div class="row collapse">
+        <div class="large-3 columns">
+          <p>Upload up to 8 images for the gallery.</p>
+        </div>
+        <div class="large-9 columns">
+          <div class="row collapse" id="gallery-upload">
+            <ul class="large-block-grid-3">
+              <% (1..9).each do |i| %>
+              <li>
+                <input type="file" name="gallery_image_<%= i %>">
+                <img src="<%= @activity.send('gallery_image_' + i.to_s).url || '/img/upload.svg' %>" alt="">
+              </li>
+              <% end %>
+            </ul>
+          </div>
+          <input type="checkbox" name="hide_gallery" <%= "checked" if @activity.hide_gallery? %>> <span class="check-label">Tick this box to hide the Gallery for this activity.</span>
+        </div>
+      </div>
+      <hr>
+      <h3>Availability</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>What is the availability of this activity?</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="Availability" name="availability" value="<%= @activity.availability %>">
+        </div>
+      </div>
+      <hr>
+      <h3>Suitability</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Who is this activity suitable for?</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="Suitability" name="suitability" value="<%= @activity.suitability %>">
+        </div>
+      </div>
+      <hr>
+      <h3>Embed YouTube video</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>If you would like to use a YouTube video on the page, please embed one here.  If you do not want to use a YouTube video on this page, please leave this field blank.</p>
+          <p>Instructions for embedding a YouTube Video.</p>
+          <div id="order">
+          <ol>
+            <li>Find the video on YouTube that you would like to embed.</li>
+            <li>Click the 'Share' button underneath the video in YouTube.</li>
+            <li>Click the 'Embed' tab button.</li>
+            <li>You will be shown some embed code that looks like this:<br> < iframe readonly width="560" height="315" src="https://www.youtube.com/embed/RXn1g0xtUMk" frameborder="0" allowfullscreen></iframe ></li>
+            <li>Copy the 'Embed Code' and paste it into a text editor like Notepad or Word.</li>
+            <li>Look for the  'Width' and 'Height' values in the embed code, we are going to change them.</li>
+            <li>Change the width value so it looks exactly like this: width="100%"</li>
+            <li>Change the height value so it looks exactly like this: height="auto"</li>
+            <li>Finally, copy the edited code into the field here on this page.</li>
+          </ol>
+          </div>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="YouTube URL" name="youtube_video" value="<%= Rack::Utils.escape_html(@activity.youtube_video) %>">
+        </div>
+      </div>
+      <hr>
+
+      <h1>Provider details</h1>
+      <p style="font-style: italic;">Leave this section blank if there is no provider.</p>
+
+      <hr>
+
+      <h3>Provider's Name</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>What is the name of the company or organisation providing this activity?</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="Provider's name" name="providers_name" value="<%= @activity.providers_name %>">
+        </div>
+      </div>
+      <hr>
+      <h3>Provider's Phone Number</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Public contact telephone number of the provider.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="Provider's telephone number" name="providers_phone_number" value="<%= @activity.providers_phone_number %>">
+        </div>
+      </div>
+      <hr>
+      <h3>Provider's Email Address</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Public contact email address for the provider.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="email" placeholder="Provider's email address" name="providers_email_address" value="<%= @activity.providers_email_address %>">
+        </div>
+      </div>
+      <hr>
+      <h3>Provider's Website</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Public website address for the provider including http:// or https:// and wwww.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="Provider's website including http:// or https:// and wwww." name="providers_website" value="<%= @activity.providers_website %>">
+        </div>
+      </div>
+      <hr>
+      <h3>Offer Code Unique Prefix</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Create a unique offer code prefix to identify offer codes generated for this provider.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="text" placeholder="Enter an offer code prefis e.g. KAYAK" name="providers_offer_prefix" value="<%= @activity.providers_offer_prefix %>">
+        </div>
+      </div>
+      <hr>
+      <h3>Offer Code Details</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Detail what offer this code entitles the user to. Provide information on how to redeem the offer, the expiry date of the offer (e.g. 12 months after generation) and any terms and conditions stipulated by the provider in relation to using this offer code.</p>
+        </div>
+        <div class="large-5 columns">
+          <textarea placeholder="Offer code details" name="providers_offer_details"><%= @activity.providers_offer_details %></textarea>
+        </div>
+      </div>
+      <hr>
+      <h3>Provider's Logo</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Please upload an image to use as the provider's logo.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="file" name="providers_logo">
+          <img src="<%= @activity.providers_logo.url || '/img/upload.svg' %>" alt="">
+        </div>
+      </div>
+      <hr>
+      <h3>Provider's Terms and Conditions</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Please upload a PDF of the provider's terms and conditions.</p>
+        </div>
+        <div class="large-5 columns">
+          <input type="file" name="providers_terms_and_conditions">
+        </div>
+      </div>
+      <hr>
+      <h3>Provider's Address</h3>
+      <div class="row collapse">
+        <div class="large-7 columns">
+          <p>Please provide the full address of the provider's address.</p>
+        </div>
+        <div class="large-5 columns">
+          <ul>
+            <li><input type="text" placeholder="Address Line 1" name="providers_address_line_1" value="<%= @activity.providers_address_line_1 %>"></li>
+            <li><input type="text" placeholder="Address Line 2" name="providers_address_line_2" value="<%= @activity.providers_address_line_2 %>"></li>
+            <li><input type="text" placeholder="Address Line 3" name="providers_address_line_3" value="<%= @activity.providers_address_line_3 %>"></li>
+            <li><input type="text" placeholder="City" name="providers_address_city" value="<%= @activity.providers_address_city %>"></li>
+            <li><input type="text" placeholder="County" name="providers_address_county" value="<%= @activity.providers_address_county %>"></li>
+            <li><input type="text" placeholder="Postcode" name="providers_address_postcode" value="<%= @activity.providers_address_postcode %>"></li>
+          </ul>
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+    </main>
+  </form>
+</div>

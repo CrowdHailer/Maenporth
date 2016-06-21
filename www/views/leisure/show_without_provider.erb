@@ -1,0 +1,82 @@
+
+<div class="row collapse leisure" id="white-bg">
+  <div class="banner-image-wrap">
+    <img src="<%= @activity.header_image.url %>">
+  </div>
+  <h1><%= @activity.activity_name %></h1>
+  <hr>
+  <div class="large-7 medium-6 small-12 columns">
+    <div class="main-cont">
+      <p><%= @activity.main_description %></p>
+      <ol>
+        <% @activity.selling_points.each do |point| %>
+        <li><%= point %></li>
+        <% end %>
+      </ol>
+      <div class="review">
+        <h3>Customer Review</h3>
+        <p><%= @activity.customer_review %></p>
+      </div>
+      <% unless @activity.hide_gallery? %>
+      <div class="gallery">
+        <div class="row collapse">
+          <div class="large-6 columns">
+            <div id="big">
+              <% (1..9).each do |i| %>
+              <div class="image-disp" id="gallery<%= i %>">
+                <img class="gallery-image mob-display-image" src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt=""/>
+              </div>
+              <% end %>
+            </div>
+          </div>
+          <div class="large-6 columns">
+            <div class="row collapse">
+              <ul class="large-block-grid-3 medium-block-grid-1 small-block-grid-2 gallery-thumbs">
+                <% (1..9).each do |i| %>
+                <li><a href="javascript: changeImage(<%= i %>);"><div class="thumb-gallery"><img src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt="" /></div></a></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+          <script>
+          function changeImage(current) {
+            var imagesNumber = 9;
+            console.log("hello")
+            for (i=1; i<=imagesNumber; i++) {
+              if (i == current) {
+                document.getElementById("gallery" + current).style.display = "block";
+              } else {
+                document.getElementById("gallery" + i).style.display = "none";
+              }
+            }
+          }
+          </script>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="large-4 medium-5 small-12 columns">
+    <div class="add-info">
+      <% if @activity.has_availability? %>
+      <h3>Availability</h3>
+      <p><%= @activity.availability %></p>
+      <% end %>
+      <% if @activity.has_suitability? %>
+      <h3>Suitability</h3>
+      <p><%= @activity.suitability %></p>
+      <% end %>
+    </div>
+    <% if @activity.has_youtube_video? %>
+    <div id="video">
+      <%= @activity.youtube_video %>
+      <!-- <iframe width="100%" height="auto" src="" frameborder="0" allowfullscreen></iframe> -->
+    </div>
+    <% end %>
+    <% if @activity.has_public_website? %>
+    <div id="cta-basic">
+      <a target="blank" href="<%= @activity.public_website %>">Find out more<img src="/img/white-rght.svg"></a>
+    </div>
+    <% end %>
+  </div>
+</div>

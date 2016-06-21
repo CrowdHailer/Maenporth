@@ -10,18 +10,7 @@ Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_opti
 
 Dir[File.expand_path('../support/**/*.rb', __FILE__)].each { |file| require file}
 
+# DEBT we might want to see log messages as test output
+Scorched::Controller.config[:logger] = Logger.new(nil)
+
 require_relative '../www/root'
-
-class MyTest < MiniTest::Test
-  # TODO FactoryGirl methods
-  # include FactoryGirl::Syntax::Methods
-
-  # TODO database transaction for tests
-  # # Ensures all tests are run in a transaction
-  # def run(*args, &block)
-  #   result = nil
-  #   Sequel::Model.db.transaction(:rollback=>:always, :auto_savepoint=>true){result = super}
-  #   result
-  # end
-
-end

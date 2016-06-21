@@ -24,8 +24,7 @@ class Estate < Errol::Repository
     end
 
     def dispatch(record)
-      # TODO wrap in model
-      # TODO allow errol to reurn records
+      # DEBT wrap in entity
       record
     end
 
@@ -35,7 +34,7 @@ class Estate < Errol::Repository
   end
 
   def dataset
-    # TODO errol allow no dataset method
+    # DEBT errol allow no dataset method
     tmp = raw_dataset
 
     if inquiry.for_rent_only
