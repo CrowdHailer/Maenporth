@@ -5,3 +5,11 @@
 .patch-2 {
   color:#414141 !important;
 }
+
+.property-box {
+  height:auto !important;
+}
+
+.cat-text p {
+    margin-top: 1em !important;
+}
