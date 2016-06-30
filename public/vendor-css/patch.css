@@ -1,0 +1,24 @@
+.patch-1 h1 {
+  color:#414141 !important;
+}
+
+.patch-2 {
+  color:#414141 !important;
+}
+
+.property-box {
+  height:auto !important;
+}
+
+.cat-text p {
+    margin-top: 1em !important;
+}
+
+#thumbs li {
+    padding: 0em 0.4em !important;
+    margin-bottom: 0.2em !important;
+}
+
+.prop-type {
+  height:auto !important;;
+}
