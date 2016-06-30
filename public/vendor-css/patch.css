@@ -13,3 +13,12 @@
 .cat-text p {
     margin-top: 1em !important;
 }
+
+#thumbs li {
+    padding: 0em 0.4em !important;
+    margin-bottom: 0.2em !important;
+}
+
+.prop-type {
+  height:auto !important;;
+}
