@@ -7,7 +7,7 @@
   <hr>
   <div class="large-7 medium-6 small-12 columns">
     <div class="main-cont">
-      <p><%= @activity.main_description %></p>
+      <p><%= @activity.main_description.html %></p>
       <ol>
         <% @activity.selling_points.each do |point| %>
         <li><%= point %></li>
