@@ -1,6 +1,7 @@
 require_relative './random_identifier'
 require_relative './image_uploader'
 require_relative './pdf_uploader'
+require_relative './property_attributes/description'
 
 module Activity
   # The property entity is represented by the unwrapped record
@@ -10,6 +11,8 @@ module Activity
 
   class Record < Sequel::Model(:activities)
     include RandomIdentifier
+    plugin :serialization
+    serialize_attributes [::Description.method(:dump), ::Description.method(:new)], :main_description
 
     mount_uploader :header_image, ImageUploader
     mount_uploader :listings_image, ImageUploader
@@ -24,6 +27,10 @@ module Activity
     mount_uploader :gallery_image_9, ImageUploader
     mount_uploader :providers_logo, ImageUploader
     mount_uploader :providers_terms_and_conditions, PDFUploader
+
+    def main_description
+      super || ::Description.new('')
+    end
 
     def has_provider?
       return false if providers_name.nil?

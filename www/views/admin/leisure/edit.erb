@@ -98,7 +98,7 @@
           <p>Describe the activity.  This description will appear on the activity profile page.</p>
         </div>
         <div class="large-5 columns">
-          <textarea placeholder="Activity description" name="main_description"><%= @activity.main_description %></textarea>
+          <textarea placeholder="Activity description" name="main_description"><%= @activity.main_description.raw %></textarea>
         </div>
       </div>
       <hr>

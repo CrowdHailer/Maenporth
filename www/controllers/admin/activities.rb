@@ -22,11 +22,11 @@ module WWW
         render :edit
       end
 
-      post '/' do
-        # DEBT not used
-        activity = Activity::Record.create(request.POST)
-        redirect "/#{activity.id}"
-      end
+      # post '/' do
+      #   # DEBT not used
+      #   activity = Activity::Record.create()
+      #   redirect "/#{activity.id}"
+      # end
 
       get '/:id/edit' do |id|
         @activity = Activity::Record.find(id: id)
@@ -44,6 +44,7 @@ module WWW
           updates.delete("_method") # Mutable Eurgh DEBT
           updates["hidden"] = (updates["hidden"] == "on")
           updates["hide_gallery"] = (updates["hide_gallery"] == "on")
+          updates["main_description"] = Description.new(updates["main_description"])
           @activity.update(updates)
           redirect '/admin/leisure'
           # Probably redirect somewhere
