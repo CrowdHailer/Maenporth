@@ -22,3 +22,29 @@
 .prop-type {
   height:auto !important;;
 }
+
+.leisure h1 {
+    color:#414141 !important;
+    font-size:;
+}
+
+.leisure h2 {
+  font-size: 32px;
+}
+
+.leisure em {
+  font-family: 'sans-serif' !important;
+  font-style: italic;
+}
+
+.add-info p {
+  margin-bottom:1em;
+}
+
+.main-cont p {
+   margin-bottom:1em;
+}
+
+.description-wrap p {
+   margin-bottom:1em;
+}
