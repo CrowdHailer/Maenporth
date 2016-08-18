@@ -97,7 +97,7 @@
       <form action="/leisure/activities/<%= @activity.id %>/generate-offer" method="post">
         <input type="text" placeholder="Your name" required name="customer_name">
         <input type="email" placeholder="Your email address" required name="customer_email_address">
-        <input type="submit" value="Get Offer Code">
+        <input type="submit" value="Get Code">
       </form>
       <div class="hide-for-large-up">
         <p>Click on 'Get Offer Code' to receive a personalised offer code.  This offer code can be redeemed for this activity with <%= @activity.providers_name %>.  The activity provider's details are provided when the offer code is generated.</p>
