@@ -3,7 +3,7 @@ require 'carrierwave/processing/mini_magick'
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
-  process resize_to_fit: [644, 344]
+  process resize_to_fit: [968, 457]
 
   def extension_white_list
     %w(jpg jpeg gif png)
