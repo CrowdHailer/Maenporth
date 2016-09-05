@@ -54,3 +54,16 @@
 .description-wrap p {
    margin-bottom:1em;
 }
+
+// Small screens
+@media only screen { } /* Define mobile styles */
+
+@media only screen and (max-width: 40em) { 
+  .gallery-thumbs {
+    margin-left: 0;
+    margin-right: 0.7em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+} 
+  
+}
