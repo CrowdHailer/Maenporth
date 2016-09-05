@@ -13,7 +13,7 @@
     </div>
   </div>
   <hr>
-  <div class="large-7 medium-6 small-12 columns">
+  <div class="large-7 medium-12 small-12 columns">
     <div class="main-cont">
       <p><%= @activity.main_description.html %></p>
       <ol>
@@ -28,7 +28,7 @@
       <% unless @activity.hide_gallery? %>
       <div class="gallery">
         <div class="row collapse">
-          <div class="large-6 columns">
+          <div class="large-6 medium-6 small-12 columns">
             <div id="big">
               <% (1..9).each do |i| %>
               <div class="image-disp" id="gallery<%= i %>">
@@ -37,9 +37,9 @@
               <% end %>
             </div>
           </div>
-          <div class="large-6 columns">
+          <div class="large-6 medium-6 small-12 columns">
             <div class="row collapse">
-              <ul class="large-block-grid-3 medium-block-grid-1 small-block-grid-2 gallery-thumbs">
+              <ul class="large-block-grid-3 medium-block-grid-3 small-block-grid-3 gallery-thumbs">
                 <% (1..9).each do |i| %>
                 <li><a href="javascript: changeImage(<%= i %>);"><div class="thumb-gallery"><img src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt="" /></div></a></li>
                 <% end %>
@@ -64,7 +64,7 @@
       <% end %>
     </div>
   </div>
-  <div class="large-4 medium-5 small-12 columns">
+  <div class="large-4 medium-12 small-12 columns">
     <div class="add-info">
       <% if @activity.has_availability? %>
       <h3>Availability</h3>
