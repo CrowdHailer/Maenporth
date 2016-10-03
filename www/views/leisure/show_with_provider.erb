@@ -32,7 +32,7 @@
      
      <div class="gall-prev">
          <% (1..9).each do |i| %>
-              <div class="image-prev" id="gallery<%= i %>">
+              <div class="image-prev" id="gallery-prev<%= i %>">
                 <img src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt=""/>
               </div>
           <% end %>
