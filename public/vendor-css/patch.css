@@ -62,6 +62,12 @@
     overflow: hidden;
 }
 
+.gall-prev {
+    height: auto;
+    display: inline-block;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
 // Small screens
 @media only screen { } /* Define mobile styles */
 
