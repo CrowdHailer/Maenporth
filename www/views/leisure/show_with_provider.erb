@@ -30,7 +30,7 @@
       
        <% unless @activity.hide_gallery? %>
      
-     <div class="gall-prev">
+     <div class="gall-prev" onclick="document.getElementById('gallery').style.display = 'inline'">
          <% (1..8).each do |i| %>
               <div class="image-prev" id="gallery-prev<%= i %>">
                 <img src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt=""/>
@@ -40,7 +40,7 @@
      
      
      
-      <div class="gallery">
+      <div id="gallery">
         
             <div id="big">
               <% (1..9).each do |i| %>
