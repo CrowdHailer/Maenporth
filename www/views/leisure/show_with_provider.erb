@@ -25,7 +25,61 @@
         <h3>Customer Review</h3>
         <p><%= @activity.customer_review %></p>
       </div>
-      <% unless @activity.hide_gallery? %>
+      
+      <!-- NEW GALLERY TEST -->
+      
+       <% unless @activity.hide_gallery? %>
+     
+     <div class="gall-prev">
+         <% (1..9).each do |i| %>
+              <div class="image-prev" id="gallery<%= i %>">
+                <img src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt=""/>
+              </div>
+          <% end %>
+     </div>
+     
+     
+     
+      <div class="gallery">
+        
+            <div id="big">
+              <% (1..9).each do |i| %>
+              <div class="image-disp" id="gallery<%= i %>">
+                <img class="gallery-image mob-display-image" src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt=""/>
+              </div>
+              <% end %>
+            </div>
+          
+          <div class="bottom">
+              <ul class="gallery-thumbs-new">
+                <% (1..9).each do |i| %>
+                <li>
+                    <a href="javascript: changeImage(<%= i %>);">
+                        <img src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt="" />
+                    </a>
+                </li>
+                <% end %>
+              </ul>
+          </div>
+          <script>
+          function changeImage(current) {
+            var imagesNumber = 9;
+            for (i=1; i<=imagesNumber; i++) {
+              if (i == current) {
+                document.getElementById("gallery" + current).style.display = "block";
+              } else {
+                document.getElementById("gallery" + i).style.display = "none";
+              }
+            }
+          }
+          </script>
+        
+      </div>
+      <% end %>
+      
+      <!-- END NEW GALLERY TEST -->
+      
+     <!-- <% unless @activity.hide_gallery? %>
       <div class="gallery">
         <div class="row collapse">
           <div class="large-6 medium-6 small-12 columns">
@@ -61,7 +115,7 @@
           </script>
         </div>
       </div>
-      <% end %>
+      <% end %>-->
     </div>
   </div>
   <div class="large-4 medium-12 small-12 columns">
