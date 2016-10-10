@@ -1,49 +1,4 @@
-
-<div class="row collapse leisure" id="white-bg">
-  <div class="banner-image-wrap">
-    <img src="<%= @activity.header_image.url %>">
-  </div>
-  <div class="row collapse">
-    <div class="large-9 medium-9 small-12 columns patch-1">
-      <h1 class="patch-2"><%= @activity.activity_name %></h1>
-      <h2 class="provider-detail"><%= @activity.providers_name %></h2>
-    </div>
-    <div class="large-3 medium-3 small-6 end columns" id="logo">
-      <img src="<%= @activity.providers_logo.url %>">
-    </div>
-  </div>
-  <hr>
-  <div class="large-7 medium-12 small-12 columns">
-    <div class="main-cont">
-      <p><%= @activity.main_description.html %></p>
-      <ol>
-        <% @activity.selling_points.each do |point| %>
-        <li><%= point %></li>
-        <% end %>
-      </ol>
-      <div class="review">
-        <h3>Customer Review</h3>
-        <p><%= @activity.customer_review %></p>
-      </div>
-      
-      <!-- NEW GALLERY TEST -->
-      
-       <% unless @activity.hide_gallery? %>
-     <div class="gallery-header">
-       <h2>Gallery</h2>
-       <p>Click to enlarge</p>
-     </div>
-     <div class="gall-prev" onclick="document.getElementById('gallery-reveal').style.display = 'inline'">
-         <% (1..8).each do |i| %>
-              <div class="image-prev" id="gallery-prev<%= i %>">
-                <img src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt=""/>
-              </div>
-          <% end %>
-     </div>
-     
-     
-     
-      <div id="gallery-reveal" class="gallery">
+<div id="gallery-reveal" class="gallery">
         
             <div id="big">
               <% (1..9).each do |i| %>
@@ -78,7 +33,48 @@
           </script>
         
       </div>
-      <% end %>
+<div class="row collapse leisure" id="white-bg">
+  <div class="banner-image-wrap">
+    <img src="<%= @activity.header_image.url %>">
+  </div>
+  <div class="row collapse">
+    <div class="large-9 medium-9 small-12 columns patch-1">
+      <h1 class="patch-2"><%= @activity.activity_name %></h1>
+      <h2 class="provider-detail"><%= @activity.providers_name %></h2>
+    </div>
+    <div class="large-3 medium-3 small-6 end columns" id="logo">
+      <img src="<%= @activity.providers_logo.url %>">
+    </div>
+  </div>
+  <hr>
+  <div class="large-7 medium-12 small-12 columns">
+    <div class="main-cont">
+      <p><%= @activity.main_description.html %></p>
+      <ol>
+        <% @activity.selling_points.each do |point| %>
+        <li><%= point %></li>
+        <% end %>
+      </ol>
+      <div class="review">
+        <h3>Customer Review</h3>
+        <p><%= @activity.customer_review %></p>
+      </div>
+      
+      <!-- NEW GALLERY TEST -->
+      
+<% unless @activity.hide_gallery? %>
+     <div class="gallery-header">
+       <h2>Gallery</h2>
+       <p>Click to enlarge</p>
+     </div>
+     <div class="gall-prev" onclick="document.getElementById('gallery-reveal').style.display = 'inline'">
+         <% (1..8).each do |i| %>
+              <div class="image-prev" id="gallery-prev<%= i %>">
+                <img src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt=""/>
+              </div>
+          <% end %>
+     </div>
+<% end %>
       
       <!-- END NEW GALLERY TEST -->
       
