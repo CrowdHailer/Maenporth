@@ -29,7 +29,10 @@
       <!-- NEW GALLERY TEST -->
       
        <% unless @activity.hide_gallery? %>
-     
+     <div class="gallery-header">
+       <h2>Gallery</h2>
+       <p>Click to enlarge</p>
+     </div>
      <div class="gall-prev" onclick="document.getElementById('gallery-reveal').style.display = 'inline'">
          <% (1..8).each do |i| %>
               <div class="image-prev" id="gallery-prev<%= i %>">
