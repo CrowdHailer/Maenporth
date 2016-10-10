@@ -1,6 +1,7 @@
 <div id="gallery-reveal" class="gallery">
         
             <div id="big">
+              <p  onclick="document.getElementById('gallery-reveal').style.display = 'none'">Close Gallery X</p>
               <% (1..8).each do |i| %>
               <div class="image-disp" id="gallery<%= i %>">
                 <img class="gallery-image mob-display-image" src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt=""/>
