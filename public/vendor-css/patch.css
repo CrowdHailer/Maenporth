@@ -73,6 +73,27 @@
 display:none;
 }
 
+.gallery {    
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+}
+
+#big {
+    margin-right: 0.7em;
+    display: block;
+    margin: 0 auto;
+    width: 55em;
+    height: 40em;
+    border: 2em solid white;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+    overflow: hidden;
+    margin-bottom: 2em;
+    background: white;
+}
+
 // Small screens
 @media only screen { } /* Define mobile styles */
 
