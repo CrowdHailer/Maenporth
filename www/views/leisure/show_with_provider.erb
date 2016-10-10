@@ -1,14 +1,14 @@
 <div id="gallery-reveal" class="gallery">
         
             <div id="big">
-              <% (1..9).each do |i| %>
+              <% (1..8).each do |i| %>
               <div class="image-disp" id="gallery<%= i %>">
                 <img class="gallery-image mob-display-image" src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt=""/>
               </div>
               <% end %>
               <div class="bottom">
               <ul class="gallery-thumbs-new">
-                <% (1..9).each do |i| %>
+                <% (1..8).each do |i| %>
                 <li>
                     <a href="javascript: changeImage(<%= i %>);">
                         <img src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt="" />
@@ -19,7 +19,7 @@
           </div>
           <script>
           function changeImage(current) {
-            var imagesNumber = 9;
+            var imagesNumber = 8;
             for (i=1; i<=imagesNumber; i++) {
               if (i == current) {
                 document.getElementById("gallery" + current).style.display = "block";
