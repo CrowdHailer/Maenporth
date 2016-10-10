@@ -93,6 +93,7 @@ display:none;
     overflow: hidden;
     margin-bottom: 2em;
     background: white;
+  margin-top:-5em;
 }
 
 #big img {
@@ -107,6 +108,10 @@ width:100%;
     font-size: 0.9em;
     font-weight: bold;
     cursor:pointer;
+}
+
+#big .image-disp {
+height:auto;
 }
 
 .bottom ul {
