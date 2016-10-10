@@ -6,9 +6,7 @@
                 <img class="gallery-image mob-display-image" src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt=""/>
               </div>
               <% end %>
-            </div>
-          
-          <div class="bottom">
+              <div class="bottom">
               <ul class="gallery-thumbs-new">
                 <% (1..9).each do |i| %>
                 <li>
@@ -33,6 +31,8 @@
           </script>
         
       </div>
+            </div>
+          
 <div class="row collapse leisure" id="white-bg">
   <div class="banner-image-wrap">
     <img src="<%= @activity.header_image.url %>">
