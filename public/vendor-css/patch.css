@@ -68,6 +68,11 @@
     padding: 1em;
     border: 1px solid #ccc;
 }
+
+#gallery-reveal {
+display:none;
+}
+
 // Small screens
 @media only screen { } /* Define mobile styles */
 
