@@ -95,6 +95,20 @@ display:none;
     background: white;
 }
 
+#big img {
+width:100%;
+}
+
+.bottom ul {
+  margin-left: 0;
+    list-style: none;
+}
+
+.bottom li {
+  float: left;
+    width: 25%;
+}
+
 // Small screens
 @media only screen { } /* Define mobile styles */
 
