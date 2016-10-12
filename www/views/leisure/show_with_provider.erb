@@ -2,22 +2,28 @@
         
             <div id="big">
               <p  onclick="document.getElementById('gallery-reveal').style.display = 'none'">Close Gallery X</p>
-              <% (1..8).each do |i| %>
-              <div class="image-disp" id="gallery<%= i %>">
-                <img class="gallery-image mob-display-image" src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt=""/>
-              </div>
+              <div class="row collapse">
+                <div class="large-3 columns">
+                  <div class="bottom">
+                     <ul class="gallery-thumbs-new large-block-grid-2">
+                        <% (1..8).each do |i| %>
+                          <li>
+                            <a href="javascript: changeImage(<%= i %>);">
+                               <img src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt="" />
+                            </a>
+                          </li>
+                        <% end %>
+                      </ul>
+                  </div>
+                </div>
+                <div class="large-9 columns">
+                  <% (1..8).each do |i| %>
+                    <div class="image-disp" id="gallery<%= i %>">
+                      <img class="gallery-image mob-display-image" src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt=""/>
+                    </div>
               <% end %>
-              <div class="bottom">
-              <ul class="gallery-thumbs-new">
-                <% (1..8).each do |i| %>
-                <li>
-                    <a href="javascript: changeImage(<%= i %>);">
-                        <img src="<%= @activity.send('gallery_image_' + i.to_s).url %>" alt="" />
-                    </a>
-                </li>
-                <% end %>
-              </ul>
-          </div>
+                </div>
+              </div>
           <script>
           function changeImage(current) {
             var imagesNumber = 8;
