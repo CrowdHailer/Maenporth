@@ -137,6 +137,12 @@ height:auto;
   #big p {
     width:auto;
   }
+  
+  #gallery-reveal{
+  position: absolute;
+  margin-top: -8.5em;
+ }
+  
 } /* min-width 641px and max-width
 
 // Small screens
@@ -157,4 +163,7 @@ height:auto;
     width:auto;
   }
   
-}
+  #gallery-reveal{
+  position: absolute;
+  margin-top: -8.5em;
+ }
