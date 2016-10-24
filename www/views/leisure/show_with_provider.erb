@@ -3,9 +3,9 @@
             <div id="big">
               <p  onclick="document.getElementById('gallery-reveal').style.display = 'none'">Close Gallery X</p>
               <div class="row collapse">
-                <div class="large-3 columns">
+                <div class="large-3 medium-12 small-12 columns">
                   <div class="bottom">
-                     <ul class="gallery-thumbs-new large-block-grid-2">
+                     <ul class="gallery-thumbs-new large-block-grid-2 medium-block-grid-8 small-block-grid-4">
                         <% (1..8).each do |i| %>
                           <li>
                             <a href="javascript: changeImage(<%= i %>);">
