@@ -158,6 +158,7 @@ height:auto;
   
   #big {
   width:auto;
+    height: 100%;
   }
   #big p   {
     width:auto;
@@ -166,4 +167,5 @@ height:auto;
   #gallery-reveal{
   position: fixed;
     margin-top: -8.5em;
+    height: 100%;
  }
