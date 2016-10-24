@@ -164,6 +164,5 @@ height:auto;
   }
   
   #gallery-reveal{
-  position: absolute;
-  margin-top: -8.5em;
+  position: fixed;
  }
