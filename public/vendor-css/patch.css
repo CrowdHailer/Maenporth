@@ -83,7 +83,7 @@ display:none;
     margin-right: 0.7em;
     display: block;
     margin: 0 auto;
-    width: 50em;
+    width: 43em;
     height: auto;
     border: 2px solid #000;
     padding:2em;
@@ -93,7 +93,7 @@ display:none;
     overflow: hidden;
     margin-bottom: 2em;
     background: white;
-  margin-top:-5em;
+  margin-top:-10em;
 }
 
 #big img {
@@ -104,7 +104,7 @@ width:100%;
     text-align: right;
     position: absolute;
     margin-top: -1.9em;
-    width: 50.7em;
+    width: 46.8em;
     font-size: 0.9em;
     font-weight: bold;
     cursor:pointer;
