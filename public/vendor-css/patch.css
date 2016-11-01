@@ -133,6 +133,7 @@ height:auto;
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
   #big {
   width:auto;
+    margin-top:-3.5em;
   }
   #big p {
     width:auto;
@@ -159,6 +160,7 @@ height:auto;
   #big {
   width:auto;
     height: 100%;
+    margin-top:-5em;
   }
   #big p   {
     width:auto;
