@@ -20,7 +20,7 @@ class OfferTest < MiniTest::Test
     assert record.id
 
     # DEBT hard coded check for the year
-    assert_match /^BOB-\d{4}16-/, record.code
+    assert_match /^BOB-\d{4}17-/, record.code
 
     # Asserts that associated activity is also saved
     assert activity_record.id
