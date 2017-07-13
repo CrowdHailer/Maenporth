@@ -106,7 +106,7 @@
             <input type="text" name="property[property_name]" value="<%= @property.property_name %>">
             <h4>Is this a Maenporth Estate managed property?</h4>
             <p>If it is, tick this box.  Leave blank if it is not.</p>
-            <input type="checkbox">
+            <input name="property[estate_managed]" type="checkbox" <%= 'checked' if @property.estate_managed %>>
           </div>
         </div>
         <div class="row collapse">

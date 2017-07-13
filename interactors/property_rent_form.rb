@@ -1,6 +1,7 @@
 class PropertyRentForm < Vulcanize::Form
   attribute :property_name, PropertyName
   attribute :rent_description, Description
+  attribute :estate_managed, Vulcanize::CheckBox, :default => false
   attribute :review, Description
   attribute :enquiry_route, String
   attribute :enquiry_link, Link
