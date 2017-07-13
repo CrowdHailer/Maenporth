@@ -86,7 +86,7 @@ class PropertyRentFormTest < Minitest::Test
 
   def test_estate_managed_false_when_unchecked
     form = PropertyRentForm.new
-    assert_equal false, form.wifi
+    assert_equal false, form.estate_managed
   end
 
   def test_obtains_bbq
