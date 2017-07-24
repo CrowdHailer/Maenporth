@@ -75,3 +75,6 @@ shotgun
 # Start SASS watch and compilation
 bundle exec rake sass:watch
 ```
+### Database Migrations
+
+Database migrations are currently handled manually.
