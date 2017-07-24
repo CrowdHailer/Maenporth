@@ -1,4 +1,20 @@
-Redirecting!
+<style>
+  .redirect-wrapper {
+  padding:10em 1em;
+  }
+  .wheel {
+  -webkit-transform: rotate(600deg);
+    -webkit-transition: -webkit-transform 4s ease-out;
+    height:2em;
+    width:2em;
+    background:blue;
+  }
+</style>
+<div class="redirect-wrapper">
+  <h2>We are redirecting you to the agent's website... Hold on for just a moment.</h2>
+  <div class="wheel">
+  </div>
+</div>
 <script type="text/javascript">
   setTimeout(function () {
     window.location.replace("<%= @redirect_url %>")
