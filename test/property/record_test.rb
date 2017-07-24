@@ -97,6 +97,11 @@ module Property
       assert_equal ViewType, record.view_type.class
     end
 
+    def test_can_have_be_estate_managed
+      record = Record.new :estate_managed => true
+      assert_equal true, record.estate_managed
+    end
+
     def test_can_have_a_wifi
       record = Record.new :wifi => true
       assert_equal true, record.wifi

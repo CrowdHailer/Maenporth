@@ -3,7 +3,9 @@ module WWW
     render_defaults[:dir] += '/properties'
 
     get '/for-rent' do
-      @properties = Estate.for_rent.shuffle
+      all_properties = Estate.for_rent.shuffle
+      managed, rest = all_properties.partition(&:estate_managed)
+      @properties = managed + rest
       render :'all-for-rent'
     end
 
