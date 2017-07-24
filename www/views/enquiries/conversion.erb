@@ -2,18 +2,80 @@
   .redirect-wrapper {
   padding:10em 1em;
   }
-  .wheel {
-  -webkit-transform: rotate(600deg);
-    -webkit-transition: -webkit-transform 4s ease-out;
-    height:2em;
-    width:2em;
-    background:blue;
+  #wheel-container {
+  position: absolute;
+  left: 45%;
+  height: 40px;
+  width: 40px;
+}
+.circle1 {
+  position: relative;
+  -moz-transform:rotate(320deg);
+  -webkit-transform:rotate(320deg);
+  -o-transform:rotate(320deg);
+  -ms-transform:rotate(320deg);
+  animation: spin1 4.5s infinite linear;
+  -webkit-animation: spin1 4.5s infinite linear;
+  
+}
+
+/* animations */
+
+@keyframes spin1 {
+  0% {
+  -moz-transform:rotate(320deg);
+  -webkit-transform:rotate(320deg);
+  -o-transform:rotate(320deg);
+  -ms-transform:rotate(320deg);
   }
+  100% {
+  -moz-transform:rotate(680deg);
+  -webkit-transform:rotate(680deg);
+  -o-transform:rotate(680deg);
+  -ms-transform:rotate(680deg); 
+  }
+}
+@-webkit-keyframes spin1 {
+  0% {
+  -moz-transform:rotate(320deg);
+  -webkit-transform:rotate(320deg);
+  -o-transform:rotate(320deg);
+  -ms-transform:rotate(320deg);
+  }
+  100% {
+  -moz-transform:rotate(680deg);
+  -webkit-transform:rotate(680deg);
+  -o-transform:rotate(680deg);
+  -ms-transform:rotate(680deg); 
+  }
+}
 </style>
 <div class="redirect-wrapper">
   <h2>We are redirecting you to the agent's website... Hold on for just a moment.</h2>
-  <div class="wheel">
-  </div>
+  <div id="wheel-container">
+    <svg class="circle1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 198 199.5" style="enable-background:new 0 0 198 199.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:#F8F7F7;}
+	.st3{fill:#FFED00;}
+	.st4{fill:#00975F;}
+	.st5{fill:none;}
+	.st6{fill:#FFEA12;}
+	.st7{fill:#7EB0D4;}
+	.st8{fill:#009661;}
+	.st9{fill:#FFFFFF;}
+	.st10{fill:#909191;}
+</style>
+<g id="Layer_1" class="st0">
+</g>
+<g id="Design">
+	<path class="st10" d="M151.9,101.2c0,29.2-23.7,52.9-52.9,52.9S46,130.5,46,101.2C46,72,69.7,48.3,98.9,48.3V12
+		C49.6,12,9.7,52,9.7,101.2c0,49.3,40,89.3,89.3,89.3s89.2-40,89.2-89.3H151.9z"/>
+</g>
+</svg>
+</div>
 </div>
 <script type="text/javascript">
   setTimeout(function () {
