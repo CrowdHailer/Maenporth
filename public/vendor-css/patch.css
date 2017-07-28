@@ -145,6 +145,14 @@ height:auto;
   margin-top: -5.6em;
  }
   
+  .thumb-wrap {
+  height:auto !important;
+  }
+  
+  #bigimages {
+padding:0;
+}
+  
 } /* min-width 641px and max-width
 
 // Small screens
@@ -172,3 +180,12 @@ height:auto;
     margin-top: -8.5em;
     height: 100%;
  }
+  
+  .thumb-wrap {
+  height:auto !important;
+  }
+  
+  #bigimages {
+padding:0;
+  }
+}
