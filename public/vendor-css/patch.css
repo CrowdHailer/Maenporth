@@ -1,3 +1,8 @@
+#logomain {
+float:none !important;
+margin-top:1em !important;
+}
+
 .patch-1 h1 {
   color:#414141 !important;
 }
@@ -20,7 +25,7 @@
 }
 
 .prop-type {
-  height:auto !important;;
+  height:auto !important;
 }
 
 .leisure h1 {
